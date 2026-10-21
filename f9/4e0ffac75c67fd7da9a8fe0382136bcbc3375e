@@ -1,0 +1,31 @@
+commonSdk/src/main/cpp/utils/elf_util.cpp
+  s_706405007d01ba::t_f5f26299a9616a 1-171
+commonSdk/src/main/cpp/utils/hide_api.cpp
+  s_706405007d01ba::t_2ebdd481249182 1-444
+commonSdk/src/main/cpp/utils/lock.h
+  s_706405007d01ba::t_89de3bff0bddd1 1-30
+commonSdk/src/main/cpp/utils/utils.cpp
+  s_706405007d01ba::t_2c7af5fa19ae2e 1-143
+commonSdk/src/main/AndroidManifest.xml
+  s_706405007d01ba::t_543bf740299671 1-4965
+commonSdk/src/main/cpp/utils/dlfcn_nougat.cpp
+  s_706405007d01ba::t_a0103263bc6ca9 1-297
+commonSdk/src/main/cpp/utils/offset.cpp
+  s_706405007d01ba::t_7e86c81e47e22e 1-59
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f94e0ffac75c67fd7da9a8fe0382136bcbc3375e",
+  "prompts": {},
+  "sessions": {
+    "s_706405007d01ba": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "dde6f4bc-9a51-48df-a5d4-8429e4ffdc72",
+        "model": "maas-glm-5-2-260617"
+      },
+      "human_author": "y00798287 <yangwei1@huawei.com>"
+    }
+  }
+}
