@@ -15,17 +15,22 @@ allprojects {
 subprojects {
 
     afterEvaluate {
+        // commonSdk 模块用 phong12a5 原配置（compileSdk 33 + Java 1.8），
+        // 因为它的 dalvik.system.VMRuntime stub 跟 compileSdk 36 的 android.jar 冲突。
+        if (project.name == 'commonSdk') {
+            return
+        }
+
         def isAndroidProject = project.plugins.hasPlugin('android')
         def isLibraryProject = project.plugins.hasPlugin('android-library')
 
         if (isAndroidProject || isLibraryProject) {
             android {
-                compileSdkVersion 33
-                //buildToolsVersion '30.0.1'
+                compileSdk 36
 
                 compileOptions {
-                    sourceCompatibility JavaVersion.VERSION_1_8
-                    targetCompatibility JavaVersion.VERSION_1_8
+                    sourceCompatibility JavaVersion.VERSION_17
+                    targetCompatibility JavaVersion.VERSION_17
                 }
 
                 if (new File(projectDir, "src/main/cpp/CMakeLists.txt").exists()) {
@@ -37,15 +42,17 @@ subprojects {
                 }
 
                 defaultConfig {
-                    minSdkVersion 21
+                    minSdk 21
                     //noinspection OldTargetApi
-                    targetSdkVersion 26
+                    targetSdk 26
 
                     versionCode rootProject.ext.VA_VERSION_CODE
                     versionName rootProject.ext.VA_VERSION
                 }
 
-                lintOptions {
+                ndkVersion "27.0.12077973"
+
+                lint {
                     checkReleaseBuilds false
                     abortOnError false
                 }
@@ -68,20 +75,15 @@ subprojects {
                         signingConfig signingConfigs.va
                         minifyEnabled true
                         shrinkResources true
-                        zipAlignEnabled true
-                        proguardFiles getDefaultProguardFile('proguard-android.txt'), "${rootProject.rootDir}/proguard/proguard-rules.pro", "proguard-rules.pro"
+                        proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), "${rootProject.rootDir}/proguard/proguard-rules.pro", "proguard-rules.pro"
                     }
 
                     debug {
                         signingConfig release.signingConfig
-                        crunchPngs false //关闭crunchPng优化
+                        crunchPngs false
                         minifyEnabled false
 
-                        //minifyEnabled true    //minifyEnabled为true的作用：启用代码混淆、压缩APK
-                        //shrinkResources true   //shrinkResources为true用来开启删除无用资源
-                        //zipAlignEnabled true   //不开启ZipAlign优化
-
-                        proguardFiles getDefaultProguardFile('proguard-android.txt'), "${rootProject.rootDir}/proguard/proguard-rules.pro", "proguard-rules.pro"
+                        proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), "${rootProject.rootDir}/proguard/proguard-rules.pro", "proguard-rules.pro"
                     }
                 }
             }
