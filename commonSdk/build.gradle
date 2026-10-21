@@ -69,7 +69,7 @@ dependencies {
     implementation 'com.github.megatronking.stringfog:xor:1.1.0'
 
     implementation files('libs/Amap_2DMap_V6.0.0_20191106.jar')
-    implementation files('libs/Amap_Location_V5.3.1_20210331.jar')
+    implementation files('libs/AMap_Location_V5.3.1_20210331.jar')
     implementation files('libs/AMap_Search_V7.9.0_20210331.jar')
     implementation files('libs/rxandroid.jar')
     implementation files('libs/rxjava.jar')
