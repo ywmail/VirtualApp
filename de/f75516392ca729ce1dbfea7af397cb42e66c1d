@@ -1,0 +1,49 @@
+app/src/main/res/layout/activity_mock_device.xml
+  s_f9c92146537111::t_9defb52265b57e 1-383
+app/src/main/res/layout/activity_mock_devices.xml
+  s_f9c92146537111::t_bb6966e267034b 1-26
+app/src/main/res/layout/dialog_tips.xml
+  s_f9c92146537111::t_4682f43b1776c9 1-79
+CLAUDE.md
+  s_706405007d01ba::t_6e438da0e11536 1-220
+annotation/build.gradle
+  s_706405007d01ba::t_1665cdcb7e898b 7-10
+app/build.gradle
+  s_706405007d01ba::t_eefdef49cb2e00 4-5,21,56,61,65-66,69-70,72-73,75-77,79-82,96-97,118-121
+app/src/main/java/com/carlos/home/HomeActivity.java
+  s_f9c92146537111::t_e35e9669fda87b 211,266-281
+app/src/main/res/drawable/ic_title_menu.xml
+  s_f9c92146537111::t_ef85a2ac074e35 1-10
+app/src/main/res/drawable/icon_back.xml
+  s_f9c92146537111::t_99c5ca7fc11299 1-10
+app/src/main/res/layout/main_fun_btn.xml
+  s_f9c92146537111::t_6eca18be4ca86c 1-32
+app/src/main/res/values/dimens.xml
+  s_f9c92146537111::t_74df8e8fc27bf8 23
+app/src/main/res/values/strings.xml
+  s_f9c92146537111::t_b25dd529a444aa 3-51,53-68,70,72-90
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "def75516392ca729ce1dbfea7af397cb42e66c1d",
+  "prompts": {},
+  "sessions": {
+    "s_706405007d01ba": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "dde6f4bc-9a51-48df-a5d4-8429e4ffdc72",
+        "model": "unknown"
+      },
+      "human_author": "y00798287 <yangwei1@huawei.com>"
+    },
+    "s_f9c92146537111": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a28ff8b5-04ca-437a-970f-970b88971025",
+        "model": "maas-glm-5-2-260617"
+      },
+      "human_author": "y00798287 <yangwei1@huawei.com>"
+    }
+  }
+}
