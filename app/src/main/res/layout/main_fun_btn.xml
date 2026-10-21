@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.carlos.common.widget.MainFunBtn xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_fun_btn"
+    android:layout_width="120dp"
+    android:layout_height="120dp"
+    android:layout_gravity="bottom|center_horizontal"
+    android:layout_marginBottom="40dp"
+    android:background="#3303a9f4"
+    android:clickable="true"
+    android:focusable="true">
+
+    <TextView
+        android:id="@+id/tv_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="+"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/tv_buttom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_top"
+        android:layout_centerHorizontal="true"
+        android:text="添加"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+</com.carlos.common.widget.MainFunBtn>

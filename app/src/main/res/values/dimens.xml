@@ -20,4 +20,5 @@
 
     <dimen name="map_menu_size">38dp</dimen>
     <dimen name="menu_icon_m">50dp</dimen>
+    <dimen name="desktop_divider">2dp</dimen>
 </resources>

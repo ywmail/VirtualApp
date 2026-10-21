@@ -1,8 +1,8 @@
 apply plugin: 'com.android.application'
 
 android {
-    //compileSdkVersion 29
-    //buildToolsVersion '29.0.1'
+    compileSdk 36
+    namespace "com.carlos"
 
     signingConfigs {
         release {
@@ -18,16 +18,11 @@ android {
             keyPassword rootProject.ext.signing_keyPassword
         }
     }
-    
+
     defaultConfig {
         applicationId rootProject.ext.PACKAGE_NAME
-        //minSdkVersion 15
-        //targetSdkVersion 32
         versionCode rootProject.ext.VA_VERSION_CODE
         versionName rootProject.ext.VA_VERSION
-
-        //renderscriptTargetApi 19
-        //renderscriptSupportModeEnabled true
 
         multiDexEnabled true
         vectorDrawables.useSupportLibrary = true
@@ -35,16 +30,11 @@ android {
         buildConfigField 'String', 'PACKAGE_NAME', '"' + rootProject.ext.PACKAGE_NAME + '"'
         buildConfigField 'String', 'EXT_PACKAGE_NAME', '"' + rootProject.ext.EXT_PACKAGE_NAME + '"'
         buildConfigField 'String', 'VA_VERSION_NAME', '"V' + rootProject.ext.VA_VERSION + '"'
-        //buildConfigField 'String', 'PACKAGE_NAME_ARM64', '"' + rootProject.ext.EXT_PACKAGE_NAME + '"'
         manifestPlaceholders = [
                 PACKAGE_NAME_32BIT: rootProject.ext.PACKAGE_NAME,
                 PACKAGE_NAME_ARM64: rootProject.ext.EXT_PACKAGE_NAME,
                 VA_ACCESS_PERMISSION_NAME: rootProject.ext.VA_ACCESS_PERMISSION_NAME,
         ]
-        //ndk {
-            //abiFilters rootProject.ext.VA_VERSION_64?"arm64-v8a":"armeabi-v7a"//"arm64-v8a","armeabi", "armeabi-v7a", "x86"  //兼容Android 10
-            //abiFilters "armeabi-v7a", "x86" , "x86_64"
-        //}
 
         if (rootProject.ext.VA_MAIN_PACKAGE_32BIT) {
             ndk.abiFilters = ["armeabi-v7a"]
@@ -61,43 +51,35 @@ android {
 
     buildTypes {
         debug {
-            //debuggable true
             jniDebuggable false
             minifyEnabled false
-            zipAlignEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), '../security/proguard-rules.pro' //'proguard-rules.pro', 'virtualapp-proguard-rules.pro','../security/proguard-rules.pro' //
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), '../security/proguard-rules.pro'
         }
         release {
             jniDebuggable true
             minifyEnabled true
-            zipAlignEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), '../security/proguard-rules.pro' //'proguard-rules.pro', 'virtualapp-proguard-rules.pro','../security/proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), '../security/proguard-rules.pro'
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
-    lintOptions {
-        abortOnError false  // 如果发现 lint 错误，不中止编译
-        checkReleaseBuilds false  // 禁用发布版本的 lint 检查
-        xmlReport true  // 生成 XML 格式的报告
-        htmlReport true  // 生成 HTML 格式的报告
+    buildFeatures {
+        buildConfig true
     }
-    lintOptions {
+
+    lint {
         abortOnError false
+        checkReleaseBuilds false
+        xmlReport true
+        htmlReport true
     }
-    packagingOptions {
-        exclude 'META-INF/DEPENDENCIES'
-        exclude 'META-INF/NOTICE'
-        exclude 'META-INF/LICENSE'
-        exclude 'META-INF/LICENSE.txt'
-        exclude 'META-INF/NOTICE.txt'
-
-        // 解决资源冲突
-       // exclude 'META-INF/metadata.jvm.kotlin_module'
-        //exclude 'META-INF/*.kotlin_module' // 也可以尝试排除所有相关的kotlin_module文件
+    packaging {
+        resources {
+            excludes += ['META-INF/DEPENDENCIES', 'META-INF/NOTICE', 'META-INF/NOTICE.md', 'META-INF/LICENSE', 'META-INF/LICENSE.txt', 'META-INF/LICENSE.md', 'META-INF/NOTICE.txt']
+        }
     }
 }
 
@@ -111,7 +93,8 @@ repositories {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation(name:'lib-release', ext:'aar')
+//    implementation(name:'lib-release', ext:'aar')
+    implementation project(':commonSdk')
     //Android Lib
     implementation 'androidx.percentlayout:percentlayout:1.0.0'
     implementation 'androidx.appcompat:appcompat:1.2.0'
@@ -132,10 +115,10 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
 
     //Retrofit
-    implementation "com.squareup.retrofit2:retrofit:2.9.0"//导入Retrofit
-    implementation "com.squareup.retrofit2:converter-gson:2.9.0"//转换器，请求结果转换成VO
-    implementation "com.squareup.retrofit2:converter-scalars:2.9.0"//转换器，请求结果转换成原始json字符串
-    implementation "com.squareup.retrofit2:adapter-rxjava2:2.9.0"//配合Rxjava使用，将retofit的call映射成Observable
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+    implementation "com.squareup.retrofit2:converter-scalars:2.9.0"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:2.9.0"
 
     /*okhttp 网络 请求封装包*/
     implementation 'com.squareup.okhttp3:okhttp:3.4.1'

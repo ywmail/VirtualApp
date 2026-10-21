@@ -208,7 +208,7 @@ public class HomeActivity extends VActivity implements HomeContract.HomeView, La
     }
 
     private void initMenu() {
-        mPopupMenu = new PopupMenu(new ContextThemeWrapper(this, R.style.Theme_AppCompat_Light), mMenuView);
+        mPopupMenu = new PopupMenu(new ContextThemeWrapper(this, androidx.appcompat.R.style.Theme_AppCompat_Light), mMenuView);
         Menu menu = mPopupMenu.getMenu();
         setIconEnable(menu, true);
 
@@ -263,7 +263,22 @@ public class HomeActivity extends VActivity implements HomeContract.HomeView, La
 
         noApplicationList = findViewById(R.id.no_application_list);
         findViewById(R.id.main_fun_btn).setOnClickListener((view)->{
-            ListAppActivity.gotoListApp(this,ListAppActivity.ACTION_CLONE_APP);
+            PopupMenu funMenu = new PopupMenu(new ContextThemeWrapper(this, androidx.appcompat.R.style.Theme_AppCompat_Light), view);
+            Menu funMenuItems = funMenu.getMenu();
+            setIconEnable(funMenuItems, true);
+            funMenuItems.add("克隆应用").setIcon(R.drawable.ic_application).setOnMenuItemClickListener(item -> {
+                ListAppActivity.gotoListApp(this, ListAppActivity.ACTION_CLONE_APP);
+                return true;
+            });
+            funMenuItems.add("从文件安装APK").setIcon(R.drawable.ic_application).setOnMenuItemClickListener(item -> {
+                Intent chooseFile = new Intent(Intent.ACTION_GET_CONTENT);
+                chooseFile.setType("application/vnd.android.package-archive");
+                chooseFile.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
+                Intent chooser = Intent.createChooser(chooseFile, "选择要安装的APK");
+                startActivityForResult(chooser, CHOOSE_FILE_CODE);
+                return true;
+            });
+            funMenu.show();
         });
         tipsNotifiction = findViewById(R.id.tipsNotifiction);
         if (isUpgrade()) {
