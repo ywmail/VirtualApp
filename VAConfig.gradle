@@ -14,8 +14,8 @@ ext {
     VA_VERSION_CODE             = 23202
     VA_FULL_EXT                 = true //如果这个是true ,那么将32里面的一些代码都会打包到插件apk 里面来
 
-    signing_storeFile           = "${rootDir}/security/scorpion.jks"
-    signing_storePassword       = "scorpion123"
-    signing_keyAlias            = "scorpion"
-    signing_keyPassword         = "scorpion123"
+    signing_storeFile           = System.getenv('SIGNING_STORE_FILE') ?: "${rootDir}/security/scorpion.jks"
+    signing_storePassword       = System.getenv('SIGNING_STORE_PASSWORD') ?: "scorpion123"
+    signing_keyAlias            = System.getenv('SIGNING_KEY_ALIAS') ?: "scorpion"
+    signing_keyPassword         = System.getenv('SIGNING_KEY_PASSWORD') ?: "scorpion123"
 }

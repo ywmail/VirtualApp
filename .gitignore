@@ -30,6 +30,9 @@ local.properties
 *.class
 *.so
 *.jar
+# commonSdk 预编译 native 库和第三方 jar 需要入库
+!commonSdk/src/main/jniLibs/**/*.so
+!commonSdk/libs/*.jar
 bin/
 gen/
 out/
