@@ -29,6 +29,8 @@ local.properties
 *.dex
 *.class
 *.so
+# commonSdk 的预编译 native 库需要入库
+!commonSdk/src/main/jniLibs/**/*.so
 bin/
 gen/
 out/
