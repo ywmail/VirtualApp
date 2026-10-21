@@ -1,0 +1,99 @@
+commonSdk/src/main/AndroidManifest.xml
+  s_706405007d01ba::t_543bf740299671 1-4965
+commonSdk/src/main/cpp/CMakeLists.txt
+  s_706405007d01ba::t_0217278b0b0f5c 1-43
+commonSdk/src/main/cpp/art/art_compiler_options.cpp
+  s_706405007d01ba::t_ece76afc7a55e5 1-25
+commonSdk/src/main/cpp/art/art_method.cpp
+  s_706405007d01ba::t_4adabc45c55147 1-197
+commonSdk/src/main/cpp/casts/cast_art_method.cpp
+  s_706405007d01ba::t_48368040311856 1-290
+commonSdk/src/main/cpp/casts/cast_compiler_options.cpp
+  s_706405007d01ba::t_cc876b92f90668 1-35
+commonSdk/src/main/cpp/includes/arch.h
+  s_706405007d01ba::t_3e5ea82759a5ec 1-48
+commonSdk/src/main/cpp/includes/arch_base.h
+  s_706405007d01ba::t_c64e4c365eb1e4 1-34
+commonSdk/src/main/cpp/includes/art_compiler_options.h
+  s_706405007d01ba::t_ce691d4d0de223 1-28
+commonSdk/src/main/cpp/includes/art_jit.h
+  s_706405007d01ba::t_22791dae90ce3d 1-28
+commonSdk/src/main/cpp/includes/art_method.h
+  s_706405007d01ba::t_ee21a56c725abb 1-87
+commonSdk/src/main/cpp/includes/art_runtime.h
+  s_706405007d01ba::t_9b82614682d763 1-18
+commonSdk/src/main/cpp/includes/cast.h
+  s_706405007d01ba::t_10b401b0d47a6a 1-123
+commonSdk/src/main/cpp/includes/cast_art_method.h
+  s_706405007d01ba::t_7145e12b5cd8a0 1-39
+commonSdk/src/main/cpp/includes/cast_compiler_options.h
+  s_706405007d01ba::t_d3ade020537a8e 1-24
+commonSdk/src/main/cpp/includes/dlfcn_nougat.h
+  s_706405007d01ba::t_e1974dee9fdaf7 1-17
+commonSdk/src/main/cpp/includes/elf_util.h
+  s_706405007d01ba::t_b02fa4ca2232aa 1-72
+commonSdk/src/main/cpp/includes/hide_api.h
+  s_706405007d01ba::t_0bc18e25e19d89 1-61
+commonSdk/src/main/cpp/includes/inst.h
+  s_706405007d01ba::t_e4950dc5e53352 1-120
+commonSdk/src/main/cpp/includes/log.h
+  s_706405007d01ba::t_c963f3e8255d76 1-16
+commonSdk/src/main/cpp/includes/native_hook.h
+  s_706405007d01ba::t_840c71a446a4e0 1-19
+commonSdk/src/main/cpp/includes/never_call.h
+  s_706405007d01ba::t_b7445712527c75 1-14
+commonSdk/src/main/cpp/includes/offset.h
+  s_706405007d01ba::t_8d73825c27a637 1-28
+commonSdk/src/main/cpp/includes/sandhook.h
+  s_706405007d01ba::t_8798f0ce479256 1-16
+commonSdk/src/main/cpp/includes/trampoline.h
+  s_706405007d01ba::t_14e7f9603f618a 1-231
+commonSdk/src/main/cpp/includes/trampoline_manager.h
+  s_706405007d01ba::t_7fa7d31e61426a 1-115
+commonSdk/src/main/cpp/includes/utils.h
+  s_706405007d01ba::t_8276f72be448f5 1-41
+commonSdk/src/main/cpp/inst/insts_arm32.cpp
+  s_706405007d01ba::t_a1480d6d95eb05 1-134
+commonSdk/src/main/cpp/inst/insts_arm64.cpp
+  s_706405007d01ba::t_60f3f706f6368f 1-74
+commonSdk/src/main/cpp/nativehook/native_hook.cpp
+  s_706405007d01ba::t_2b4c9fbd9baed0 1-96
+commonSdk/src/main/cpp/sandhook.cpp
+  s_706405007d01ba::t_ed1dd195cce0c3 1-586
+commonSdk/src/main/cpp/trampoline/arch/arm32.S
+  s_706405007d01ba::t_1ec597097bfd46 1-124
+commonSdk/src/main/cpp/trampoline/arch/arm64.S
+  s_706405007d01ba::t_8d1f0fae58718c 1-139
+commonSdk/src/main/cpp/trampoline/trampoline.cpp
+  s_706405007d01ba::t_d759c72ad2ba76 1-144
+commonSdk/src/main/cpp/trampoline/trampoline_manager.cpp
+  s_706405007d01ba::t_33b4f69a132cc5 1-324
+commonSdk/src/main/cpp/utils/dlfcn_nougat.cpp
+  s_706405007d01ba::t_a0103263bc6ca9 1-297
+commonSdk/src/main/cpp/utils/elf_util.cpp
+  s_706405007d01ba::t_f5f26299a9616a 1-171
+commonSdk/src/main/cpp/utils/hide_api.cpp
+  s_706405007d01ba::t_2ebdd481249182 1-444
+commonSdk/src/main/cpp/utils/lock.h
+  s_706405007d01ba::t_89de3bff0bddd1 1-30
+commonSdk/src/main/cpp/utils/offset.cpp
+  s_706405007d01ba::t_7e86c81e47e22e 1-59
+commonSdk/src/main/cpp/utils/utils.cpp
+  s_706405007d01ba::t_2c7af5fa19ae2e 1-143
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "6415c8a75992286f6f7f4de3151b4212f0163243",
+  "prompts": {},
+  "sessions": {
+    "s_706405007d01ba": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "dde6f4bc-9a51-48df-a5d4-8429e4ffdc72",
+        "model": "maas-glm-5-2-260617"
+      },
+      "human_author": "y00798287 <yangwei1@huawei.com>"
+    }
+  }
+}
