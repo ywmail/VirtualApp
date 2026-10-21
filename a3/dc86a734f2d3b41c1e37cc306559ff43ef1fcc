@@ -1,0 +1,451 @@
+commonSdk/libs/AMap_Location_V5.3.1_20210331.jar
+  s_706405007d01ba::t_f503dfff52a4a4 1-3
+commonSdk/libs/AMap_Search_V7.9.0_20210331.jar
+  s_706405007d01ba::t_340efe3222d1ca 1-3
+commonSdk/libs/Amap_2DMap_V6.0.0_20191106.jar
+  s_706405007d01ba::t_1283d236240bf5 1-3
+commonSdk/libs/rxandroid.jar
+  s_706405007d01ba::t_b6d46c1e3ff52c 1-3
+commonSdk/libs/rxjava.jar
+  s_706405007d01ba::t_da654ef755e07c 1-3
+commonSdk/src/main/AndroidManifest.xml
+  s_706405007d01ba::t_19502fc28bc8e9 1-4965
+commonSdk/src/main/cpp/CMakeLists.txt
+  s_706405007d01ba::t_c767a73920576e 1-43
+commonSdk/src/main/cpp/art/art_compiler_options.cpp
+  s_706405007d01ba::t_d17c11de49bbf9 1-25
+commonSdk/src/main/cpp/art/art_method.cpp
+  s_706405007d01ba::t_c5ddf85378a6b5 1-197
+commonSdk/src/main/cpp/casts/cast_art_method.cpp
+  s_706405007d01ba::t_3bdd3fb05d67a7 1-290
+commonSdk/src/main/cpp/casts/cast_compiler_options.cpp
+  s_706405007d01ba::t_e653de4bbdb443 1-35
+commonSdk/src/main/cpp/includes/arch.h
+  s_706405007d01ba::t_48eee657c08123 1-48
+commonSdk/src/main/cpp/includes/arch_base.h
+  s_706405007d01ba::t_0bf6641a822f3a 1-34
+commonSdk/src/main/cpp/includes/art_compiler_options.h
+  s_706405007d01ba::t_4cddfb0379995c 1-28
+commonSdk/src/main/cpp/includes/art_jit.h
+  s_706405007d01ba::t_c885ea1c73d0df 1-28
+commonSdk/src/main/cpp/includes/art_method.h
+  s_706405007d01ba::t_74162492ce4969 1-87
+commonSdk/src/main/cpp/includes/art_runtime.h
+  s_706405007d01ba::t_3ff91d7d656eb2 1-18
+commonSdk/src/main/cpp/includes/cast.h
+  s_706405007d01ba::t_163496944c6632 1-123
+commonSdk/src/main/cpp/includes/cast_art_method.h
+  s_706405007d01ba::t_caac1a6e809977 1-39
+commonSdk/src/main/cpp/includes/cast_compiler_options.h
+  s_706405007d01ba::t_ab7615c9c1459a 1-24
+commonSdk/src/main/cpp/includes/dlfcn_nougat.h
+  s_706405007d01ba::t_597fb2c7f454af 1-17
+commonSdk/src/main/cpp/includes/elf_util.h
+  s_706405007d01ba::t_eedf4380c6a0b7 1-72
+commonSdk/src/main/cpp/includes/hide_api.h
+  s_706405007d01ba::t_259c544c8e7d9d 1-61
+commonSdk/src/main/cpp/includes/inst.h
+  s_706405007d01ba::t_3c2e12f4e5a028 1-120
+commonSdk/src/main/cpp/includes/log.h
+  s_706405007d01ba::t_a389329b3c487c 1-16
+commonSdk/src/main/cpp/includes/native_hook.h
+  s_706405007d01ba::t_a61625f8abc3c4 1-19
+commonSdk/src/main/cpp/includes/never_call.h
+  s_706405007d01ba::t_f7921e4a1e53c2 1-14
+commonSdk/src/main/cpp/includes/offset.h
+  s_706405007d01ba::t_396f2377d59ca6 1-28
+commonSdk/src/main/cpp/includes/sandhook.h
+  s_706405007d01ba::t_3f76447962e1e4 1-16
+commonSdk/src/main/cpp/includes/trampoline.h
+  s_706405007d01ba::t_077e4aecbd1ee6 1-231
+commonSdk/src/main/cpp/includes/trampoline_manager.h
+  s_706405007d01ba::t_c866a786c6e763 1-115
+commonSdk/src/main/cpp/includes/utils.h
+  s_706405007d01ba::t_71d6e683b1054c 1-41
+commonSdk/src/main/cpp/inst/insts_arm32.cpp
+  s_706405007d01ba::t_a623b25eb33ae7 1-134
+commonSdk/src/main/cpp/inst/insts_arm64.cpp
+  s_706405007d01ba::t_01abcdb69e008e 1-74
+commonSdk/src/main/cpp/nativehook/native_hook.cpp
+  s_706405007d01ba::t_991d407cefe291 1-96
+commonSdk/src/main/cpp/sandhook.cpp
+  s_706405007d01ba::t_815807f3eaa284 1-586
+commonSdk/src/main/cpp/trampoline/arch/arm32.S
+  s_706405007d01ba::t_a97bf6b09d3f89 1-124
+commonSdk/src/main/cpp/trampoline/arch/arm64.S
+  s_706405007d01ba::t_928f69296ce61c 1-139
+commonSdk/src/main/cpp/trampoline/trampoline.cpp
+  s_706405007d01ba::t_b2e3829b6ffe94 1-144
+commonSdk/src/main/cpp/trampoline/trampoline_manager.cpp
+  s_706405007d01ba::t_bb6a984cef6bba 1-324
+commonSdk/src/main/cpp/utils/dlfcn_nougat.cpp
+  s_706405007d01ba::t_8646f91dc7e2d7 1-297
+commonSdk/src/main/cpp/utils/elf_util.cpp
+  s_706405007d01ba::t_45594a3c493338 1-171
+commonSdk/src/main/cpp/utils/hide_api.cpp
+  s_706405007d01ba::t_c89a8f51095b64 1-444
+commonSdk/src/main/cpp/utils/lock.h
+  s_706405007d01ba::t_e226884f9c47a2 1-30
+commonSdk/src/main/cpp/utils/offset.cpp
+  s_706405007d01ba::t_d6078e2adcf690 1-59
+commonSdk/src/main/cpp/utils/utils.cpp
+  s_706405007d01ba::t_c34563d877b5b6 1-143
+commonSdk/src/main/jniLibs/arm64-v8a/libcommon-va.so
+  s_706405007d01ba::t_52c6d4093fdc03 1-3
+commonSdk/src/main/jniLibs/arm64-v8a/libcommon.so
+  s_706405007d01ba::t_74266be3fe4efc 1-3
+commonSdk/src/main/jniLibs/arm64-v8a/libcontroller.so
+  s_706405007d01ba::t_03f6d7f2b7f6a1 1-3
+commonSdk/src/main/jniLibs/arm64-v8a/libhyxd_64.so
+  s_706405007d01ba::t_ce82043e1f5795 1-3
+commonSdk/src/main/jniLibs/arm64-v8a/libshadowhook.so
+  s_706405007d01ba::t_d69b4a5ebae4f2 1-3
+commonSdk/src/main/jniLibs/arm64-v8a/libvbox.so
+  s_706405007d01ba::t_e48e140dff44cc 1-3
+commonSdk/src/main/jniLibs/arm64-v8a/libvbox_ext.so
+  s_706405007d01ba::t_23f494466bb1de 1-3
+commonSdk/src/main/jniLibs/armeabi-v7a/libcommon-va.so
+  s_706405007d01ba::t_425c83e95a2545 1-3
+commonSdk/src/main/jniLibs/armeabi-v7a/libcommon.so
+  s_706405007d01ba::t_c6f2dc07d19bfb 1-3
+commonSdk/src/main/jniLibs/armeabi-v7a/libcontroller.so
+  s_706405007d01ba::t_de063a4f6e3478 1-3
+commonSdk/src/main/jniLibs/armeabi-v7a/libhyxd.so
+  s_706405007d01ba::t_290a1004a4fd23 1-3
+commonSdk/src/main/jniLibs/armeabi-v7a/libshadowhook.so
+  s_706405007d01ba::t_ce2d085f7faf3b 1-3
+commonSdk/src/main/jniLibs/armeabi-v7a/libvbox.so
+  s_706405007d01ba::t_eb976daab2749a 1-3
+commonSdk/src/main/jniLibs/armeabi-v7a/libvbox_ext.so
+  s_706405007d01ba::t_75d1bfba8afe9e 1-3
+commonSdk/src/main/res/anim/dialog_enter.xml
+  s_706405007d01ba::t_d572f730d3cf20 1-5
+commonSdk/src/main/res/anim/dialog_out.xml
+  s_706405007d01ba::t_8cec13578ab6b1 1-5
+commonSdk/src/main/res/anim/glide_anim.xml
+  s_706405007d01ba::t_f10af5ad0f8d30 1-13
+commonSdk/src/main/res/anim/ucrop_loader_circle_path.xml
+  s_706405007d01ba::t_7347f23771b8c6 1-20
+commonSdk/src/main/res/anim/ucrop_loader_circle_scale.xml
+  s_706405007d01ba::t_0f54f388a868d5 1-28
+commonSdk/src/main/res/color/text_color.xml
+  s_706405007d01ba::t_4fe69b50e72682 1-6
+commonSdk/src/main/res/color/ucrop_scale_text_view_selector.xml
+  s_706405007d01ba::t_afec25c7905358 1-5
+commonSdk/src/main/res/drawable-anydpi-v21/ic_check_white_24dp.xml
+  s_706405007d01ba::t_0d69b524fce125 1-10
+commonSdk/src/main/res/drawable-anydpi-v21/ic_clear_white_24dp.xml
+  s_706405007d01ba::t_17096f3715e4b7 1-10
+commonSdk/src/main/res/drawable-anydpi-v21/ic_error_outline_white_24dp.xml
+  s_706405007d01ba::t_44b903d0b00570 1-10
+commonSdk/src/main/res/drawable-anydpi-v21/ic_info_outline_white_24dp.xml
+  s_706405007d01ba::t_2f4bf3aad1912e 1-10
+commonSdk/src/main/res/drawable/bg_btn_clicked.xml
+  s_706405007d01ba::t_517cb3c0077814 1-6
+commonSdk/src/main/res/drawable/bg_btn_default.xml
+  s_706405007d01ba::t_126beacc3bc5ed 1-6
+commonSdk/src/main/res/drawable/bg_progressbar.xml
+  s_706405007d01ba::t_c8a76d24b8979b 1-21
+commonSdk/src/main/res/drawable/blue_circle.xml
+  s_706405007d01ba::t_4607fcea75f595 1-9
+commonSdk/src/main/res/drawable/btn_back_selector.xml
+  s_706405007d01ba::t_bbb3b4dda62dea 1-21
+commonSdk/src/main/res/drawable/btn_foreground_selector.xml
+  s_706405007d01ba::t_24b6e7fe857a62 1-21
+commonSdk/src/main/res/drawable/btn_green_shape.xml
+  s_706405007d01ba::t_ba9b29247ec4cf 1-5
+commonSdk/src/main/res/drawable/btn_login.xml
+  s_706405007d01ba::t_c73c1bf60ca52a 1-37
+commonSdk/src/main/res/drawable/btn_login_normal.xml
+  s_706405007d01ba::t_8a3ff5953f8847 1-22
+commonSdk/src/main/res/drawable/btn_login_pressed.xml
+  s_706405007d01ba::t_d72bdc64f5ff07 1-22
+commonSdk/src/main/res/drawable/btn_tv.xml
+  s_706405007d01ba::t_3bcde962656e8b 1-12
+commonSdk/src/main/res/drawable/button_fillet_normal.xml
+  s_706405007d01ba::t_9dd160d41c263e 1-4
+commonSdk/src/main/res/drawable/button_fillet_pressed.xml
+  s_706405007d01ba::t_3517aa2b1d5a77 1-4
+commonSdk/src/main/res/drawable/buttonstyle.xml
+  s_706405007d01ba::t_cd5b0b67512ae6 1-19
+commonSdk/src/main/res/drawable/camera.xml
+  s_706405007d01ba::t_9418a2c382a818 1-7
+commonSdk/src/main/res/drawable/dialog_config_bg.xml
+  s_706405007d01ba::t_f98db5a0dc3c5c 1-7
+commonSdk/src/main/res/drawable/folder_bg.xml
+  s_706405007d01ba::t_d1778a1e6b28f1 1-27
+commonSdk/src/main/res/drawable/gray_rect.xml
+  s_706405007d01ba::t_db0e30f4e8c044 1-9
+commonSdk/src/main/res/drawable/ic_chevron_left.xml
+  s_706405007d01ba::t_f5e9ad4d61f118 1-5
+commonSdk/src/main/res/drawable/ic_image.xml
+  s_706405007d01ba::t_479172856f872b 1-12
+commonSdk/src/main/res/drawable/ic_image_select.xml
+  s_706405007d01ba::t_54a0cb3fb4327a 1-12
+commonSdk/src/main/res/drawable/ic_image_un_select.xml
+  s_706405007d01ba::t_464fcd9fb0e5b1 1-12
+commonSdk/src/main/res/drawable/ic_img_load_fail.xml
+  s_706405007d01ba::t_abddf9d9093938 1-12
+commonSdk/src/main/res/drawable/ic_search_white_24dp.xml
+  s_706405007d01ba::t_76686047d92385 1-9
+commonSdk/src/main/res/drawable/img_avatar.xml
+  s_706405007d01ba::t_4c77820a6bc5a3 1-15
+commonSdk/src/main/res/drawable/layout_corner.xml
+  s_706405007d01ba::t_d48d8fa43b4c3e 1-7
+commonSdk/src/main/res/drawable/mirror_btn_bg.xml
+  s_706405007d01ba::t_e521e4e3d1d9d5 1-15
+commonSdk/src/main/res/drawable/my_switch_thumb.xml
+  s_706405007d01ba::t_c6b40a761c8a89 1-5
+commonSdk/src/main/res/drawable/my_switch_track.xml
+  s_706405007d01ba::t_a08cf5249c0152 1-4
+commonSdk/src/main/res/drawable/selector_map_input.xml
+  s_706405007d01ba::t_5b0a86f8448725 1-6
+commonSdk/src/main/res/drawable/selector_map_loc.xml
+  s_706405007d01ba::t_183747aae9c135 1-6
+commonSdk/src/main/res/drawable/selector_mock.xml
+  s_706405007d01ba::t_bc27a345a8fea0 1-8
+commonSdk/src/main/res/drawable/selector_text_green.xml
+  s_706405007d01ba::t_fdb12a08765bc5 1-6
+commonSdk/src/main/res/drawable/shape_sheet_dialog_bg.xml
+  s_706405007d01ba::t_7a285c155fff61 1-7
+commonSdk/src/main/res/drawable/switch_off_thumb.xml
+  s_706405007d01ba::t_647567312d444a 1-8
+commonSdk/src/main/res/drawable/switch_off_track.xml
+  s_706405007d01ba::t_df84363f55485e 1-9
+commonSdk/src/main/res/drawable/switch_on_thumb.xml
+  s_706405007d01ba::t_ab140645cbc341 1-8
+commonSdk/src/main/res/drawable/switch_on_track.xml
+  s_706405007d01ba::t_5a3894a88c5565 1-9
+commonSdk/src/main/res/drawable/take_photo_normal.xml
+  s_706405007d01ba::t_5d9eba59aec45a 1-12
+commonSdk/src/main/res/drawable/take_photo_press.xml
+  s_706405007d01ba::t_4aa6f39236bc36 1-12
+commonSdk/src/main/res/drawable/toolbar_back.xml
+  s_706405007d01ba::t_db5700bc945391 1-11
+commonSdk/src/main/res/drawable/tv_button.xml
+  s_706405007d01ba::t_e40cea4d358378 1-5
+commonSdk/src/main/res/drawable/txt_add_bg_pressed.xml
+  s_706405007d01ba::t_fb8967b3eebcef 1-10
+commonSdk/src/main/res/drawable/ucrop_shadow_upside.xml
+  s_706405007d01ba::t_4d939203f7c87d 1-7
+commonSdk/src/main/res/drawable/ucrop_vector_ic_crop.xml
+  s_706405007d01ba::t_7b86998b6514f9 1-9
+commonSdk/src/main/res/drawable/ucrop_vector_loader.xml
+  s_706405007d01ba::t_0ba69fc28342f8 1-24
+commonSdk/src/main/res/drawable/ucrop_vector_loader_animated.xml
+  s_706405007d01ba::t_1c1a8d289830d6 1-11
+commonSdk/src/main/res/layout/activity_forget.xml
+  s_706405007d01ba::t_0b3331ceaacd16 1-143
+commonSdk/src/main/res/layout/activity_fragment_forget_password.xml
+  s_706405007d01ba::t_b1b82ecd25aa42 1-110
+commonSdk/src/main/res/layout/activity_fragment_login.xml
+  s_706405007d01ba::t_e6f4f78cb06929 1-201
+commonSdk/src/main/res/layout/activity_fragment_recharge.xml
+  s_706405007d01ba::t_69d985075392a3 1-115
+commonSdk/src/main/res/layout/activity_fragment_register.xml
+  s_706405007d01ba::t_e88b13279572a8 1-159
+commonSdk/src/main/res/layout/activity_image_select.xml
+  s_706405007d01ba::t_76c71f2dff150b 1-185
+commonSdk/src/main/res/layout/activity_image_select2.xml
+  s_706405007d01ba::t_6d7af4600cea4e 1-181
+commonSdk/src/main/res/layout/activity_login.xml
+  s_706405007d01ba::t_60d5788b3b72bd 1-21
+commonSdk/src/main/res/layout/activity_mirror.xml
+  s_706405007d01ba::t_03c5fc57b3f6ca 1-136
+commonSdk/src/main/res/layout/activity_mirror_item_menu.xml
+  s_706405007d01ba::t_ca50e4c5d7f2cd 1-70
+commonSdk/src/main/res/layout/activity_mirror_item_menu_btn2.xml
+  s_706405007d01ba::t_790a4feddb10f0 1-77
+commonSdk/src/main/res/layout/activity_mock_device.xml
+  s_706405007d01ba::t_f667fc2662c0e3 1-436
+commonSdk/src/main/res/layout/activity_mock_location.xml
+  s_706405007d01ba::t_bfa54b877c3e69 1-257
+commonSdk/src/main/res/layout/activity_preview.xml
+  s_706405007d01ba::t_23d96874cdfe20 1-112
+commonSdk/src/main/res/layout/activity_recharge.xml
+  s_706405007d01ba::t_fe05b82f2adf06 1-180
+commonSdk/src/main/res/layout/activity_rv_preview.xml
+  s_706405007d01ba::t_e3cf80ca2de02a 1-119
+commonSdk/src/main/res/layout/activity_setting.xml
+  s_706405007d01ba::t_c1ed4c557f8e38 1-233
+commonSdk/src/main/res/layout/activity_web_view.xml
+  s_706405007d01ba::t_d4aee7f1cf3eb8 1-18
+commonSdk/src/main/res/layout/activity_xapk_install.xml
+  s_706405007d01ba::t_21a6ac2aa38068 1-21
+commonSdk/src/main/res/layout/adapter_camera_item.xml
+  s_706405007d01ba::t_bfdecb5cbe0992 1-14
+commonSdk/src/main/res/layout/adapter_folder.xml
+  s_706405007d01ba::t_1011ba13a6cc90 1-70
+commonSdk/src/main/res/layout/adapter_images_item.xml
+  s_706405007d01ba::t_1f2647c40d741b 1-30
+commonSdk/src/main/res/layout/app_not_authorized.xml
+  s_706405007d01ba::t_707dff519779f5 1-56
+commonSdk/src/main/res/layout/app_start.xml
+  s_706405007d01ba::t_2c6e06a6211b0a 1-43
+commonSdk/src/main/res/layout/bootm_preview_item.xml
+  s_706405007d01ba::t_0f3a3d72ec0a89 1-19
+commonSdk/src/main/res/layout/bsd_folder_dialog.xml
+  s_706405007d01ba::t_b1f5fa4cac00bf 1-13
+commonSdk/src/main/res/layout/choose_account_row.xml
+  s_706405007d01ba::t_b22060cd7e6147 1-26
+commonSdk/src/main/res/layout/choose_account_type.xml
+  s_706405007d01ba::t_582e06803b7ca8 1-19
+commonSdk/src/main/res/layout/choose_type_and_account.xml
+  s_706405007d01ba::t_2950b3ce8f5f5f 1-62
+commonSdk/src/main/res/layout/content_gms_init.xml
+  s_706405007d01ba::t_62e89f8f086fcd 1-48
+commonSdk/src/main/res/layout/content_gms_init_layout.xml
+  s_706405007d01ba::t_78ff72d93ff957 1-48
+commonSdk/src/main/res/layout/content_toolbar.xml
+  s_706405007d01ba::t_158530a18ad0b2 1-26
+commonSdk/src/main/res/layout/custom_notification.xml
+  s_706405007d01ba::t_d448fd6fa8ace7 1-168
+commonSdk/src/main/res/layout/custom_notification_lite.xml
+  s_706405007d01ba::t_e4b89701ff3c25 1-11
+commonSdk/src/main/res/layout/dialog_agreement.xml
+  s_706405007d01ba::t_40089ab505e119 1-105
+commonSdk/src/main/res/layout/dialog_change_loc.xml
+  s_706405007d01ba::t_cbfdd5a0471ff3 1-104
+commonSdk/src/main/res/layout/dialog_change_wifi.xml
+  s_706405007d01ba::t_2978ba708b3aa7 1-102
+commonSdk/src/main/res/layout/dialog_mirror_backup.xml
+  s_706405007d01ba::t_fc715bf12eff18 1-103
+commonSdk/src/main/res/layout/dialog_single_input.xml
+  s_706405007d01ba::t_19a288f452235b 1-94
+commonSdk/src/main/res/layout/dialog_tips.xml
+  s_706405007d01ba::t_a4bb9c42eba2e0 1-96
+commonSdk/src/main/res/layout/download_demo.xml
+  s_706405007d01ba::t_2bcab4a8683c07 1-140
+commonSdk/src/main/res/layout/float_item_check_layout.xml
+  s_706405007d01ba::t_536bdb85a4d5b8 1-30
+commonSdk/src/main/res/layout/float_window_single.xml
+  s_706405007d01ba::t_823297c43caf25 1-24
+commonSdk/src/main/res/layout/float_windows_tab.xml
+  s_706405007d01ba::t_74617856484e16 1-37
+commonSdk/src/main/res/layout/head_top.xml
+  s_706405007d01ba::t_79358f86652da9 1-37
+commonSdk/src/main/res/layout/item_location_app.xml
+  s_706405007d01ba::t_774605beee27cf 1-48
+commonSdk/src/main/res/layout/item_view_pager.xml
+  s_706405007d01ba::t_eb963e880a869b 1-10
+commonSdk/src/main/res/layout/layout_bottom_sheet.xml
+  s_706405007d01ba::t_32f8f4b6c6e989 1-43
+commonSdk/src/main/res/layout/layout_tab.xml
+  s_706405007d01ba::t_056e47cf1ce81b 1-31
+commonSdk/src/main/res/layout/layout_tab_bottom.xml
+  s_706405007d01ba::t_7bcabe0653fbaa 1-45
+commonSdk/src/main/res/layout/layout_tab_left.xml
+  s_706405007d01ba::t_bbf0e593336c7a 1-45
+commonSdk/src/main/res/layout/layout_tab_right.xml
+  s_706405007d01ba::t_0fe9d3c7feda4a 1-45
+commonSdk/src/main/res/layout/layout_tab_segment.xml
+  s_706405007d01ba::t_96e5302903eab2 1-40
+commonSdk/src/main/res/layout/layout_tab_top.xml
+  s_706405007d01ba::t_6e5b4cd1899c68 1-44
+commonSdk/src/main/res/layout/main_fun_btn.xml
+  s_706405007d01ba::t_a77cfe0bf0089d 1-35
+commonSdk/src/main/res/layout/mrfz_tab.xml
+  s_706405007d01ba::t_41a95dc71858f6 1-330
+commonSdk/src/main/res/layout/normal_tab.xml
+  s_706405007d01ba::t_2fb8e27d8c3073 1-66
+commonSdk/src/main/res/layout/preview_item.xml
+  s_706405007d01ba::t_6fa020ea23d46e 1-7
+commonSdk/src/main/res/layout/resolve_list_item.xml
+  s_706405007d01ba::t_28d3a0186c31aa 1-65
+commonSdk/src/main/res/layout/textprogressbar.xml
+  s_706405007d01ba::t_4407b73038734b 1-18
+commonSdk/src/main/res/layout/toast_layout.xml
+  s_706405007d01ba::t_dbe0eae257c8c1 1-25
+commonSdk/src/main/res/layout/ucrop_activity_photobox.xml
+  s_706405007d01ba::t_62df770248c2ff 1-51
+commonSdk/src/main/res/layout/ucrop_aspect_ratio.xml
+  s_706405007d01ba::t_b5df6954f4e1af 1-7
+commonSdk/src/main/res/layout/ucrop_controls.xml
+  s_706405007d01ba::t_db0336b0d1770c 1-78
+commonSdk/src/main/res/layout/ucrop_fragment_photobox.xml
+  s_706405007d01ba::t_684e3eacb05507 1-32
+commonSdk/src/main/res/layout/ucrop_layout_rotate_wheel.xml
+  s_706405007d01ba::t_b428a24bf0d00c 1-49
+commonSdk/src/main/res/layout/ucrop_layout_scale_wheel.xml
+  s_706405007d01ba::t_21425adae2d85b 1-20
+commonSdk/src/main/res/layout/ucrop_view.xml
+  s_706405007d01ba::t_e74fcaa778d9e9 1-20
+commonSdk/src/main/res/menu/map_menu.xml
+  s_706405007d01ba::t_cb42e97a1666cf 1-13
+commonSdk/src/main/res/menu/marktet_map.xml
+  s_706405007d01ba::t_c8c715c463c7f0 1-12
+commonSdk/src/main/res/menu/menu_device.xml
+  s_706405007d01ba::t_19bdb0f332143b 1-12
+commonSdk/src/main/res/menu/ucrop_menu_activity.xml
+  s_706405007d01ba::t_2c7b499ae2dd4a 1-18
+commonSdk/src/main/res/values-de/values-de.xml
+  s_706405007d01ba::t_0c90ce75d364f3 1-6
+commonSdk/src/main/res/values-fr/values-fr.xml
+  s_706405007d01ba::t_d2e488ba456131 1-6
+commonSdk/src/main/res/values-night-v8/values-night-v8.xml
+  s_706405007d01ba::t_8bc40976982c37 1-71
+commonSdk/src/main/res/values-nl/values-nl.xml
+  s_706405007d01ba::t_adaf60204f5c71 1-6
+commonSdk/src/main/res/values-sk/values-sk.xml
+  s_706405007d01ba::t_6f0df11bbb4399 1-6
+commonSdk/src/main/res/values-sw240dp-v13/values-sw240dp-v13.xml
+  s_706405007d01ba::t_1c90760864d9b4 1-503
+commonSdk/src/main/res/values-sw320dp-v13/values-sw320dp-v13.xml
+  s_706405007d01ba::t_79cc15d768e64d 1-503
+commonSdk/src/main/res/values-sw360dp-v13/values-sw360dp-v13.xml
+  s_706405007d01ba::t_ce11a41d9c29a7 1-503
+commonSdk/src/main/res/values-sw384dp-v13/values-sw384dp-v13.xml
+  s_706405007d01ba::t_fcea4ce90360fa 1-503
+commonSdk/src/main/res/values-sw392dp-v13/values-sw392dp-v13.xml
+  s_706405007d01ba::t_8fb964c92ecda5 1-503
+commonSdk/src/main/res/values-sw400dp-v13/values-sw400dp-v13.xml
+  s_706405007d01ba::t_9e438a0bdc9933 1-503
+commonSdk/src/main/res/values-sw411dp-v13/values-sw411dp-v13.xml
+  s_706405007d01ba::t_4a92236cb94e58 1-503
+commonSdk/src/main/res/values-sw420dp-v13/values-sw420dp-v13.xml
+  s_706405007d01ba::t_edd157986dad43 1-503
+commonSdk/src/main/res/values-sw440dp-v13/values-sw440dp-v13.xml
+  s_706405007d01ba::t_98a342568c039f 1-503
+commonSdk/src/main/res/values-sw480dp-v13/values-sw480dp-v13.xml
+  s_706405007d01ba::t_777ace53f35b90 1-503
+commonSdk/src/main/res/values-sw520dp-v13/values-sw520dp-v13.xml
+  s_706405007d01ba::t_e05676df0b9da6 1-503
+commonSdk/src/main/res/values-sw560dp-v13/values-sw560dp-v13.xml
+  s_706405007d01ba::t_1548a6b0c670ee 1-503
+commonSdk/src/main/res/values-sw600dp-v13/values-sw600dp-v13.xml
+  s_706405007d01ba::t_ac1f06a4190ee9 1-503
+commonSdk/src/main/res/values-sw640dp-v13/values-sw640dp-v13.xml
+  s_706405007d01ba::t_bcdfdb2699ca0e 1-503
+commonSdk/src/main/res/values-sw682dp-v13/values-sw682dp-v13.xml
+  s_706405007d01ba::t_4fb727101b1891 1-503
+commonSdk/src/main/res/values-sw768dp-v13/values-sw768dp-v13.xml
+  s_706405007d01ba::t_bcecda9b9fd804 1-503
+commonSdk/src/main/res/values-w820dp-v13/values-w820dp-v13.xml
+  s_706405007d01ba::t_c9c8fa603884fc 1-4
+commonSdk/src/main/res/values-zh-rCN/values-zh-rCN.xml
+  s_706405007d01ba::t_6b4995b86eb601 1-111
+commonSdk/src/main/res/values-zh-rTW/values-zh-rTW.xml
+  s_706405007d01ba::t_86e98c6ca44d3d 1-8
+commonSdk/src/main/res/values-zh/values-zh.xml
+  s_706405007d01ba::t_b26a7504ed478a 1-6
+commonSdk/src/main/res/values/values.xml
+  s_706405007d01ba::t_120af91d1276f2 1-1240
+commonSdk/src/main/res/xml/provider_paths.xml
+  s_706405007d01ba::t_15945e01119685 1-4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a3dc86a734f2d3b41c1e37cc306559ff43ef1fcc",
+  "prompts": {},
+  "sessions": {
+    "s_706405007d01ba": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "dde6f4bc-9a51-48df-a5d4-8429e4ffdc72",
+        "model": "unknown"
+      },
+      "human_author": "y00798287 <yangwei1@huawei.com>"
+    }
+  }
+}
