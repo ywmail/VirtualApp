@@ -1,0 +1,27 @@
+commonSdk/src/main/cpp/sandhook.cpp
+  s_706405007d01ba::t_ed1dd195cce0c3 1-586
+commonSdk/src/main/cpp/art/art_compiler_options.cpp
+  s_706405007d01ba::t_ece76afc7a55e5 1-25
+commonSdk/src/main/cpp/casts/cast_art_method.cpp
+  s_706405007d01ba::t_48368040311856 1-290
+commonSdk/src/main/cpp/art/art_method.cpp
+  s_706405007d01ba::t_4adabc45c55147 1-197
+commonSdk/src/main/cpp/casts/cast_compiler_options.cpp
+  s_706405007d01ba::t_cc876b92f90668 1-35
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a621aeb4939dea85da4a61debfb0da7f8a9b12fe",
+  "prompts": {},
+  "sessions": {
+    "s_706405007d01ba": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "dde6f4bc-9a51-48df-a5d4-8429e4ffdc72",
+        "model": "maas-glm-5-2-260617"
+      },
+      "human_author": "y00798287 <yangwei1@huawei.com>"
+    }
+  }
+}
