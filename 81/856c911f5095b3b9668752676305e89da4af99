@@ -1,0 +1,19 @@
+.gitignore
+  s_706405007d01ba::t_5368af98d48226 32-33
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "81856c911f5095b3b9668752676305e89da4af99",
+  "prompts": {},
+  "sessions": {
+    "s_706405007d01ba": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "dde6f4bc-9a51-48df-a5d4-8429e4ffdc72",
+        "model": "maas-glm-5-2-260617"
+      },
+      "human_author": "y00798287 <yangwei1@huawei.com>"
+    }
+  }
+}
