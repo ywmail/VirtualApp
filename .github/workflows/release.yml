@@ -53,8 +53,18 @@ jobs:
       - name: Create missing proguard rules files
         run: |
           mkdir -p security proguard
-          touch security/proguard-rules.pro
-          touch proguard/proguard-rules.pro
+          cat > security/proguard-rules.pro << 'PROGUARD'
+          -dontwarn javax.ws.rs.**
+          -dontwarn org.springframework.**
+          -dontwarn com.alibaba.fastjson.support.jaxrs.**
+          -dontwarn com.alibaba.fastjson.support.spring.**
+          PROGUARD
+          cat > proguard/proguard-rules.pro << 'PROGUARD'
+          -dontwarn javax.ws.rs.**
+          -dontwarn org.springframework.**
+          -dontwarn com.alibaba.fastjson.support.jaxrs.**
+          -dontwarn com.alibaba.fastjson.support.spring.**
+          PROGUARD
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
