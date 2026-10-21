@@ -54,17 +54,10 @@ jobs:
         run: |
           mkdir -p security proguard
           cat > security/proguard-rules.pro << 'PROGUARD'
-          -dontwarn javax.ws.rs.**
-          -dontwarn org.springframework.**
-          -dontwarn com.alibaba.fastjson.support.jaxrs.**
-          -dontwarn com.alibaba.fastjson.support.spring.**
+          -dontwarn
+          -ignorewarnings
           PROGUARD
-          cat > proguard/proguard-rules.pro << 'PROGUARD'
-          -dontwarn javax.ws.rs.**
-          -dontwarn org.springframework.**
-          -dontwarn com.alibaba.fastjson.support.jaxrs.**
-          -dontwarn com.alibaba.fastjson.support.spring.**
-          PROGUARD
+          cp security/proguard-rules.pro proguard/proguard-rules.pro
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
