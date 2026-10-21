@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/forget_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tv_button"
+            android:src="@drawable/ic_chevron_left"
+            android:textColor="@color/black100" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="start|center_vertical"
+            android:textSize="32sp"
+            android:text="@string/text_forget"
+            android:textColor="@color/black80"
+            android:layout_margin="30dp"/>
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="48dp"
+            android:layout_marginEnd="48dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            tools:ignore="NestedWeights">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/btn_tv"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteX="42dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:src="@drawable/img_avatar"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/forget_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tv"
+                    android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/text_username"
+                    android:inputType="text"
+                    android:maxLength="100"
+                    android:maxLines="1" />
+
+                <TextView
+                    android:id="@+id/clear_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:gravity="center"
+                    android:src="@drawable/img_avatar"
+                    android:text="@string/text_clean"
+                    android:textColor="@color/btn_bg"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/btn_tv"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteX="42dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:src="@drawable/img_avatar"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/forget_mail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tv"
+                    android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/text_mail"
+                    android:inputType="text"
+                    android:maxLength="100"
+                    android:maxLines="1" />
+
+                <TextView
+                    android:id="@+id/clear_mail"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_weight="5"
+                    android:gravity="center"
+                    android:src="@drawable/img_avatar"
+                    android:text="@string/text_clean"
+                    android:textColor="@color/btn_bg"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/btn_forget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_login"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="@string/text_get_back"
+                android:textColor="@color/tv_bg" />
+
+        </LinearLayout>
+
+</LinearLayout>

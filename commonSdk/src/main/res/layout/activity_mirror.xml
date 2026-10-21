@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_6bc196"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/head_top" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_sheet_dialog_bg"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/application_info"
+                android:layout_width="match_parent"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="@dimen/dp_124"
+                    android:layout_marginTop="34dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="64dp">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/app_icon"
+                        android:layout_width="64dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_height="64dp"
+                        android:layout_gravity="center_horizontal"
+                        />
+                    <com.carlos.common.widget.LabelView
+                        xmlns:lv="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/app_user_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="end"
+                        android:visibility="invisible"
+                        lv:lv_background_color="@color/color_6bc196"
+                        lv:lv_gravity="TOP_RIGHT"
+                        lv:lv_text_all_caps="false"
+                        lv:lv_fill_triangle="true"
+                        lv:lv_text="2"
+                        lv:lv_text_size="8sp"/>
+
+                    <com.carlos.common.widget.LabelView
+                        xmlns:lv="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/app_is_ext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="end"
+                        android:visibility="invisible"
+                        lv:lv_background_color="@color/color_6bc196"
+                        lv:lv_gravity="BOTTOM_RIGHT"
+                        lv:lv_text_all_caps="false"
+                        lv:lv_fill_triangle="true"
+                        lv:lv_text="2"
+                        lv:lv_text_size="8sp"/>
+
+                   <!-- android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    lv:lv_background_color="@color/color_6bc196"
+                    lv:lv_fill_triangle="true"
+                    lv:lv_gravity="BOTTOM_RIGHT"
+                    lv:lv_text="32"
+                    lv:lv_text_all_caps="false"
+                    lv:lv_text_color="@android:color/white"
+                    lv:lv_text_size="8sp"
+                    -->
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/app_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textColor="#333333"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="16sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/app_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#999999"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/menu_panel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/application_info"
+                android:clipToPadding="false"
+                android:scrollbars="vertical"
+                tools:listitem="@layout/activity_mirror_item_menu" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/start_application"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="40dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/color_6bc196"
+                android:gravity="center"
+                android:tag="binding_6"
+                android:text="启动分身"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

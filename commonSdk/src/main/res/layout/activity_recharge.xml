@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/recharge_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_centerVertical="true"
+            android:background="@drawable/tv_button"
+            android:src="@drawable/ic_chevron_left"
+            android:textColor="@color/black100" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start|center_vertical"
+            android:text="@string/text_recharge"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/black80"
+            android:textSize="32sp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/register_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:background="@drawable/tv_button"
+        android:text="注册"
+        android:textColor="@color/black100" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:ignore="NestedWeights">
+
+        <LinearLayout
+            android:id="@+id/account_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/btn_tv"
+            android:visibility="invisible"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="42dp">
+
+            <EditText
+                android:id="@+id/recharge_username"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/btn_tv"
+                android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@."
+                android:ems="10"
+                android:gravity="center"
+                android:hint="@string/text_username"
+                android:inputType="text"
+
+                android:maxLength="100"
+                android:maxLines="1" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:src="@drawable/img_avatar"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/clear_username"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:src="@drawable/img_avatar"
+                android:text="@string/text_clean"
+                android:textColor="@color/btn_bg"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/btn_tv"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="42dp">
+
+            <EditText
+                android:id="@+id/recharge_key"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/btn_tv"
+                android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="@string/text_key"
+                android:maxLength="100"
+                android:text="2d69d36ff2fb4713b54f52bdd1468469"
+                android:maxLines="1" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:src="@drawable/img_avatar"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/clear_key"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:src="@drawable/img_avatar"
+                android:text="@string/text_clean"
+                android:textColor="@color/btn_bg"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btn_recharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_login"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp_30"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_30"
+
+            android:paddingBottom="@dimen/dp_10"
+            android:text="@string/text_recharge_start"
+            android:textColor="@color/black100"
+            android:textSize="18sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.382"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/pay_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+
+                android:background="@drawable/btn_login"
+                android:paddingLeft="@dimen/dp_5"
+                android:paddingTop="@dimen/dp_1"
+                android:paddingRight="@dimen/dp_5"
+                android:paddingBottom="@dimen/dp_1"
+                android:text="购买卡密"
+                android:textColor="@color/black100" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

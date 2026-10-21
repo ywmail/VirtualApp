@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/layout_corner"
+        android:orientation="vertical"
+        android:textColor="@color/colorAccent">
+        <com.kook.tablayout.SegmentTabLayout
+            android:id="@+id/float_tabTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/float_tablayout_height"
+            tl:tl_indicator_anim_enable="true"
+            tl:tl_tab_space_equal="true"
+            tl:tl_textsize="14sp" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/float_tabContext"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#2644DAFF">
+
+        </androidx.viewpager.widget.ViewPager>
+
+        <Button
+            android:id="@+id/features_menu"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/float_tablayout_height"
+            android:background="@drawable/my_switch_track"
+            android:text="扫描" />
+    </LinearLayout>
+</FrameLayout>

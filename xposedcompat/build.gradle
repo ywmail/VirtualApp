@@ -1,13 +1,14 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
+    compileSdk 36
+    namespace "com.swift.sandhook.xposedcompat"
 
 
 
     defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 28
+        minSdk 19
+        targetSdk 28
         versionCode 1
         versionName "1.0"
 
@@ -18,7 +19,7 @@ android {
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
 

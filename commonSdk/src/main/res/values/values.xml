@@ -1,0 +1,1240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="applist">
+        <item>All Apps</item>
+        <item>System Apps</item>
+        <item>Installed Apps</item>
+    </string-array>
+    <string-array name="languageCodeList">
+        <item>ar</item>
+        <item>zh</item>
+        <item>nl</item>
+        <item>en</item>
+        <item>fr</item>
+        <item>de</item>
+        <item>el</item>
+        <item>hi</item>
+        <item>id</item>
+        <item>it</item>
+        <item>ja</item>
+        <item>pt</item>
+        <item>ru</item>
+        <item>es</item>
+        <item>vi</item>
+    </string-array>
+    <string-array name="languageList">
+        <item>عربي</item>
+        <item>中文(简体)</item>
+        <item>Nederlands</item>
+        <item>English</item>
+        <item>français</item>
+        <item>Deutsche</item>
+        <item>Ελληνικά</item>
+        <item>हिन्दी</item>
+        <item>Bahasa Indonesia</item>
+        <item>Italiano</item>
+        <item>日本語</item>
+        <item>Português</item>
+        <item>русский</item>
+        <item>Español</item>
+        <item>Tiếng Việt</item>
+    </string-array>
+    <integer-array name="progress_colors">
+        <item>@color/holo_blue_dark</item>
+        <item>@color/holo_yellow_dark</item>
+        <item>@color/holo_green_dark</item>
+        <item>@color/holo_purple_dark</item>
+        <item>@color/holo_red_dark</item>
+    </integer-array>
+    <string-array name="weeks">
+        <item>周日</item>
+        <item>周一</item>
+        <item>周二</item>
+        <item>周三</item>
+        <item>周四</item>
+        <item>周五</item>
+        <item>周六</item>
+    </string-array>
+    <attr format="color" name="tl_divider_color"/>
+    <attr format="dimension" name="tl_divider_padding"/>
+    <attr format="dimension" name="tl_divider_width"/>
+    <attr format="integer" name="tl_indicator_anim_duration"/>
+    <attr format="boolean" name="tl_indicator_anim_enable"/>
+    <attr format="boolean" name="tl_indicator_bounce_enable"/>
+    <attr format="color" name="tl_indicator_color"/>
+    <attr format="dimension" name="tl_indicator_corner_radius"/>
+    <attr format="enum" name="tl_indicator_gravity">
+        <enum name="TOP" value="48"/>
+        <enum name="BOTTOM" value="80"/>
+    </attr>
+    <attr format="dimension" name="tl_indicator_height"/>
+    <attr format="dimension" name="tl_indicator_margin_bottom"/>
+    <attr format="dimension" name="tl_indicator_margin_left"/>
+    <attr format="dimension" name="tl_indicator_margin_right"/>
+    <attr format="dimension" name="tl_indicator_margin_top"/>
+    <attr format="enum" name="tl_indicator_style">
+        <enum name="NORMAL" value="0"/>
+        <enum name="TRIANGLE" value="1"/>
+        <enum name="BLOCK" value="2"/>
+    </attr>
+    <attr format="dimension" name="tl_indicator_width"/>
+    <attr format="boolean" name="tl_indicator_width_equal_title"/>
+    <attr format="dimension" name="tl_tab_padding"/>
+    <attr format="boolean" name="tl_tab_space_equal"/>
+    <attr format="dimension" name="tl_tab_width"/>
+    <attr format="boolean" name="tl_textAllCaps"/>
+    <attr format="enum" name="tl_textBold">
+        <enum name="NONE" value="0"/>
+        <enum name="SELECT" value="1"/>
+        <enum name="BOTH" value="2"/>
+    </attr>
+    <attr format="color" name="tl_textSelectColor"/>
+    <attr format="color" name="tl_textUnselectColor"/>
+    <attr format="dimension" name="tl_textsize"/>
+    <attr format="color" name="tl_underline_color"/>
+    <attr format="enum" name="tl_underline_gravity">
+        <enum name="TOP" value="48"/>
+        <enum name="BOTTOM" value="80"/>
+    </attr>
+    <attr format="dimension" name="tl_underline_height"/>
+    <color name="bg">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="black10">#22000000</color>
+    <color name="black100">#FF000000</color>
+    <color name="black2">#252525</color>
+    <color name="black3">#606060</color>
+    <color name="black80">#CC000000</color>
+    <color name="black_20_transparent">#55000000</color>
+    <color name="blue">#3b7fd4</color>
+    <color name="btn_bg">#D5D6E2</color>
+    <color name="btn_login_end">#027FF8</color>
+    <color name="btn_login_pressed_end">#80027FF8</color>
+    <color name="btn_login_pressed_start">#8091C8FC</color>
+    <color name="btn_login_start">#91C8FC</color>
+    <color name="colorAccent">#ffffff</color>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimaryRavel">#ffffff</color>
+    <color name="colorPrimaryRavel2">#ffffff</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_6bc196">#6bc196</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_ff6bc196">#336bc196</color>
+    <color name="darkgrey">#807E7E</color>
+    <color name="defaultTextColor">#FFFFFF</color>
+    <color name="dialogColorPrimary">#a0607191</color>
+    <color name="dialogColorPrimary2">#50607191</color>
+    <color name="errorColor">#D50000</color>
+    <color name="extreme_mode">#FFFFFF</color>
+    <color name="gray">#D0D0D0</color>
+    <color name="gray2">#C0C0C0</color>
+    <color name="gray4">#686868</color>
+    <color name="gray9">#333333</color>
+    <color name="green">#00FF00</color>
+    <color name="holo_blue_dark">#33cccc</color>
+    <color name="holo_green_dark">#67e667</color>
+    <color name="holo_purple_dark">#df38b1</color>
+    <color name="holo_red_dark">#ff4040</color>
+    <color name="holo_yellow_dark">#ff9640</color>
+    <color name="infoColor">#3F51B5</color>
+    <color name="item_bg">@color/white</color>
+    <color name="light_gray">#fff5f5f5</color>
+    <color name="mainTextColor">#202020</color>
+    <color name="md_transparent">#00FFFFFF</color>
+    <color name="normalColor">#353A3E</color>
+    <color name="pink">#CF0E00</color>
+    <color name="pressed">#BDBDBD</color>
+    <color name="ramcolor">#6bc196</color>
+    <color name="red">#FF0000</color>
+    <color name="romcolor">#ea1e63</color>
+    <color name="sdcardcolor">#4F10C2</color>
+    <color name="snackbar_text">#FFFFFF</color>
+    <color name="splashgrey">#969696</color>
+    <color name="successColor">#388E3C</color>
+    <color name="syscolor">#0FB015</color>
+    <color name="testcolor">#515151</color>
+    <color name="textcolor">#000000</color>
+    <color name="textgrey">#343232</color>
+    <color name="theme1">#f44236</color>
+    <color name="theme10">#4cb050</color>
+    <color name="theme10accent">#C93000</color>
+    <color name="theme10dark">#00A607</color>
+    <color name="theme11">#ff9700</color>
+    <color name="theme11accent">#5A1ACF</color>
+    <color name="theme11dark">#E08501</color>
+    <color name="theme12">#FFC000</color>
+    <color name="theme12accent">#5413C8</color>
+    <color name="theme12dark">#EAB000</color>
+    <color name="theme13">#D2E41D</color>
+    <color name="theme13accent">#5112C1</color>
+    <color name="theme13dark">#D0E122</color>
+    <color name="theme14">#fe5722</color>
+    <color name="theme14accent">#1B31AD</color>
+    <color name="theme14dark">#F94C15</color>
+    <color name="theme15">#795547</color>
+    <color name="theme15accent">#BF0F4A</color>
+    <color name="theme15dark">#5B4137</color>
+    <color name="theme1accent">#009606</color>
+    <color name="theme1dark">#D73A2F</color>
+    <color name="theme2">#ea1e63</color>
+    <color name="theme2accent">#2647dd</color>
+    <color name="theme2dark">#D21B59</color>
+    <color name="theme3">#9a28b1</color>
+    <color name="theme3accent">#C97800</color>
+    <color name="theme3dark">#8C239F</color>
+    <color name="theme4">#683ab7</color>
+    <color name="theme4accent">#C19000</color>
+    <color name="theme4dark">#602BBF</color>
+    <color name="theme5">#6bc196</color>
+    <color name="theme5accent">#CF3B0C</color>
+    <color name="theme5dark">#2D4BCF</color>
+    <color name="theme6">#2295f0</color>
+    <color name="theme6accent">#BC0E4A</color>
+    <color name="theme6dark">#2087D9</color>
+    <color name="theme7">#04a8f5</color>
+    <color name="theme7accent">#C20D4B</color>
+    <color name="theme7dark">#0396DA</color>
+    <color name="theme8">#00bed2</color>
+    <color name="theme8accent">#C1154F</color>
+    <color name="theme8dark">#02A7B8</color>
+    <color name="theme9">#009788</color>
+    <color name="theme9accent">#C1360B</color>
+    <color name="theme9dark">#01897C</color>
+    <color name="transparent">#00000000</color>
+    <color name="tv_bg">#F2F3F7</color>
+    <color name="ucrop_color_crop_background">#000</color>
+    <color name="ucrop_color_default_crop_frame">#ffffff</color>
+    <color name="ucrop_color_default_crop_grid">#80ffffff</color>
+    <color name="ucrop_color_default_dimmed">#8c000000</color>
+    <color name="ucrop_color_default_logo">#4f212121</color>
+    <color name="ucrop_color_progress_wheel_line">#808080</color>
+    <color name="ucrop_color_statusbar">#CC5833</color>
+    <color name="ucrop_color_toolbar">#FF6E40</color>
+    <color name="ucrop_color_toolbar_widget">#fff</color>
+    <color name="ucrop_color_widget">#000</color>
+    <color name="ucrop_color_widget_active">#FF6E40</color>
+    <color name="ucrop_color_widget_background">#fff</color>
+    <color name="ucrop_color_widget_text">#000</color>
+    <color name="warningColor">#FFA900</color>
+    <color name="white">#ffffff</color>
+    <color name="white_bg">#FFFFFF</color>
+    <color name="yellow">#FFC000</color>
+    <color name="zram">#EF3D05</color>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="appbar_padding">16dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="desktop_divider">0.5dp</dimen>
+    <dimen name="dialog_activity_horizontal_margin">32dp</dimen>
+    <dimen name="dialog_activity_vertical_margin">32dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="float_tablayout_height">28dp</dimen>
+    <dimen name="item_height">60dp</dimen>
+    <dimen name="match_parent">-1px</dimen>
+    <dimen name="notification_max_height">256dp</dimen>
+    <dimen name="notification_mid_height">128dp</dimen>
+    <dimen name="notification_min_height">64dp</dimen>
+    <dimen name="notification_padding">4dp</dimen>
+    <dimen name="notification_panel_width">-1dp</dimen>
+    <dimen name="notification_side_padding">8dp</dimen>
+    <dimen name="standard_notification_panel_width">416dp
+    </dimen>
+    <dimen name="switchMargin">1dp</dimen>
+    <dimen name="tab_heigth">40dp</dimen>
+    <dimen name="ucrop_default_crop_frame_stoke_width">1dp</dimen>
+    <dimen name="ucrop_default_crop_grid_stoke_width">1dp</dimen>
+    <dimen name="ucrop_default_crop_logo_size">200dp</dimen>
+    <dimen name="ucrop_default_crop_rect_corner_touch_area_line_length">10dp</dimen>
+    <dimen name="ucrop_default_crop_rect_corner_touch_threshold">30dp</dimen>
+    <dimen name="ucrop_default_crop_rect_min_size">100dp</dimen>
+    <dimen name="ucrop_height_crop_aspect_ratio_text">40dp</dimen>
+    <dimen name="ucrop_height_divider_shadow">3dp</dimen>
+    <dimen name="ucrop_height_horizontal_wheel_progress_line">20dp</dimen>
+    <dimen name="ucrop_height_wrapper_controls">64dp</dimen>
+    <dimen name="ucrop_height_wrapper_states">72dp</dimen>
+    <dimen name="ucrop_margin_horizontal_wheel_progress_line">10dp</dimen>
+    <dimen name="ucrop_margit_top_widget_text">10sp</dimen>
+    <dimen name="ucrop_padding_crop_frame">16dp</dimen>
+    <dimen name="ucrop_progress_size">30dp</dimen>
+    <dimen name="ucrop_size_dot_scale_text_view">8dp</dimen>
+    <dimen name="ucrop_size_wrapper_rotate_button">50dp</dimen>
+    <dimen name="ucrop_text_size_widget_text">13sp</dimen>
+    <dimen name="ucrop_width_horizontal_wheel_progress_line">2dp</dimen>
+    <integer name="config_maxResolverActivityColumns">8</integer>
+    <integer name="ucrop_progress_loading_anim_time">1500</integer>
+    <string name="aberration">Aberration Modes</string>
+    <string name="abi">Supported ABIs</string>
+    <string name="about">关于</string>
+    <string name="about_title">关于我们</string>
+    <string name="ac">AC</string>
+    <string name="accelerometer">Accelerometer</string>
+    <string name="accent">Theme Color</string>
+    <string name="accuracy">Accuracy</string>
+    <string name="action_board">Test board </string>
+    <string name="action_disable_drag">Disable drag</string>
+    <string name="action_enable_drag">Enable drag</string>
+    <string name="action_lists">Test lists</string>
+    <string name="activate">activate</string>
+    <string name="activity_choose_location">地点选择</string>
+    <string name="activity_location_settings">虚拟地理位置</string>
+    <string name="add_account_button_label">Add account</string>
+    <string name="adfree">You are Already a Premium User. Enjoy your Ad-free experience.</string>
+    <string name="ads">Get rid of Ads. Your small contribution helps me a lot.</string>
+    <string name="advertid">Google Advertising ID</string>
+    <string name="airplanemode">Airplane Mode</string>
+    <string name="algo">Algorithms</string>
+    <string name="all_picture">全部图片</string>
+    <string name="allow">Allow</string>
+    <string name="altitude">Altitude</string>
+    <string name="antibanding">AntiBanding Modes</string>
+    <string name="any_apps">部分应用</string>
+    <string name="apertures">Apertures</string>
+    <string name="api">API Level</string>
+    <string name="apk_file_does_not_exists_please_provide_valid_file_path">Apk file does not exists, please provide valid file path.</string>
+    <string name="apksaved">Extracted Apk Saved in Downloads Folder.</string>
+    <string name="apn">APN</string>
+    <string name="app_desc">Device Info is a simple and powerful Android application which gives you a complete Software and Hardware information about your Mobile device with advanced user-interface.\nIf possible help me in translating the app in your local language. Tap on translate and you will be redirected to Crowdin website. Login there and start contributing.</string>
+    <string name="app_name">libcommon</string>
+    <string name="app_settings">App设置</string>
+    <string name="app_version">App Version</string>
+    <string name="application_manager">Application manager</string>
+    <string name="application_title">应用</string>
+    <string name="apps">Apps</string>
+    <string name="apps_inst">All Apps Installed</string>
+    <string name="apps_manager">应用管理</string>
+    <string name="appsize">Size</string>
+    <string name="askratestat">How about rating it on Play Store?</string>
+    <string name="autoexposure">Auto Exposure Modes</string>
+    <string name="autofocus">AutoFocus Modes</string>
+    <string name="autofocusreg">Maximum Auto Focus Regions</string>
+    <string name="autowhitebalance">Auto White Balance Modes</string>
+    <string name="avail_mem">Available Memory</string>
+    <string name="axis">Axis</string>
+    <string name="back">Back</string>
+    <string name="backcam">BACK CAMERA</string>
+    <string name="backup">Backup</string>
+    <string name="backup_recovery_title">Bakup and Recovery</string>
+    <string name="bandsupport">5GHz Band Support</string>
+    <string name="bandwidth">Bandwidth</string>
+    <string name="baseband">Baseband</string>
+    <string name="battery">Battery</string>
+    <string name="battery_stat">Battery Status</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="board">Board</string>
+    <string name="bogomips">BogoMIPS</string>
+    <string name="bootloader">Bootloader</string>
+    <string name="brand">品牌</string>
+    <string name="bright_mode">Brightness Mode</string>
+    <string name="brightness">Brightness Level</string>
+    <string name="broken_apk_file_please_select_another_apk_file">Broken apk file, please select another apk file to install.</string>
+    <string name="bssid">BSSID</string>
+    <string name="build_host">Build Host</string>
+    <string name="build_no">Build Number</string>
+    <string name="build_print">Build Fingerprint</string>
+    <string name="build_serial">SERIAL</string>
+    <string name="camera">Camera</string>
+    <string name="camera_capablity">Camera Capabilities</string>
+    <string name="cancel">Cancel</string>
+    <string name="capacity">Capacity</string>
+    <string name="cels">Celsius</string>
+    <string name="channel">Channel</string>
+    <string name="channels">Channels</string>
+    <string name="charging">Charging</string>
+    <string name="chargingbrack">(Charging)</string>
+    <string name="choose">Choose</string>
+    <string name="choose_language">Choose Language</string>
+    <string name="choose_user_title">请选择一个用户</string>
+    <string name="clean_data">清除数据</string>
+    <string name="clear">清除</string>
+    <string name="clearkey">Clearkey CDM</string>
+    <string name="clone_apps">创建分身应用</string>
+    <string name="codecs">Codecs</string>
+    <string name="codename">Code Name</string>
+    <string name="cold">Cold</string>
+    <string name="color_filter_arrg">Color Filter Arrangement</string>
+    <string name="compen_step">Compensation Step</string>
+    <string name="config_device_info">配置设备信息</string>
+    <string name="confirm">确定</string>
+    <string name="confirm_count">确定(%1$d)</string>
+    <string name="confirm_maxcount">确定(%1$d/%2$d)</string>
+    <string name="connect_to_net">Please connect to Wifi or Carrier.</string>
+    <string name="connected">Connected</string>
+    <string name="contact">Contact Developer</string>
+    <string name="copied">Copied</string>
+    <string name="copyright" translatable="false">©kook</string>
+    <string name="cores">Cores</string>
+    <string name="country">Country</string>
+    <string name="cpu">CPU</string>
+    <string name="cpu_arch">CPU Architecture</string>
+    <string name="cpu_driver">CPU Scaling Driver</string>
+    <string name="cpu_freq">CPU Frequency</string>
+    <string name="cpu_hardware">CPU Hardware</string>
+    <string name="cpu_running">Running CPUs</string>
+    <string name="cpu_status">CPU Status</string>
+    <string name="cpu_type">CPU Type</string>
+    <string name="cpu_usage">CPU Usage</string>
+    <string name="cpufamily">CPU Family</string>
+    <string name="cpuprocess">CPU Process</string>
+    <string name="create">Create</string>
+    <string name="create_desktop_icon">Create desktop icon</string>
+    <string name="create_shortcut">创建快捷方式</string>
+    <string name="cropping_type">Cropping Type</string>
+    <string name="current">Current</string>
+    <string name="dark">Dark</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="data">Data</string>
+    <string name="date">Released Date</string>
+    <string name="dead">Dead</string>
+    <string name="debug">Debug</string>
+    <string name="defaults">Defaults</string>
+    <string name="delete">删除</string>
+    <string name="density">Density</string>
+    <string name="desc_ads">Mode Type Image</string>
+    <string name="desc_appversion">Mode Type Image</string>
+    <string name="desc_circlecolor">Circle Color (Theme)</string>
+    <string name="desc_export">Mode Type Image</string>
+    <string name="desc_feedback">Mode Type Image</string>
+    <string name="desc_icon">Splash Icon</string>
+    <string name="desc_mode">Mode Type Image</string>
+    <string name="desc_rate">Mode Type Image</string>
+    <string name="desc_temp">Mode Type Image</string>
+    <string name="desc_theme">Theme Color Image</string>
+    <string name="descriptor">Descriptor</string>
+    <string name="details">Details</string>
+    <string name="device">机型</string>
+    <string name="device_id">Android Device ID</string>
+    <string name="device_lav">Device</string>
+    <string name="devicefeat">Device Features</string>
+    <string name="devicefeatures">Total Device Features</string>
+    <string name="devicename">Device Name</string>
+    <string name="devicetype">Device Type</string>
+    <string name="dhcplease">DHCP Lease Duration</string>
+    <string name="dhcpserver">DHCP Server</string>
+    <string name="dingtalk_replace_pic">钉钉打卡相片</string>
+    <string name="disabled">Disabled</string>
+    <string name="discharge">Discharging</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="display">Display</string>
+    <string name="dlg_reset_device">重置为真实手机信息</string>
+    <string name="dns1">DNS1</string>
+    <string name="dns2">DNS2</string>
+    <string name="done">Done</string>
+    <string name="dots">-----------------------------------</string>
+    <string name="drminfo">DRM Info</string>
+    <string name="dualsim">Dual Sim</string>
+    <string name="earproximity">Ear Proximity</string>
+    <string name="earspeaker">Ear Speaker</string>
+    <string name="edgemodes">Edge Modes</string>
+    <string name="effects">Effects</string>
+    <string name="enable">开启</string>
+    <string name="enabled">Enabled</string>
+    <string name="exception_tips_by_network">软件网络异常请联系qixie0306@gmail.com</string>
+    <string name="exception_tips_by_sha1">软件版本常请联系qixie0306@gmail.com</string>
+    <string name="export">Export Details</string>
+    <string name="export_data">Export Data</string>
+    <string name="exporting">Exporting Details</string>
+    <string name="ext_store">External Storage</string>
+    <string name="extcam">EXTERNAL CAMERA</string>
+    <string name="external_storage">外置存储</string>
+    <string name="extract">Extract</string>
+    <string name="extracted">Apk Extracted Successfully.</string>
+    <string name="extracting">Extracting APK</string>
+    <string name="face_detect_mode">Face Detection Modes</string>
+    <string name="fahren">Fahrenheit</string>
+    <string name="fake_device_info">伪造设备</string>
+    <string name="features">Features</string>
+    <string name="feedback">Feedback</string>
+    <string name="feedback_stat">If you have any suggestions,questions or problems, don\'t hesitate to contact me.</string>
+    <string name="filter_dens">Filter Densities</string>
+    <string name="fingerdesc">Place an enrolled finger on the fingerprint sensor to pass the test. Please enroll a finger if you haven\'t.</string>
+    <string name="fingersubtitle">Place your finger on the sensor</string>
+    <string name="fingertest">Fingerprint Test</string>
+    <string name="flashavail">Flash Available</string>
+    <string name="flashlight">FlashLight</string>
+    <string name="flat">Flat</string>
+    <string name="focal_length">Focal Lengths</string>
+    <string name="focus_dist">Focus Distance Calibration</string>
+    <string name="follow_system">System default</string>
+    <string name="fontscale">Font Scale</string>
+    <string name="free">Free</string>
+    <string name="frequency">Frequency</string>
+    <string name="front">Front</string>
+    <string name="frontcam">FRONT CAMERA</string>
+    <string name="full">Fully Charged</string>
+    <string name="fullscreenad1" translatable="false">182852390180298_182931730172364</string>
+    <string name="fuzz">Fuzz</string>
+    <string name="gateway">Gateway</string>
+    <string name="general">General</string>
+    <string name="good">Good</string>
+    <string name="governor">CPU Governor</string>
+    <string name="gpu_extension">Total GPU Extensions</string>
+    <string name="gpu_render">GPU Renderer</string>
+    <string name="gpu_vendor">GPU Vendor</string>
+    <string name="gpu_version">GPU Version</string>
+    <string name="gpuext">GPU Extensions</string>
+    <string name="hardware">Hardware</string>
+    <string name="hardwarelevel">Hardware Level</string>
+    <string name="hasvibrator">Has Vibrator</string>
+    <string name="hdcp">HDCP Level</string>
+    <string name="hdr">HDR</string>
+    <string name="hdr_cap">HDR Capabilities</string>
+    <string name="health">Health</string>
+    <string name="hint_lat">经度</string>
+    <string name="hint_lng">纬度</string>
+    <string name="hotpixelmode">Hot Pixel Modes</string>
+    <string name="hours">Hours</string>
+    <string name="image">图片</string>
+    <string name="imsi">IMSI</string>
+    <string name="in_store">Internal Storage</string>
+    <string name="info_know">Info you must Know about Android !</string>
+    <string name="input">Input Devices</string>
+    <string name="input_loc_error">输入内容有误，请检查格式：纬度-90~90，经度-180~180</string>
+    <string name="inputdevice">Input Device</string>
+    <string name="install_d">+%d</string>
+    <string name="install_date">Installation Date</string>
+    <string name="install_too_much_once_time">不能一次性安装超过9个App!</string>
+    <string name="intf">Interface</string>
+    <string name="ipaddress">IP Address</string>
+    <string name="ipv4">IPv4 Address</string>
+    <string name="ipv6">IPv6 Address</string>
+    <string name="is_mock">Have Mock</string>
+    <string name="iso_range">ISO Sensitivity Range</string>
+    <string name="java_property">Java Property</string>
+    <string name="java_runtime">Java Runtime</string>
+    <string name="java_vm">Java VM</string>
+    <string name="keep_service_damon_noti_text">Get Removed</string>
+    <string name="keep_service_damon_noti_text_v24">Keep app alive to receive new messages on time</string>
+    <string name="keep_service_damon_noti_title">Tip: Message Should Be Hidden</string>
+    <string name="keep_service_damon_noti_title_v24">Running…</string>
+    <string name="keep_service_noti_text">Remove Service Notification</string>
+    <string name="keep_service_noti_title">Remove Service Notification</string>
+    <string name="kernel">Kernel</string>
+    <string name="keyError" translatable="false">请输入卡密！</string>
+    <string name="keyboardtype">Keyboard Type</string>
+    <string name="kill_all_app">加速</string>
+    <string name="label_lat">经度:</string>
+    <string name="label_lng">纬度:</string>
+    <string name="landscape">Landscape</string>
+    <string name="lang">Language</string>
+    <string name="latest_version">already the latest version</string>
+    <string name="latitude">Latitude</string>
+    <string name="lensplacement">Lens Placement</string>
+    <string name="level">Level</string>
+    <string name="light">Light</string>
+    <string name="lightsensor">Light Sensor</string>
+    <string name="linkspeed">Link Speed</string>
+    <string name="loading">Loading Apps</string>
+    <string name="loading_in_local_lang">Changing Language…</string>
+    <string name="location">GPS</string>
+    <string name="longitude">Longitude</string>
+    <string name="loudspeaker">Loudspeaker</string>
+    <string name="mac_address">WiFi MAC Address</string>
+    <string name="mailError" translatable="false">请输入正确的邮箱！</string>
+    <string name="mailNoInput" translatable="false">请输入邮箱!</string>
+    <string name="manu">Manufacturer</string>
+    <string name="manufacturer">制造商</string>
+    <string name="max_auto_exposure">Maximum Auto Exposure Regions</string>
+    <string name="max_dig_zoom">Maximum Digital Zoom</string>
+    <string name="max_face_count">Max Face Count</string>
+    <string name="max_out_stream">Maximum Output Streams</string>
+    <string name="max_out_stream_stalling">Maximum Output Streams Stalling</string>
+    <string name="max_raw_out_stream">Maximum RAW Output Streams</string>
+    <string name="max_sessions">Max No. of Sessions</string>
+    <string name="maxhdcp">Max HDCP Level</string>
+    <string name="mbps">Mbps</string>
+    <string name="memory">Memory</string>
+    <string name="menu_accounts">账号管理</string>
+    <string name="menu_gms">google框架</string>
+    <string name="menu_mock_phone">机型模拟</string>
+    <string name="menu_mock_wifi">Wifi模拟</string>
+    <string name="microphone">Microphone</string>
+    <string name="minsdk">Minimum SDK</string>
+    <string name="mobile">Mobile</string>
+    <string name="mobiledata">Mobile Data</string>
+    <string name="mock_device">模拟中</string>
+    <string name="mock_global">全局模拟中</string>
+    <string formatted="false" name="mock_location">
+        经度:%s\n
+        纬度:%s\N</string>
+    <string name="mock_none">真机信息</string>
+    <string name="mocking">正在模拟位置</string>
+    <string name="mode">Mode Type Image</string>
+    <string name="model">Model</string>
+    <string name="motionrangedetails">Motion Range Details</string>
+    <string name="multitouch">MultiTouch</string>
+    <string name="nativead1" translatable="false">182852390180298_182853473513523</string>
+    <string name="nativead2" translatable="false">182852390180298_184270953371775</string>
+    <string name="nativerectangle1" translatable="false">182852390180298_184834379982099</string>
+    <string name="net_type">Network Type</string>
+    <string name="netop">Network Operator</string>
+    <string name="network">Network</string>
+    <string name="networkType">Network Type</string>
+    <string name="next">Next</string>
+    <string name="no">No</string>
+    <string name="noApplications">No find applications</string>
+    <string name="no_internet">No Internet Connection</string>
+    <string name="no_mock">No mock</string>
+    <string name="no_so_file">No so file</string>
+    <string name="no_wifi">No WiFi Connection</string>
+    <string name="noapps">No Such App Found</string>
+    <string name="nocamera">No Camera Available</string>
+    <string name="nocodec">No Codecs Available</string>
+    <string name="noinput">No Input Devices Available</string>
+    <string name="none">None</string>
+    <string name="nosensors">No Sensors Available</string>
+    <string name="nosim">No Sim Card detected.</string>
+    <string name="not_allowed_to_update_package">Not allowed to update the package.</string>
+    <string name="not_supported">Not Supported</string>
+    <string name="notcharge">Not Charging</string>
+    <string name="notconnected">Not Connected</string>
+    <string name="nothanks">No, Thanks</string>
+    <string name="nothermal">Thermals are restricted to system only. Accessing them requires Root.</string>
+    <string name="notrecog">Not Recognized !</string>
+    <string name="oksure">OK, Sure</string>
+    <string name="open">Open</string>
+    <string name="open_sessions">No. of Open Sessions</string>
+    <string name="opengl">OpenGL ES</string>
+    <string name="operator">Operator</string>
+    <string name="operator_code">Operator Code</string>
+    <string name="optical_stable">Optical Stabilization</string>
+    <string name="orientation">Orientation</string>
+    <string name="other">Other</string>
+    <string name="overheat">Overheat</string>
+    <string name="overvoltage">Over Voltage</string>
+    <string name="owner_name">Admin</string>
+    <string name="partial_res">Partial Results</string>
+    <string name="passionate">Passionate Android Developer. Connect with me.</string>
+    <string name="passwordNoInput" translatable="false">请输入密码！</string>
+    <string name="permission">Permissions</string>
+    <string name="permission_authorize">Please click Request Location Authorization</string>
+    <string name="permission_boot_content">The APP in the plug-in cannot be started currently due to system permission limitation. Please first enable VA hover window permission in Settings, and then enable associated startup permission in mobile Phone Manager.</string>
+    <string name="permission_boot_notice">Notice</string>
+    <string name="permission_denied_ok">启动失败</string>
+    <string name="permission_tip_title">重要提示：</string>
+    <string name="permission_tips_confirm">我知道了</string>
+    <string name="phonetype">Phone Type</string>
+    <string name="pixel">Pixels</string>
+    <string name="pixel_array_size">Pixel Array Size</string>
+    <string name="pkgname">Package Name</string>
+    <string name="play_services">Google Play Services</string>
+    <string name="please_provide_apk_file_path">path = NULL, please provide apk file path.</string>
+    <string name="portrait">Portrait</string>
+    <string name="power">Power</string>
+    <string name="power_source">Power Source</string>
+    <string name="premium_user">You are already a Premium User.</string>
+    <string name="preparing">正在打开App，请稍等…</string>
+    <string name="preview">预览</string>
+    <string name="preview_count">预览(%1$d)</string>
+    <string name="processor">Processor</string>
+    <string name="processorname">Processor Name</string>
+    <string name="productid">Product ID</string>
+    <string name="purchase_done">Purchase Done Successfully…</string>
+    <string name="ram">Random Access Memory</string>
+    <string name="ramtype">RAM Type</string>
+    <string name="range">Range</string>
+    <string name="rate">Rate Us</string>
+    <string name="rate_stat">Enjoying this app? Would you mind giving us a feedback on Google Play Store</string>
+    <string name="read_this">If the MegaPixel count shown is wrong, that means your device manufacturer has limited the access to the camera for third-party apps. Also even if your device has more than one camera on one side, Android OS identifies them as a single camera for that side.</string>
+    <string name="readthis">Please Read This</string>
+    <string name="real_location">真实位置</string>
+    <string name="recovery">Recovery</string>
+    <string name="ref_rate">Refresh Rate</string>
+    <string name="released">Released</string>
+    <string name="remember" translatable="false">记住密码</string>
+    <string name="removeads">Remove Ads</string>
+    <string name="request_external_storage_manager_notice">Because the App adaptation version is too low, it is restricted by the file storage management permissions of the current system, please enable all file management permissions of VA and VA plug-ins in the settings!</string>
+    <string name="requires_per">Click here to grant Permission</string>
+    <string name="resol">Resolution</string>
+    <string name="roaming">Roaming</string>
+    <string name="romota">OTA Upgrade</string>
+    <string name="root_access">Root Access</string>
+    <string name="root_manage_apps">Root Management Apps</string>
+    <string name="root_no">Root Access Not Available</string>
+    <string name="root_yes">Root Access Available</string>
+    <string name="rootinfo">Root Info</string>
+    <string name="satellites">Satellites</string>
+    <string name="save">保存</string>
+    <string name="save_menu">Save</string>
+    <string name="save_success">保存成功!</string>
+    <string name="saved">Device Information Saved in Downloads Folder.</string>
+    <string name="scaleDownShowBehavior">com.winfo.photoselector.widget.ScaleDownShowBehavior</string>
+    <string name="scenemodes">Scene Modes</string>
+    <string name="se_linux">SELinux</string>
+    <string name="search">搜索</string>
+    <string name="sec_patch">Security Patch Level</string>
+    <string name="seconds">Seconds</string>
+    <string name="security_level">Security Level</string>
+    <string name="select">选择</string>
+    <string name="select_accent">Select a Theme Color</string>
+    <string name="sensor_avai">Sensors are available on your device</string>
+    <string name="sensor_available">Sensors Available</string>
+    <string name="sensor_size">Sensor Size</string>
+    <string name="sensorname">Sensor Name</string>
+    <string name="sensors">Sensors</string>
+    <string name="server_process_name">:va_core</string>
+    <string name="setting">Settings</string>
+    <string name="settings">Settings</string>
+    <string name="settings_global_property">Settings Global Property</string>
+    <string name="settings_secure_property">Settings Secure Property</string>
+    <string name="settings_system_property">Settings System Property</string>
+    <string name="share">Share App</string>
+    <string name="share_tips">Get your complete Device Information with this amazing app</string>
+    <string name="shareapk">Share</string>
+    <string name="signalstrength">Signal Strength</string>
+    <string name="sim1">SIM 1</string>
+    <string name="sim2">SIM 2</string>
+    <string name="size">Physical Size</string>
+    <string name="sms">SMS</string>
+    <string name="source">Source</string>
+    <string name="sources">Sources</string>
+    <string name="speed">Speed</string>
+    <string name="square">Square</string>
+    <string name="state">State</string>
+    <string name="status">Status</string>
+    <string name="storage">Storage</string>
+    <string name="subnetmask">Subnet Mask</string>
+    <string name="supported">Supported</string>
+    <string name="supported_resol">Supported Resolutions</string>
+    <string name="supportus">Support Us</string>
+    <string name="sys_store">System Storage</string>
+    <string name="system">System</string>
+    <string name="system_property">System Property</string>
+    <string name="system_setting">SystemSettings</string>
+    <string name="systemid">System ID</string>
+    <string name="taphere">Tap here for more info</string>
+    <string name="targetsdk">Target SDK</string>
+    <string name="tech">Technology</string>
+    <string name="temp">Temperature</string>
+    <string name="temp_unit">Temperature Unit</string>
+    <string name="test_accel">Shake your device. Did you feel the vibration?</string>
+    <string name="test_bluetooth">Starting Bluetooth</string>
+    <string name="test_display">Display may turn black, white, red, green and blue. Look for different colored pixels and tap to continue.</string>
+    <string name="test_earproximity">Cover the area above the display. Is the illustration changing?</string>
+    <string name="test_failed">Test Failed…</string>
+    <string name="test_flashlight">Is the flashlight working?</string>
+    <string name="test_lightsensor">Cover the area above the display. Is the value changing?</string>
+    <string name="test_microphone">Speak to the microphone. Is the progress changing?</string>
+    <string name="test_multitouch">Does the screen detects multiple fingers?</string>
+    <string name="test_passed">Test Passed…</string>
+    <string name="test_pat_mode">Test Pattern Mode</string>
+    <string name="test_speaker">Audio is playing. Can you hear it?</string>
+    <string name="test_vibration">Can you feel the phone vibrating?</string>
+    <string name="test_volumedown">Press the volume down key, do you got any feedback?</string>
+    <string name="test_volumeup">Press the volume up key, do you got any feedback?</string>
+    <string name="tests">Tests</string>
+    <string name="text_account_style_error" translatable="false">用户名或密码应由超过6位数字和字母混合组成！</string>
+    <string name="text_clean" translatable="false">X</string>
+    <string formatted="false" name="text_delete_app">是否移除应用 %s ?</string>
+    <string name="text_forget" translatable="false">密码找回</string>
+    <string name="text_forget_password" translatable="false">忘记密码</string>
+    <string name="text_get_back" translatable="false">找回</string>
+    <string name="text_install_gms">是否启用Google Service支持？</string>
+    <string name="text_key" translatable="false">卡密</string>
+    <string name="text_key_error" translatable="false">请输入卡密！</string>
+    <string name="text_login" translatable="false">登录</string>
+    <string name="text_mail" translatable="false">邮箱</string>
+    <string name="text_mail_error" translatable="false">请输入正确的邮箱！</string>
+    <string name="text_mail_no_input" translatable="false">请输入邮箱!</string>
+    <string name="text_password" translatable="false">密码</string>
+    <string name="text_recharge" translatable="false">账号充值</string>
+    <string name="text_recharge_start" translatable="false">充值</string>
+    <string name="text_username" translatable="false">用户名</string>
+    <string name="text_username_error" translatable="false">请输入正确的用户名！</string>
+    <string name="theme">Theme</string>
+    <string name="thermal">Thermal</string>
+    <string name="thumbnailsize">Thumbnail Sizes</string>
+    <string name="timeout">Screen Timeout</string>
+    <string name="timestamp_source">Timestamp Source</string>
+    <string name="timezone">Timezone</string>
+    <string name="tip">提示</string>
+    <string name="tip_delete">删除应用</string>
+    <string name="tip_find_location">正在定位</string>
+    <string name="tip_input_keywords">搜索地点</string>
+    <string name="tip_no_app">请先添加一个App</string>
+    <string name="tip_no_find_points">没有找到相关地点</string>
+    <string name="tip_recharge" translatable="false">充值</string>
+    <string name="tip_search_keyword">搜索非当前城市区域，请用:“城市名@关键词”</string>
+    <string name="tip_start_location">开始定位</string>
+    <string name="title_app_device">独立设置</string>
+    <string name="title_input_activate">激活</string>
+    <string name="title_input_activate_code">激活码</string>
+    <string name="title_input_location">手动输入位置</string>
+    <string name="title_input_wifi_info">输入Wifi信息</string>
+    <string name="title_input_wifi_mac">mac 地址</string>
+    <string name="title_input_wifi_ssid">Wifi 名字</string>
+    <string name="title_mirror_manager">Mirror App Manager</string>
+    <string name="title_user_device">全局设置</string>
+    <string name="toast_message">Toast message</string>
+    <string name="total">Total</string>
+    <string name="total_mem">Total Memory</string>
+    <string name="totalapps">Total Apps</string>
+    <string name="touchdet">Touches Detected</string>
+    <string name="translate">Translate</string>
+    <string name="treble">Treble</string>
+    <string name="trustedLevel">TrustedLevel</string>
+    <string name="twicePasswordError" translatable="false">两次密码输入不一致！</string>
+    <string name="twicePasswordNoInput" translatable="false">请再次输入密码！</string>
+    <string name="txt_feedback" translatable="false">意见反馈</string>
+    <string name="txt_qq" translatable="false">QQ</string>
+    <string name="txt_questions" translatable="false">常见问题</string>
+    <string name="txt_share" translatable="false">分享好友</string>
+    <string name="txt_update" translatable="false">版本更新</string>
+    <string name="txt_weixin" translatable="false">微信</string>
+    <string name="type">Type</string>
+    <string name="ucrop_error_input_data_is_absent" translatable="false">Both input and output Uri must be specified</string>
+    <string name="ucrop_label_edit_photo">Edit Photo</string>
+    <string name="ucrop_label_original">Original</string>
+    <string name="ucrop_menu_crop">Crop</string>
+    <string name="ucrop_mutate_exception_hint" translatable="false">Therefore, override color resource (ucrop_color_toolbar_widget) in your app to make it work on pre-L devices</string>
+    <string name="uid">UID</string>
+    <string name="unable">Unable to determine</string>
+    <string name="unable_to_copy_package_file">Unable to copy the package file.</string>
+    <string name="unabletoext">Unable to Extract this Apk.</string>
+    <string name="undefined">Undefined</string>
+    <string name="unknown">Unknown</string>
+    <string name="unknown_location">未知位置</string>
+    <string name="unspec_fail">Unspecified Failure</string>
+    <string name="update_date">Last Updated</string>
+    <string name="update_latest_version">Please update the latest version in settings</string>
+    <string name="updates">Seamless Updates</string>
+    <string name="uptime">System Uptime</string>
+    <string name="usage_reporting">Usage Reporting Support</string>
+    <string name="usb">USB</string>
+    <string name="usb_host">USB Host</string>
+    <string name="usbport">USB Port</string>
+    <string name="used_mem">Used Memory</string>
+    <string name="usedof">used of</string>
+    <string name="usernameError" translatable="false">请输入正确的用户名！</string>
+    <string name="vendor">Vendor</string>
+    <string name="vendorid">Vendor ID</string>
+    <string name="version">Version</string>
+    <string name="vibration">Vibration</string>
+    <string name="vibrator">Vibrator</string>
+    <string name="videostable_modes">Video Stabilization Modes</string>
+    <string name="virtual_core_x64_engine_not_installed">64bit engine not installed.</string>
+    <string name="virtual_installer">VirtualPackage Installer</string>
+    <string name="virtual_location">虚拟定位</string>
+    <string name="voice">Voice</string>
+    <string name="voltage">Voltage</string>
+    <string name="volumedown">Volume Down Button</string>
+    <string name="volumeup">Volume Up Button</string>
+    <string name="vulkan">Vulkan Support</string>
+    <string name="wait">请稍后…</string>
+    <string name="waitingInternet" translatable="false">网络请求中...</string>
+    <string name="want_sim_info">Want SIM Info ? Allow us to detect your SIM.</string>
+    <string name="webview">WebView</string>
+    <string name="whatisroot">What is Root ?</string>
+    <string name="whatisrootstat">For many computer operating systems the root (Administrator or Superuser) account is a special user with complete access to all files and commands. In the context of Android,root access allows the user to have complete control over the device. Users with root access can cause damage and caution should be used.</string>
+    <string name="whatisseamless">What are Seamless System Updates?</string>
+    <string name="whatisseamlessstat">A/B system updates, also known as seamless updates, ensure a workable booting system remains on the disk during an over-the-air (OTA) update. This approach reduces the likelihood of an inactive device after an update, which means fewer device replacements and device reflashes at repair and warranty centers. Other commercial-grade operating systems such as ChromeOS also use A/B updates successfully.</string>
+    <string name="whatistreble">What is Project Treble ?</string>
+    <string name="whatistreblestat1">Project Treble separates the vendor implementation(device-specific, lower-level software written by silicon manufacturers) from the Android OS framework via a new vendor interface. In Android 7.x and earlier, no formal vendor interface exists so device makers must update large portions of the Android code to move a device to a newer version of Android.</string>
+    <string name="whatistreblestat2">With Treble, a new stable vendor interface provides access to the hardware-specific parts of Android, enabling device makers to deliver new Android releases simply by updating the Android OS framework - without any additional work required from the silicon manufacturers.</string>
+    <string name="whitebalreg">Maximum Auto White Balance Regions</string>
+    <string name="whyroot">Why Root ?</string>
+    <string name="whyrootstat">The most common reasons for gaining root access are:\n• Remove Unwanted Applications\n• Increase Performance\n• Perform Full Data Backup\n• Connect WiFi and USB Tether\n• Use Custom Themes\n• And, run the latest Android OS.\nAll the benefits gained from root access vary based on the Hardware and Software of the device.</string>
+    <string name="widevine">Widevine CDM</string>
+    <string name="wifi">WiFi</string>
+    <string formatted="false" name="wifi_addr">
+        %s\n
+        %s</string>
+    <string name="wifi_status">Wifi状态</string>
+    <string name="wifidirect">WiFi Direct Support</string>
+    <string name="wireless">Wireless</string>
+    <string name="yes">Yes</string>
+    <string name="zram">Z-RAM</string>
+    <style name="BaseTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        
+        <item name="android:windowContentOverlay">@null</item>
+        
+        
+        
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <style name="BottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        
+    </style>
+    <style name="DialogBaseAnimation">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/dialog_out</item>
+    </style>
+    <style name="HVAlertTheme" parent="Theme.AppCompat.Light.Dialog.Alert"/>
+    <style name="ImagePicker" parent="Theme.AppCompat.Light.NoActionBar">
+        
+
+    </style>
+    <style name="PWDCheckBox">
+        
+        
+    </style>
+    <style name="ToolbarStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        
+        <item name="android:textColor">#FFFFFF</item>
+        
+    </style>
+    <style name="TransparentTheme" parent="BaseTheme">
+        <item name="android:windowNoTitle">true</item>
+
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+    <style name="VAAlertTheme" parent="android:Theme.DeviceDefault.Dialog">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <style name="VACustomTheme" parent="HVAlertTheme">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <style name="VATheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+    <style name="WindowBackgroundTheme" parent="VATheme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/notAnimation</item>
+    </style>
+    <style name="bottomSheetStyleWrapper" parent="Widget.Design.BottomSheet.Modal">
+        
+    </style>
+    <style name="notAnimation">
+        <item name="android:activityOpenEnterAnimation">@null</item>
+        <item name="android:activityOpenExitAnimation">@null</item>
+        <item name="android:activityCloseEnterAnimation">@null</item>
+        <item name="android:activityCloseExitAnimation">@null</item>
+        <item name="android:taskOpenEnterAnimation">@null</item>
+        <item name="android:taskOpenExitAnimation">@null</item>
+        <item name="android:taskCloseEnterAnimation">@null</item>
+        <item name="android:taskCloseExitAnimation">@null</item>
+        <item name="android:taskToFrontEnterAnimation">@null</item>
+        <item name="android:taskToFrontExitAnimation">@null</item>
+        <item name="android:taskToBackEnterAnimation">@null</item>
+        <item name="android:taskToBackExitAnimation">@null</item>
+    </style>
+    <style name="notification_button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    <style name="notification_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    <style name="ucrop_ImageViewWidgetIcon">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:duplicateParentState">true</item>
+    </style>
+    <style name="ucrop_TextViewCropAspectRatio">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/ucrop_height_crop_aspect_ratio_text</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:duplicateParentState">true</item>
+        <item name="android:textColor">@color/ucrop_scale_text_view_selector</item>
+    </style>
+    <style name="ucrop_TextViewWidgetText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginTop">@dimen/ucrop_margit_top_widget_text</item>
+        <item name="android:textColor">@color/ucrop_color_widget_text</item>
+        <item name="android:textSize">@dimen/ucrop_text_size_widget_text</item>
+    </style>
+    <style name="ucrop_WrapperIconState">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+       
+        <item name="android:clickable">true</item>
+    </style>
+    <style name="ucrop_WrapperRotateButton">
+        <item name="android:layout_width">@dimen/ucrop_size_wrapper_rotate_button</item>
+        <item name="android:layout_height">@dimen/ucrop_size_wrapper_rotate_button</item>
+        
+        <item name="android:clickable">true</item>
+    </style>
+    <declare-styleable name="BubbleSeekBar">
+        <attr format="float|reference" name="bsb_min"/> 
+        <attr format="float|reference" name="bsb_max"/> 
+        <attr format="float|reference" name="bsb_progress"/> 
+        <attr format="boolean" name="bsb_is_float_type"/> 
+        <attr format="dimension|reference" name="bsb_track_size"/> 
+        
+        <attr format="dimension|reference" name="bsb_second_track_size"/>
+        <attr format="dimension|reference" name="bsb_thumb_radius"/> 
+        
+        <attr format="dimension|reference" name="bsb_thumb_radius_on_dragging"/>
+        <attr format="color|reference" name="bsb_track_color"/> 
+        <attr format="color|reference" name="bsb_second_track_color"/> 
+        <attr format="color|reference" name="bsb_thumb_color"/> 
+        <attr format="integer|reference" name="bsb_section_count"/> 
+        <attr format="boolean" name="bsb_show_section_mark"/> 
+        <attr format="boolean" name="bsb_auto_adjust_section_mark"/> 
+        <attr format="boolean" name="bsb_show_section_text"/> 
+        <attr format="dimension|reference" name="bsb_section_text_size"/> 
+        <attr format="color|reference" name="bsb_section_text_color"/> 
+        
+        <attr name="bsb_section_text_position">
+            <enum name="sides" value="0"/>
+            <enum name="bottom_sides" value="1"/>
+            <enum name="below_section_mark" value="2"/>
+        </attr>
+        <attr format="integer" name="bsb_section_text_interval"/> 
+        <attr format="boolean" name="bsb_show_thumb_text"/> 
+        <attr format="dimension|reference" name="bsb_thumb_text_size"/> 
+        <attr format="color|reference" name="bsb_thumb_text_color"/> 
+        <attr format="boolean" name="bsb_show_progress_in_float"/> 
+        <attr format="boolean" name="bsb_touch_to_seek"/> 
+        <attr format="boolean" name="bsb_seek_step_section"/> 
+        <attr format="boolean" name="bsb_seek_by_section"/> 
+        <attr format="color|reference" name="bsb_bubble_color"/> 
+        <attr format="dimension|reference" name="bsb_bubble_text_size"/> 
+        <attr format="color|reference" name="bsb_bubble_text_color"/> 
+        <attr format="integer" name="bsb_anim_duration"/> 
+        <attr format="boolean" name="bsb_always_show_bubble"/> 
+        <attr format="integer" name="bsb_always_show_bubble_delay"/> 
+        <attr format="boolean" name="bsb_hide_bubble"/> 
+        <attr format="boolean" name="bsb_rtl"/> 
+        <attr name="android:enabled"/>
+    </declare-styleable>
+    <declare-styleable name="CommonTabLayout">
+        
+        <attr name="tl_indicator_color"/>
+        <attr name="tl_indicator_height"/>
+        <attr name="tl_indicator_width"/>
+        <attr name="tl_indicator_margin_left"/>
+        <attr name="tl_indicator_margin_top"/>
+        <attr name="tl_indicator_margin_right"/>
+        <attr name="tl_indicator_margin_bottom"/>
+        <attr name="tl_indicator_corner_radius"/>
+        <attr name="tl_indicator_gravity"/>
+        <attr name="tl_indicator_style"/>
+        <attr name="tl_indicator_anim_enable"/>
+        <attr name="tl_indicator_anim_duration"/>
+        <attr name="tl_indicator_bounce_enable"/>
+
+        
+        <attr name="tl_underline_color"/>
+        <attr name="tl_underline_height"/>
+        <attr name="tl_underline_gravity"/>
+
+        
+        <attr name="tl_tab_padding"/>
+        <attr name="tl_tab_space_equal"/>
+        <attr name="tl_tab_width"/>
+
+        
+        <attr name="tl_textsize"/>
+        <attr name="tl_textSelectColor"/>
+        <attr name="tl_textUnselectColor"/>
+        <attr name="tl_textBold"/>
+        <attr name="tl_textAllCaps"/>
+
+        
+        
+        <attr format="dimension" name="tl_iconWidth"/>
+        
+        <attr format="dimension" name="tl_iconHeight"/>
+        
+        <attr format="boolean" name="tl_iconVisible"/>
+        
+        <attr format="enum" name="tl_iconGravity">
+            <enum name="LEFT" value="3"/>
+            <enum name="TOP" value="48"/>
+            <enum name="RIGHT" value="5"/>
+            <enum name="BOTTOM" value="80"/>
+        </attr>
+        
+        <attr format="dimension" name="tl_iconMargin"/>
+
+    </declare-styleable>
+    <declare-styleable name="CustomButton">
+        
+        <attr format="boolean" name="reflectLight"/>
+        
+        <attr format="dimension" name="borderWidth"/>
+        <attr format="color" name="borderColor"/>
+        <attr format="dimension" name="radius"/>
+        <attr format="color" name="bgColor"/>
+    </declare-styleable>
+    <declare-styleable name="CustomFrameLayoutAttr">
+        <attr format="dimension" name="layout_maxWidth"/>
+        <attr format="dimension" name="layout_maxHeight"/>
+    </declare-styleable>
+    <declare-styleable name="FitTextView">
+        <attr format="dimension" name="ftMinTextSize"/>
+        <attr format="dimension" name="ftMaxTextSize"/>
+    </declare-styleable>
+    <declare-styleable name="LabelView">
+        
+        <attr format="string" name="lv_text"/>
+        
+        <attr format="color" name="lv_text_color"/>
+        
+        <attr format="dimension" name="lv_text_size"/>
+        
+        <attr format="boolean" name="lv_text_bold"/>
+        
+        <attr format="boolean" name="lv_text_all_caps"/>
+        
+        <attr format="color" name="lv_background_color"/>
+        
+        <attr format="dimension" name="lv_min_size"/>
+        
+        <attr format="dimension" name="lv_padding"/>
+        
+        <attr format="enum" name="lv_gravity">
+            <enum name="TOP_LEFT" value="51"/>
+            <enum name="TOP_RIGHT" value="53"/>
+            <enum name="BOTTOM_LEFT" value="83"/>
+            <enum name="BOTTOM_RIGHT" value="85"/>
+        </attr>
+        
+        <attr format="boolean" name="lv_fill_triangle"/>
+
+    </declare-styleable>
+    <declare-styleable name="MsgView">
+        
+        <attr format="color" name="mv_backgroundColor"/>
+        
+        <attr format="dimension" name="mv_cornerRadius"/>
+        
+        <attr format="dimension" name="mv_strokeWidth"/>
+        
+        <attr format="color" name="mv_strokeColor"/>
+        
+        <attr format="boolean" name="mv_isRadiusHalfHeight"/>
+        
+        <attr format="boolean" name="mv_isWidthHeightEqual"/>
+    </declare-styleable>
+    <declare-styleable name="RealtimeBlurView">
+        <attr format="dimension" name="realtimeBlurRadius"/>
+        <attr format="float" name="realtimeDownsampleFactor"/>
+        <attr format="color" name="realtimeOverlayColor"/>
+        <attr format="dimension" name="xRadius"/>
+        <attr format="dimension" name="yRadius"/>
+    </declare-styleable>
+    <declare-styleable name="SegmentTabLayout">
+        
+        <attr name="tl_indicator_color"/>
+        <attr name="tl_indicator_height"/>
+        <attr name="tl_indicator_margin_left"/>
+        <attr name="tl_indicator_margin_top"/>
+        <attr name="tl_indicator_margin_right"/>
+        <attr name="tl_indicator_margin_bottom"/>
+        <attr name="tl_indicator_corner_radius"/>
+        <attr name="tl_indicator_anim_enable"/>
+        <attr name="tl_indicator_anim_duration"/>
+        <attr name="tl_indicator_bounce_enable"/>
+
+        
+        <attr name="tl_tab_padding"/>
+        <attr name="tl_tab_space_equal"/>
+        <attr name="tl_tab_width"/>
+
+        
+        <attr name="tl_textsize"/>
+        <attr name="tl_textSelectColor"/>
+        <attr name="tl_textUnselectColor"/>
+        <attr name="tl_textBold"/>
+        <attr name="tl_textAllCaps"/>
+
+    </declare-styleable>
+    <declare-styleable name="ShadowLayout">
+        <attr format="boolean" name="sl_shadowed"/>
+        <attr format="dimension" name="sl_shadow_distance"/>
+        <attr format="integer" name="sl_shadow_angle"/>
+        <attr format="dimension" name="sl_shadow_radius"/>
+        <attr format="color" name="sl_shadow_color"/>
+    </declare-styleable>
+    <declare-styleable name="SlidingTabLayout">
+        
+        <attr name="tl_indicator_color"/>
+        <attr name="tl_indicator_height"/>
+        <attr name="tl_indicator_width"/>
+        <attr name="tl_indicator_margin_left"/>
+        <attr name="tl_indicator_margin_top"/>
+        <attr name="tl_indicator_margin_right"/>
+        <attr name="tl_indicator_margin_bottom"/>
+        <attr name="tl_indicator_corner_radius"/>
+        <attr name="tl_indicator_gravity"/>
+        <attr name="tl_indicator_style"/>
+        <attr name="tl_indicator_width_equal_title"/>
+
+        
+        <attr name="tl_underline_color"/>
+        <attr name="tl_underline_height"/>
+        <attr name="tl_underline_gravity"/>
+
+        
+        <attr name="tl_divider_color"/>
+        <attr name="tl_divider_width"/>
+        <attr name="tl_divider_padding"/>
+
+        
+        <attr name="tl_tab_padding"/>
+        <attr name="tl_tab_space_equal"/>
+        <attr name="tl_tab_width"/>
+
+        
+        <attr name="tl_textsize"/>
+        <attr name="tl_textSelectColor"/>
+        <attr name="tl_textUnselectColor"/>
+        <attr name="tl_textBold"/>
+        <attr name="tl_textAllCaps"/>
+
+    </declare-styleable>
+    <declare-styleable name="VerifyCodeButton">
+        
+        <attr name="android:background"/>
+        
+        <attr format="reference" name="clickedBackground"/>
+        
+        <attr format="integer" name="countdownTime"/>
+        
+        <attr format="string" name="countdownText"/>
+    </declare-styleable>
+    <declare-styleable name="XRefreshView">
+        <attr format="boolean" name="isHeightMatchParent"/>
+        <attr format="boolean" name="isWidthMatchParent"/>
+        <attr format="boolean" name="autoRefresh"/>
+        <attr format="boolean" name="autoLoadMore"/>
+    </declare-styleable>
+    <declare-styleable name="ucrop_AspectRatioTextView">
+
+        <attr format="string" name="ucrop_artv_ratio_title"/>
+
+        <attr format="float" name="ucrop_artv_ratio_x"/>
+        <attr format="float" name="ucrop_artv_ratio_y"/>
+
+    </declare-styleable>
+    <declare-styleable name="ucrop_UCropView">
+
+        
+        <attr format="float" name="ucrop_aspect_ratio_x"/>
+        <attr format="float" name="ucrop_aspect_ratio_y"/>
+
+        
+        <attr format="boolean" name="ucrop_show_oval_crop_frame"/>
+        <attr format="boolean" name="ucrop_circle_dimmed_layer"/>
+        <attr format="color" name="ucrop_dimmed_color"/>
+
+        <attr format="dimension" name="ucrop_grid_stroke_size"/>
+        <attr format="color" name="ucrop_grid_color"/>
+        <attr format="integer" name="ucrop_grid_row_count"/>
+        <attr format="integer" name="ucrop_grid_column_count"/>
+        <attr format="boolean" name="ucrop_show_grid"/>
+
+        <attr format="dimension" name="ucrop_frame_stroke_size"/>
+        <attr format="color" name="ucrop_frame_color"/>
+        <attr format="boolean" name="ucrop_show_frame"/>
+
+    </declare-styleable>
+</resources>

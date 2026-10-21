@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/switchMargin"
+            android:layout_weight="1"
+            android:background="@color/black10"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Switch
+                android:id="@+id/switch_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:checked="false"
+                android:thumb="@drawable/my_switch_thumb"
+                android:track="@drawable/my_switch_track"
+                tools:checked="false" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:gravity="end"
+                android:text="关闭功能菜单"
+                android:textColor="#FFFFFFF0" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+<!--            <ImageView
+                android:id="@+id/weichat"
+                android:layout_width="@dimen/dp_120"
+                android:layout_height="@dimen/dp_120"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/weichat" />-->
+
+<!--            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/weichat"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="功能创意请加微信"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp_20" />-->
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>

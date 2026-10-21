@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="140dp"
+    android:layout_height="160dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:background="@color/color_ff6bc196"
+    android:gravity="center_horizontal"
+    android:minHeight="160dp"
+    android:orientation="vertical"
+    android:paddingTop="16dp"
+    android:paddingBottom="5dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/menu_icon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/ic_mirror_uninstall" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/menu_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/menu_icon"
+        android:layout_centerHorizontal="true"
+        android:text="卸载分身"
+        android:textColor="#ff333333"
+        android:textSize="16sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/menu_action_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/mirror_btn_bg"
+        android:gravity="center"
+        android:minHeight="24dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="卸载"
+        android:textColor="#fff"
+        android:textSize="12sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/menu_sub_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="2dp"
+        android:layout_below="@id/menu_title"
+        android:layout_centerHorizontal="true"
+        android:text="清除全部数据"
+        android:maxLines="2"
+        android:minLines="2"
+        android:gravity="center"
+        android:textColor="#ff999999"
+        android:textIsSelectable="true"
+        android:textSize="14sp" />
+
+
+</RelativeLayout>

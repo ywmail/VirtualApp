@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tab_heigth"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tab_heigth"
+            android:layout_margin="@dimen/switchMargin"
+            android:background="@color/black10">
+
+            <Switch
+                android:id="@+id/switchsx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                android:checked="false"
+                android:thumb="@drawable/my_switch_thumb"
+                android:track="@drawable/my_switch_track"
+                tools:checked="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"
+                android:text="锁定三星"
+                android:textColor="#FFFFFFF0" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tab_heigth"
+            android:layout_margin="@dimen/switchMargin"
+            android:background="@color/black10">
+
+            <Switch
+                android:id="@+id/switchszjs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                android:checked="false"
+                android:thumb="@drawable/my_switch_thumb"
+                android:track="@drawable/my_switch_track"
+                tools:checked="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"
+                android:text="时装解锁"
+                android:textColor="#FFFFFFF0" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tab_heigth"
+            android:layout_margin="@dimen/switchMargin"
+            android:background="@color/black10">
+
+            <Switch
+                android:id="@+id/switchgjfw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                android:checked="false"
+                android:thumb="@drawable/my_switch_thumb"
+                android:track="@drawable/my_switch_track"
+                tools:checked="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"
+                android:text="攻击范围"
+                android:textColor="#FFFFFFF0" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tab_heigth"
+            android:layout_margin="@dimen/switchMargin"
+            android:background="@color/black10">
+
+            <Switch
+                android:id="@+id/switchatk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                android:checked="false"
+                android:thumb="@drawable/my_switch_thumb"
+                android:track="@drawable/my_switch_track"
+                tools:checked="false" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"
+                android:text="攻击倍率"
+                android:textColor="#FFFFFFF0" />
+
+            <SeekBar
+                android:id="@+id/atkSeekBar"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/atkValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="999.00"
+                android:textColor="@color/white"
+                />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                android:text="000.00"
+                android:textColor="@color/white"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tab_heigth"
+            android:layout_margin="@dimen/switchMargin"
+            android:background="@color/black10">
+
+            <Switch
+                android:id="@+id/switchyxjs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                android:checked="false"
+                android:thumb="@drawable/my_switch_thumb"
+                android:track="@drawable/my_switch_track"
+                tools:checked="false" />
+
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                android:text="加速倍率"
+                android:textColor="#FFFFFFF0" />
+
+            <SeekBar
+                android:id="@+id/yxjsSeekBar"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                />
+
+            <TextView
+                android:id="@+id/yxjsValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                android:text="999.00"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                android:text="000.00"
+                android:textColor="@color/white"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tab_heigth"
+            android:layout_margin="@dimen/switchMargin"
+            android:background="@color/black10">
+
+            <Switch
+                android:id="@+id/switchwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                android:checked="false"
+                android:thumb="@drawable/my_switch_thumb"
+                android:track="@drawable/my_switch_track"
+                tools:checked="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                android:text="无敌霸体"
+                android:textColor="#FFFFFFF0" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tab_heigth"
+            android:layout_margin="@dimen/switchMargin"
+            android:background="@color/black10">
+
+            <Switch
+                android:id="@+id/switchxdl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                android:checked="false"
+                android:thumb="@drawable/my_switch_thumb"
+                android:track="@drawable/my_switch_track"
+                tools:checked="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                android:text="锁行动力"
+                android:textColor="#FFFFFFF0" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tab_heigth"
+            android:layout_margin="@dimen/switchMargin"
+            android:background="@color/black10">
+
+            <Switch
+                android:id="@+id/switchskill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                android:checked="false"
+                android:thumb="@drawable/my_switch_thumb"
+                android:track="@drawable/my_switch_track"
+                tools:checked="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                android:text="技能消耗"
+                android:textColor="#FFFFFFF0" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tab_heigth"
+            android:layout_margin="@dimen/switchMargin"
+            android:background="@color/black10">
+
+            <Switch
+                android:id="@+id/switchtctg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                android:checked="false"
+                android:thumb="@drawable/my_switch_thumb"
+                android:track="@drawable/my_switch_track"
+                tools:checked="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                android:text="退出通关"
+                android:textColor="#FFFFFFF0" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>

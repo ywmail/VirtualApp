@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+             android:background="@drawable/bg_white"
+             android:layout_height="match_parent"
+    tools:ignore="MissingDefaultResource,ResourceName">
+    <RelativeLayout
+            android:orientation="vertical"
+            android:id="@+id/ll_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+                android:id="@+id/tv_top"
+                android:text="用户协议和免责声明"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/black2"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"/>
+        <View
+                android:id="@+id/line"
+                android:layout_below="@+id/tv_top"
+                android:background="#e8e8e8"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"/>
+        <ScrollView
+                android:id="@+id/scroll_view"
+                android:layout_below="@+id/line"
+                android:layout_above="@+id/ll_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/tv_content"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginLeft="25dp"
+                    android:lineSpacingExtra="3dp"
+                android:layout_marginTop="18dp"
+                android:paddingBottom="20dp"
+                android:textSize="13sp"
+                android:textColor="#666666"
+                android:text="欢迎使用我们的应用程序。在您使用我们的应用程序之前，请仔细阅读以下用户协议和免责声明。通过使用我们的应用程序，您同意接受以下条款和条件：\n
+\n用户协议\n\n
+1. 合法使用：本应用程序仅供合法使用。用户不得将应用程序用于任何违反适用法律法规或侵犯他人权益的活动。\n
+2. 禁止违法行为：用户不得利用本应用程序进行任何违法活动，包括但不限于侵犯他人隐私、欺诈、冒充他人等行为。\n
+3. 虚拟定位功能：本应用程序提供虚拟定位功能，用户使用该功能时应遵守适用法律法规，不得将其用于任何违法活动。用户使用虚拟定位功能所导致的任何后果由用户自行承担。\n
+4. 照片替换功能：本应用程序提供照片替换功能，用户不得将其用于任何违法活动，包括但不限于侵犯他人肖像权、传播虚假信息等行为。\n
+5. 机型模拟功能：本应用程序提供机型模拟功能，用户不得将其用于任何违法活动，包括但不限于绕过软件限制、违反应用商店规定等行为。\n
+6. 自主责任：用户对其使用本应用程序的行为负全部责任，并承担由此产生的后果。\n
+7. 合规建议：我们建议用户在使用本应用程序时遵守适用的法律法规和相关政策，以免触犯法律。\n
+8. 违规处理：一旦发现用户违反本用户协议或滥用应用程序进行违法行为，我们有权采取适当的措施，包括但不限于暂停或终止用户的使用权限，并保留向相关法律机构举报的权利。\n
+\n免责声明\n\n
+1. 技术工具：本应用程序仅提供于合法使用，并不对用户使用本应用程序所导致的任何直接或间接损失承担责任。\n
+2. 用户行为：用户对其使用本应用程序的行为负全部责任，包括但不限于使用本应用程序实施的任何违法行为。\n
+3. 使用虚拟定位、照片替换和机型模拟的免责：本应用程序提供虚拟定位、照片替换和机型模拟等功能，用户不得将其用于任何违法活动。用户对使用虚拟定位、照片替换和机型模拟功能所导致的任何违法行为承担全部责任，与应用程序作者无关。\n
+4. 监控和报告：我们有权对用户使用本应用程序的行为进行监控，并在发现用户滥用应用程序进行违法活动时，有权向相关部门或机构报告。\n
+5. 最大范围内：本免责声明适用于适用法律允许的最大范围内，并且不影响任何不可剥夺的法定权利。\n
+6. 提示：尽管我们已经明确禁止用户使用本应用程序进行违法活动，但我们无法完全阻止用户滥用应用程序。因此，请用户务必自觉遵守法律法规，以免触犯法律。\n"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </ScrollView>
+
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:paddingLeft="26dp"
+            android:paddingTop="16dp"
+            android:paddingRight="26dp"
+            android:paddingBottom="13dp">
+
+
+
+            <TextView
+                android:id="@+id/tv_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:background="@drawable/dialog_config_bg"
+                android:gravity="center"
+                android:text="同意并继续"
+                android:textColor="@color/white"
+
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_cancle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="13dp"
+                android:gravity="center"
+                android:text="暂不同意，退出使用"
+                android:textColor="#999999"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

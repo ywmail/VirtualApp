@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent">
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tv_button"
+        android:src="@drawable/ic_chevron_left"
+        android:textColor="@color/black100" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="30dp"
+            android:paddingTop="20dp"
+            android:gravity="center">
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp">
+
+            <!--android:text="kook123"-->
+            <EditText
+                android:id="@+id/account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="50dp"
+                android:background="@drawable/btn_tv"
+                android:layout_marginLeft="50dp"
+                android:textColor="#9F9FA0"
+                android:textColorHint="#9F9FA0"
+
+                android:hint="用户名"/>
+
+            <!--android:text="w329716228"-->
+
+            <EditText
+                android:id="@+id/password_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_tv"
+
+                android:hint="请输入密码"
+                android:textColor="#9F9FA0"
+                android:inputType="textPassword"
+                android:layout_marginTop="@dimen/dp_5"
+                android:textColorHint="#9F9FA0"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"/>
+
+            <!--android:hint="请请输入密码"-->
+            <!--android:text="w329716228"-->
+            <EditText
+                android:id="@+id/password_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_tv"
+
+                android:hint="请请输入密码"
+                android:textColor="#9F9FA0"
+                android:layout_marginTop="@dimen/dp_5"
+                android:inputType="textPassword"
+                android:textColorHint="#9F9FA0"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"/>
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_tv"
+                android:hint="输入邮箱"
+
+                android:textColor="#9F9FA0"
+                android:layout_marginTop="@dimen/dp_5"
+                android:inputType="textEmailAddress"
+                android:textColorHint="#9F9FA0"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/code"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/btn_tv"
+                    android:hint="输入验证码"
+                    android:textColor="#9F9FA0"
+                    android:maxLength="4"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:inputType="textEmailAddress"
+                    android:textColorHint="#9F9FA0"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"/>
+
+                <com.scorpion.activity.widget.VerifyCodeButton
+                    android:id="@+id/btn_verify_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bg_btn_default"
+                    android:gravity="center"
+                    android:text="获取验证码"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    app:clickedBackground="@drawable/bg_btn_clicked"
+                    app:countdownText="重新获取"
+                    app:countdownTime="10" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/register_btn"
+                android:layout_width="@dimen/dp_160"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp_30"
+                android:paddingRight="@dimen/dp_30"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10"
+                android:textSize="18sp"
+                android:textColor="@color/black100"
+
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:background="@drawable/btn_login"
+                android:text="注册"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

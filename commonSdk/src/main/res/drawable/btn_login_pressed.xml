@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <size
+        android:height="64dp"
+        android:width="64dp"/>
+    <padding
+        android:left="10dp"
+        android:right="10dp"
+        android:bottom="10dp"
+        android:top="10dp"
+        />
+    <gradient
+        android:startColor="@color/btn_login_pressed_start"
+        android:endColor="@color/btn_login_pressed_end"
+        android:type="linear"
+        android:useLevel="false"
+        android:gradientRadius="25dp"
+        android:angle="0"
+        />
+
+</shape>

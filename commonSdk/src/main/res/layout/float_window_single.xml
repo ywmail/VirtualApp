@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tl="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/layout_corner"
+    android:textColor="@color/colorAccent">
+
+    <com.kook.tablayout.SegmentTabLayout
+        android:id="@+id/float_tabTitle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tl:tl_indicator_anim_enable="true"
+        tl:tl_tab_space_equal="true"
+        tl:tl_textsize="12sp"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/float_tabContext"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </androidx.viewpager.widget.ViewPager>
+
+</LinearLayout>

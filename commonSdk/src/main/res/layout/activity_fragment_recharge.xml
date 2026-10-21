@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        android:gravity="center">
+        <!--android:background="@drawable/main_bg"-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="30dp"
+            android:paddingTop="20dp"
+            android:background="#80404348"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="@dimen/dp_72"
+                android:layout_height="@dimen/dp_72"
+
+                android:layout_centerHorizontal="true"
+                />
+            <!--android:src="@mipmap/ic_launcher_t"-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/app_name"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/logo"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:background="#50000000">
+            <EditText
+                android:id="@+id/account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:layout_gravity="center"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:textColor="#9F9FA0"
+                android:textColorHint="#9F9FA0"
+                android:hint="请输入 用户名"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#83738F"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"/>
+
+            <EditText
+                android:id="@+id/recharge_key"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:layout_gravity="center"
+                android:hint="请输入卡密"
+                android:textColor="#9F9FA0"
+                android:layout_marginTop="@dimen/dp_5"
+                android:textColorHint="#9F9FA0"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#83738F"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/recharge_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingLeft="@dimen/dp_30"
+                android:paddingRight="@dimen/dp_30"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10"
+                android:textSize="18sp"
+                android:textColor="@color/black100"
+
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_login"
+                android:text="@string/tip_recharge"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -2,13 +2,14 @@ apply plugin: 'com.android.library'
 
 
 android {
-    compileSdkVersion 26
+    compileSdk 36
+    namespace "com.lody.virtual"
     defaultConfig {
-        minSdkVersion 19
+        minSdk 19
         //noinspection ExpiredTargetSdkVersion
-        targetSdkVersion 22
+        targetSdk 22
 
-        buildConfigField 'String', 'VA_VERSION_NAME', '"V' + rootProject.ext.VERSION + '"'
+        buildConfigField 'String', 'VA_VERSION_NAME', '"V' + rootProject.ext.VA_VERSION + '"'
 
         if (project.hasProperty('commit')) {
             buildConfigField 'String', 'commit', '"' + commit + '"'
@@ -17,13 +18,13 @@ android {
         }
 
         manifestPlaceholders = [
-                PERMISSION_PREFIX:  rootProject.ext.PACKAGE_NAME_32BIT,
-                AUTHORITY_PREFIX :  rootProject.ext.PACKAGE_NAME_32BIT,
-                VA_VERSION       : '' + rootProject.ext.VERSION_CODE,
+                PERMISSION_PREFIX:  rootProject.ext.PACKAGE_NAME,
+                AUTHORITY_PREFIX :  rootProject.ext.PACKAGE_NAME,
+                VA_VERSION       : '' + rootProject.ext.VA_VERSION_CODE,
         ]
         externalNativeBuild {
             ndkBuild {
-                abiFilters "arm64-v8a"//"armeabi-v7a"//,
+                abiFilters "arm64-v8a"
             }
         }
     }
@@ -41,7 +42,7 @@ android {
             path file("src/main/jni/Android.mk")
         }
     }
-    lintOptions {
+    lint {
         //IJobService need NewApi
         abortOnError false
         warning 'NewApi', 'OnClick', 'EllipsizeMaxLines'
