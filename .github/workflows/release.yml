@@ -50,6 +50,11 @@ jobs:
               -dname "CN=CI,OU=Dev,O=VirtualApp,L=Local,ST=Local,C=CN"
           fi
 
+      - name: Create missing proguard rules file
+        run: |
+          mkdir -p security
+          touch security/proguard-rules.pro
+
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
