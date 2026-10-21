@@ -1,0 +1,26 @@
+.github/SETUP_SECRETS.md
+  s_706405007d01ba::t_83f1882283da54 1-29
+.github/workflows/release.yml
+  s_706405007d01ba::t_02a651c4127904 33,41,43-51
+  s_706405007d01ba::t_fcf4c1a66e4762 1-32,34-40,42,52-84
+VAConfig.gradle
+  s_706405007d01ba::t_abd6a86a8133c5 17-20
+.gitignore
+  s_706405007d01ba::t_54bbbc1bc9670f 33-35
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "91b208f3f035db4196bb16c360ef3d37a85e4ebb",
+  "prompts": {},
+  "sessions": {
+    "s_706405007d01ba": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "dde6f4bc-9a51-48df-a5d4-8429e4ffdc72",
+        "model": "maas-glm-5-2-260617"
+      },
+      "human_author": "y00798287 <yangwei1@huawei.com>"
+    }
+  }
+}
