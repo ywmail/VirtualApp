@@ -1,0 +1,59 @@
+commonSdk/src/main/cpp/includes/art_runtime.h
+  s_706405007d01ba::t_9b82614682d763 1-18
+commonSdk/src/main/cpp/includes/native_hook.h
+  s_706405007d01ba::t_840c71a446a4e0 1-19
+commonSdk/src/main/cpp/includes/cast_compiler_options.h
+  s_706405007d01ba::t_d3ade020537a8e 1-24
+commonSdk/src/main/cpp/includes/cast.h
+  s_706405007d01ba::t_10b401b0d47a6a 1-123
+commonSdk/src/main/cpp/includes/utils.h
+  s_706405007d01ba::t_8276f72be448f5 1-41
+commonSdk/src/main/cpp/includes/art_method.h
+  s_706405007d01ba::t_ee21a56c725abb 1-87
+commonSdk/src/main/cpp/includes/art_compiler_options.h
+  s_706405007d01ba::t_ce691d4d0de223 1-28
+commonSdk/src/main/cpp/includes/arch.h
+  s_706405007d01ba::t_3e5ea82759a5ec 1-48
+commonSdk/src/main/cpp/includes/sandhook.h
+  s_706405007d01ba::t_8798f0ce479256 1-16
+commonSdk/src/main/cpp/includes/offset.h
+  s_706405007d01ba::t_8d73825c27a637 1-28
+commonSdk/src/main/cpp/includes/elf_util.h
+  s_706405007d01ba::t_b02fa4ca2232aa 1-72
+commonSdk/src/main/cpp/includes/trampoline.h
+  s_706405007d01ba::t_14e7f9603f618a 1-231
+commonSdk/src/main/cpp/includes/log.h
+  s_706405007d01ba::t_c963f3e8255d76 1-16
+commonSdk/src/main/cpp/includes/art_jit.h
+  s_706405007d01ba::t_22791dae90ce3d 1-28
+commonSdk/src/main/cpp/includes/dlfcn_nougat.h
+  s_706405007d01ba::t_e1974dee9fdaf7 1-17
+commonSdk/src/main/cpp/includes/inst.h
+  s_706405007d01ba::t_e4950dc5e53352 1-120
+commonSdk/src/main/cpp/includes/never_call.h
+  s_706405007d01ba::t_b7445712527c75 1-14
+commonSdk/src/main/cpp/includes/trampoline_manager.h
+  s_706405007d01ba::t_7fa7d31e61426a 1-115
+commonSdk/src/main/cpp/includes/hide_api.h
+  s_706405007d01ba::t_0bc18e25e19d89 1-61
+commonSdk/src/main/cpp/includes/cast_art_method.h
+  s_706405007d01ba::t_7145e12b5cd8a0 1-39
+commonSdk/src/main/cpp/includes/arch_base.h
+  s_706405007d01ba::t_c64e4c365eb1e4 1-34
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "27589b13d11725bfe083028682c25d3ce39ef1cb",
+  "prompts": {},
+  "sessions": {
+    "s_706405007d01ba": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "dde6f4bc-9a51-48df-a5d4-8429e4ffdc72",
+        "model": "maas-glm-5-2-260617"
+      },
+      "human_author": "y00798287 <yangwei1@huawei.com>"
+    }
+  }
+}
