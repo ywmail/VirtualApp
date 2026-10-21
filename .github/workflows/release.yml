@@ -21,9 +21,12 @@ jobs:
           java-version: '25'
 
       - name: Install Android SDK components
+        env:
+          JAVA_HOME: /usr/lib/jvm/temurin-17-jdk-amd64
         run: |
-          yes | sdkmanager --licenses > /dev/null 2>&1 || true
-          sdkmanager "platforms;android-33" "platforms;android-36" "build-tools;36.0.0" "ndk;27.0.12077973"
+          export PATH="$JAVA_HOME/bin:$PATH"
+          yes | ${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager --licenses > /dev/null 2>&1 || true
+          ${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager "platforms;android-33" "platforms;android-36" "build-tools;36.0.0" "ndk;27.0.12077973"
 
       - name: Generate local.properties
         run: echo "sdk.dir=$ANDROID_HOME" > local.properties
