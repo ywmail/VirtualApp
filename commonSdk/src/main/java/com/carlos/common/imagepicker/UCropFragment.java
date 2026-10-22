@@ -183,10 +183,10 @@ extends Fragment {
     }
 
     public void setupViews(View view, Bundle args) {
-        this.mActiveWidgetColor = args.getInt("com.carlos.multiapp.UcropColorWidgetActive", ContextCompat.getColor((Context)this.getContext(), (int)R.color.ucrop_color_widget_active));
-        this.mLogoColor = args.getInt("com.carlos.multiapp.UcropLogoColor", ContextCompat.getColor((Context)this.getContext(), (int)R.color.ucrop_color_default_logo));
-        this.mShowBottomControls = !args.getBoolean("com.carlos.multiapp.HideBottomControls", false);
-        this.mRootViewBackgroundColor = args.getInt("com.carlos.multiapp.UcropRootViewBackgroundColor", ContextCompat.getColor((Context)this.getContext(), (int)R.color.ucrop_color_crop_background));
+        this.mActiveWidgetColor = args.getInt("com.ywmail.virtualapp.UcropColorWidgetActive", ContextCompat.getColor((Context)this.getContext(), (int)R.color.ucrop_color_widget_active));
+        this.mLogoColor = args.getInt("com.ywmail.virtualapp.UcropLogoColor", ContextCompat.getColor((Context)this.getContext(), (int)R.color.ucrop_color_default_logo));
+        this.mShowBottomControls = !args.getBoolean("com.ywmail.virtualapp.HideBottomControls", false);
+        this.mRootViewBackgroundColor = args.getInt("com.ywmail.virtualapp.UcropRootViewBackgroundColor", ContextCompat.getColor((Context)this.getContext(), (int)R.color.ucrop_color_crop_background));
         this.initiateRootViews(view);
         this.callback.loadingProgress(true);
         if (this.mShowBottomControls) {
@@ -209,8 +209,8 @@ extends Fragment {
     }
 
     private void setImageData(@NonNull Bundle bundle) {
-        Uri inputUri = (Uri)bundle.getParcelable("com.carlos.multiapp.InputUri");
-        Uri outputUri = (Uri)bundle.getParcelable("com.carlos.multiapp.OutputUri");
+        Uri inputUri = (Uri)bundle.getParcelable("com.ywmail.virtualapp.InputUri");
+        Uri outputUri = (Uri)bundle.getParcelable("com.ywmail.virtualapp.OutputUri");
         this.processOptions(bundle);
         if (inputUri != null && outputUri != null) {
             try {
@@ -225,35 +225,35 @@ extends Fragment {
     }
 
     private void processOptions(@NonNull Bundle bundle) {
-        String compressionFormatName = bundle.getString("com.carlos.multiapp.CompressionFormatName");
+        String compressionFormatName = bundle.getString("com.ywmail.virtualapp.CompressionFormatName");
         Bitmap.CompressFormat compressFormat = null;
         if (!TextUtils.isEmpty((CharSequence)compressionFormatName)) {
             compressFormat = Bitmap.CompressFormat.valueOf((String)compressionFormatName);
         }
         this.mCompressFormat = compressFormat == null ? DEFAULT_COMPRESS_FORMAT : compressFormat;
-        this.mCompressQuality = bundle.getInt("com.carlos.multiapp.CompressionQuality", 90);
-        int[] allowedGestures = bundle.getIntArray("com.carlos.multiapp.AllowedGestures");
+        this.mCompressQuality = bundle.getInt("com.ywmail.virtualapp.CompressionQuality", 90);
+        int[] allowedGestures = bundle.getIntArray("com.ywmail.virtualapp.AllowedGestures");
         if (allowedGestures != null && allowedGestures.length == 3) {
             this.mAllowedGestures = allowedGestures;
         }
-        this.mGestureCropImageView.setMaxBitmapSize(bundle.getInt("com.carlos.multiapp.MaxBitmapSize", 0));
-        this.mGestureCropImageView.setMaxScaleMultiplier(bundle.getFloat("com.carlos.multiapp.MaxScaleMultiplier", 10.0f));
-        this.mGestureCropImageView.setImageToWrapCropBoundsAnimDuration(bundle.getInt("com.carlos.multiapp.ImageToCropBoundsAnimDuration", 500));
-        this.mOverlayView.setFreestyleCropEnabled(bundle.getBoolean("com.carlos.multiapp.FreeStyleCrop", false));
-        this.mOverlayView.setDimmedColor(bundle.getInt("com.carlos.multiapp.DimmedLayerColor", this.getResources().getColor(R.color.ucrop_color_default_dimmed)));
-        this.mOverlayView.setCircleDimmedLayer(bundle.getBoolean("com.carlos.multiapp.CircleDimmedLayer", false));
-        this.mOverlayView.setShowCropFrame(bundle.getBoolean("com.carlos.multiapp.ShowCropFrame", true));
-        this.mOverlayView.setCropFrameColor(bundle.getInt("com.carlos.multiapp.CropFrameColor", this.getResources().getColor(R.color.ucrop_color_default_crop_frame)));
-        this.mOverlayView.setCropFrameStrokeWidth(bundle.getInt("com.carlos.multiapp.CropFrameStrokeWidth", this.getResources().getDimensionPixelSize(R.dimen.ucrop_default_crop_frame_stoke_width)));
-        this.mOverlayView.setShowCropGrid(bundle.getBoolean("com.carlos.multiapp.ShowCropGrid", true));
-        this.mOverlayView.setCropGridRowCount(bundle.getInt("com.carlos.multiapp.CropGridRowCount", 2));
-        this.mOverlayView.setCropGridColumnCount(bundle.getInt("com.carlos.multiapp.CropGridColumnCount", 2));
-        this.mOverlayView.setCropGridColor(bundle.getInt("com.carlos.multiapp.CropGridColor", this.getResources().getColor(R.color.ucrop_color_default_crop_grid)));
-        this.mOverlayView.setCropGridStrokeWidth(bundle.getInt("com.carlos.multiapp.CropGridStrokeWidth", this.getResources().getDimensionPixelSize(R.dimen.ucrop_default_crop_grid_stoke_width)));
-        float aspectRatioX = bundle.getFloat("com.carlos.multiapp.AspectRatioX", 0.0f);
-        float aspectRatioY = bundle.getFloat("com.carlos.multiapp.AspectRatioY", 0.0f);
-        int aspectRationSelectedByDefault = bundle.getInt("com.carlos.multiapp.AspectRatioSelectedByDefault", 0);
-        ArrayList aspectRatioList = bundle.getParcelableArrayList("com.carlos.multiapp.AspectRatioOptions");
+        this.mGestureCropImageView.setMaxBitmapSize(bundle.getInt("com.ywmail.virtualapp.MaxBitmapSize", 0));
+        this.mGestureCropImageView.setMaxScaleMultiplier(bundle.getFloat("com.ywmail.virtualapp.MaxScaleMultiplier", 10.0f));
+        this.mGestureCropImageView.setImageToWrapCropBoundsAnimDuration(bundle.getInt("com.ywmail.virtualapp.ImageToCropBoundsAnimDuration", 500));
+        this.mOverlayView.setFreestyleCropEnabled(bundle.getBoolean("com.ywmail.virtualapp.FreeStyleCrop", false));
+        this.mOverlayView.setDimmedColor(bundle.getInt("com.ywmail.virtualapp.DimmedLayerColor", this.getResources().getColor(R.color.ucrop_color_default_dimmed)));
+        this.mOverlayView.setCircleDimmedLayer(bundle.getBoolean("com.ywmail.virtualapp.CircleDimmedLayer", false));
+        this.mOverlayView.setShowCropFrame(bundle.getBoolean("com.ywmail.virtualapp.ShowCropFrame", true));
+        this.mOverlayView.setCropFrameColor(bundle.getInt("com.ywmail.virtualapp.CropFrameColor", this.getResources().getColor(R.color.ucrop_color_default_crop_frame)));
+        this.mOverlayView.setCropFrameStrokeWidth(bundle.getInt("com.ywmail.virtualapp.CropFrameStrokeWidth", this.getResources().getDimensionPixelSize(R.dimen.ucrop_default_crop_frame_stoke_width)));
+        this.mOverlayView.setShowCropGrid(bundle.getBoolean("com.ywmail.virtualapp.ShowCropGrid", true));
+        this.mOverlayView.setCropGridRowCount(bundle.getInt("com.ywmail.virtualapp.CropGridRowCount", 2));
+        this.mOverlayView.setCropGridColumnCount(bundle.getInt("com.ywmail.virtualapp.CropGridColumnCount", 2));
+        this.mOverlayView.setCropGridColor(bundle.getInt("com.ywmail.virtualapp.CropGridColor", this.getResources().getColor(R.color.ucrop_color_default_crop_grid)));
+        this.mOverlayView.setCropGridStrokeWidth(bundle.getInt("com.ywmail.virtualapp.CropGridStrokeWidth", this.getResources().getDimensionPixelSize(R.dimen.ucrop_default_crop_grid_stoke_width)));
+        float aspectRatioX = bundle.getFloat("com.ywmail.virtualapp.AspectRatioX", 0.0f);
+        float aspectRatioY = bundle.getFloat("com.ywmail.virtualapp.AspectRatioY", 0.0f);
+        int aspectRationSelectedByDefault = bundle.getInt("com.ywmail.virtualapp.AspectRatioSelectedByDefault", 0);
+        ArrayList aspectRatioList = bundle.getParcelableArrayList("com.ywmail.virtualapp.AspectRatioOptions");
         if (aspectRatioX > 0.0f && aspectRatioY > 0.0f) {
             if (this.mWrapperStateAspectRatio != null) {
                 this.mWrapperStateAspectRatio.setVisibility(View.GONE);
@@ -264,8 +264,8 @@ extends Fragment {
         } else {
             this.mGestureCropImageView.setTargetAspectRatio(0.0f);
         }
-        int maxSizeX = bundle.getInt("com.carlos.multiapp.MaxSizeX", 0);
-        int maxSizeY = bundle.getInt("com.carlos.multiapp.MaxSizeY", 0);
+        int maxSizeX = bundle.getInt("com.ywmail.virtualapp.MaxSizeX", 0);
+        int maxSizeY = bundle.getInt("com.ywmail.virtualapp.MaxSizeY", 0);
         if (maxSizeX > 0 && maxSizeY > 0) {
             this.mGestureCropImageView.setMaxResultImageSizeX(maxSizeX);
             this.mGestureCropImageView.setMaxResultImageSizeY(maxSizeY);
@@ -291,8 +291,8 @@ extends Fragment {
     }
 
     private void setupAspectRatioWidget(@NonNull Bundle bundle, View view) {
-        int aspectRationSelectedByDefault = bundle.getInt("com.carlos.multiapp.AspectRatioSelectedByDefault", 0);
-        ArrayList<AspectRatio> aspectRatioList = bundle.getParcelableArrayList("com.carlos.multiapp.AspectRatioOptions");
+        int aspectRationSelectedByDefault = bundle.getInt("com.ywmail.virtualapp.AspectRatioSelectedByDefault", 0);
+        ArrayList<AspectRatio> aspectRatioList = bundle.getParcelableArrayList("com.ywmail.virtualapp.AspectRatioOptions");
         if (aspectRatioList == null || aspectRatioList.isEmpty()) {
             aspectRationSelectedByDefault = 2;
             aspectRatioList = new ArrayList<AspectRatio>();
@@ -480,11 +480,11 @@ extends Fragment {
     }
 
     protected UCropResult getResult(Uri uri, float resultAspectRatio, int offsetX, int offsetY, int imageWidth, int imageHeight) {
-        return new UCropResult(-1, new Intent().putExtra("com.carlos.multiapp.OutputUri", (Parcelable)uri).putExtra("com.carlos.multiapp.CropAspectRatio", resultAspectRatio).putExtra("com.carlos.multiapp.ImageWidth", imageWidth).putExtra("com.carlos.multiapp.ImageHeight", imageHeight).putExtra("com.carlos.multiapp.OffsetX", offsetX).putExtra("com.carlos.multiapp.OffsetY", offsetY));
+        return new UCropResult(-1, new Intent().putExtra("com.ywmail.virtualapp.OutputUri", (Parcelable)uri).putExtra("com.ywmail.virtualapp.CropAspectRatio", resultAspectRatio).putExtra("com.ywmail.virtualapp.ImageWidth", imageWidth).putExtra("com.ywmail.virtualapp.ImageHeight", imageHeight).putExtra("com.ywmail.virtualapp.OffsetX", offsetX).putExtra("com.ywmail.virtualapp.OffsetY", offsetY));
     }
 
     protected UCropResult getError(Throwable throwable) {
-        return new UCropResult(96, new Intent().putExtra("com.carlos.multiapp.Error", (Serializable)throwable));
+        return new UCropResult(96, new Intent().putExtra("com.ywmail.virtualapp.Error", (Serializable)throwable));
     }
 
     static {

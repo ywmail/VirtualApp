@@ -18,11 +18,11 @@ public abstract class SettingConfig {
     public abstract String getExtPackageName();
 
     public String getBinderProviderAuthority() {
-        return "com.carlos.multiapp.virtual.service.BinderProvider";
+        return getMainPackageName() + ".virtual.service.BinderProvider";
     }
 
     public String getExtPackageHelperAuthority() {
-        return "com.carlos.multiapp.virtual.service.ext_helper";
+        return getMainPackageName() + ".virtual.service.ext_helper";
     }
 
     public boolean isEnableIORedirect() {

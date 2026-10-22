@@ -45,12 +45,12 @@ public class CommonApp {
 
         @Override
         public String getMainPackageName() {
-            return "com.carlos.multiapp";
+            return "com.ywmail.virtualapp";
         }
 
         @Override
         public String getExtPackageName() {
-            return "com.carlos.multiapp.ext";
+            return "com.ywmail.virtualapp.ext";
         }
 
         @Override

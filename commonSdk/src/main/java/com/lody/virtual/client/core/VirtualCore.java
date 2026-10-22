@@ -319,8 +319,8 @@ public final class VirtualCore {
 
             StubManifest.PACKAGE_NAME = packageName;
             StubManifest.EXT_PACKAGE_NAME = ext_packageName;
-            StubManifest.EXT_STUB_CP_AUTHORITY = "com.carlos.multiapp.virtual_stub_ext_";
-            StubManifest.EXT_PROXY_CP_AUTHORITY = "com.carlos.multiapp.provider_proxy_ext";
+            StubManifest.EXT_STUB_CP_AUTHORITY = ext_packageName + ".virtual_stub_ext_";
+            StubManifest.EXT_PROXY_CP_AUTHORITY = ext_packageName + ".provider_proxy_ext";
             this.context = context;
             this.isMainPackage = context.getPackageName().equals(StubManifest.PACKAGE_NAME);
             NativeEngine.bypassHiddenAPIEnforcementPolicyIfNeeded();

@@ -49,19 +49,19 @@ public class UCrop {
     public static final int REQUEST_CROP = 69;
     public static final int RESULT_ERROR = 96;
     public static final int MIN_SIZE = 10;
-    private static final String EXTRA_PREFIX = "com.carlos.multiapp";
-    public static final String EXTRA_INPUT_URI = "com.carlos.multiapp.InputUri";
-    public static final String EXTRA_OUTPUT_URI = "com.carlos.multiapp.OutputUri";
-    public static final String EXTRA_OUTPUT_CROP_ASPECT_RATIO = "com.carlos.multiapp.CropAspectRatio";
-    public static final String EXTRA_OUTPUT_IMAGE_WIDTH = "com.carlos.multiapp.ImageWidth";
-    public static final String EXTRA_OUTPUT_IMAGE_HEIGHT = "com.carlos.multiapp.ImageHeight";
-    public static final String EXTRA_OUTPUT_OFFSET_X = "com.carlos.multiapp.OffsetX";
-    public static final String EXTRA_OUTPUT_OFFSET_Y = "com.carlos.multiapp.OffsetY";
-    public static final String EXTRA_ERROR = "com.carlos.multiapp.Error";
-    public static final String EXTRA_ASPECT_RATIO_X = "com.carlos.multiapp.AspectRatioX";
-    public static final String EXTRA_ASPECT_RATIO_Y = "com.carlos.multiapp.AspectRatioY";
-    public static final String EXTRA_MAX_SIZE_X = "com.carlos.multiapp.MaxSizeX";
-    public static final String EXTRA_MAX_SIZE_Y = "com.carlos.multiapp.MaxSizeY";
+    private static final String EXTRA_PREFIX = "com.ywmail.virtualapp";
+    public static final String EXTRA_INPUT_URI = "com.ywmail.virtualapp.InputUri";
+    public static final String EXTRA_OUTPUT_URI = "com.ywmail.virtualapp.OutputUri";
+    public static final String EXTRA_OUTPUT_CROP_ASPECT_RATIO = "com.ywmail.virtualapp.CropAspectRatio";
+    public static final String EXTRA_OUTPUT_IMAGE_WIDTH = "com.ywmail.virtualapp.ImageWidth";
+    public static final String EXTRA_OUTPUT_IMAGE_HEIGHT = "com.ywmail.virtualapp.ImageHeight";
+    public static final String EXTRA_OUTPUT_OFFSET_X = "com.ywmail.virtualapp.OffsetX";
+    public static final String EXTRA_OUTPUT_OFFSET_Y = "com.ywmail.virtualapp.OffsetY";
+    public static final String EXTRA_ERROR = "com.ywmail.virtualapp.Error";
+    public static final String EXTRA_ASPECT_RATIO_X = "com.ywmail.virtualapp.AspectRatioX";
+    public static final String EXTRA_ASPECT_RATIO_Y = "com.ywmail.virtualapp.AspectRatioY";
+    public static final String EXTRA_MAX_SIZE_X = "com.ywmail.virtualapp.MaxSizeX";
+    public static final String EXTRA_MAX_SIZE_Y = "com.ywmail.virtualapp.MaxSizeY";
     private Intent mCropIntent;
     private Bundle mCropOptionsBundle;
 
@@ -79,9 +79,9 @@ public class UCrop {
             Log.d((String)"HV-", (String)("UCropActivity  packageName:" + packageName + "    userId:" + userId));
         }
         this.mCropOptionsBundle = new Bundle();
-        this.mCropOptionsBundle.putParcelable("com.carlos.multiapp.InputUri", (Parcelable)source);
-        this.mCropOptionsBundle.putParcelable("com.carlos.multiapp.OutputUri", (Parcelable)destination);
-        this.mCropOptionsBundle.putParcelable("com.carlos.multiapp.InputUri", (Parcelable)source);
+        this.mCropOptionsBundle.putParcelable("com.ywmail.virtualapp.InputUri", (Parcelable)source);
+        this.mCropOptionsBundle.putParcelable("com.ywmail.virtualapp.OutputUri", (Parcelable)destination);
+        this.mCropOptionsBundle.putParcelable("com.ywmail.virtualapp.InputUri", (Parcelable)source);
     }
 
     public UCrop withAspectRatio(float x, float y) {
@@ -168,35 +168,35 @@ public class UCrop {
     }
 
     public static class Options {
-        public static final String EXTRA_COMPRESSION_FORMAT_NAME = "com.carlos.multiapp.CompressionFormatName";
-        public static final String EXTRA_COMPRESSION_QUALITY = "com.carlos.multiapp.CompressionQuality";
-        public static final String EXTRA_ALLOWED_GESTURES = "com.carlos.multiapp.AllowedGestures";
-        public static final String EXTRA_MAX_BITMAP_SIZE = "com.carlos.multiapp.MaxBitmapSize";
-        public static final String EXTRA_MAX_SCALE_MULTIPLIER = "com.carlos.multiapp.MaxScaleMultiplier";
-        public static final String EXTRA_IMAGE_TO_CROP_BOUNDS_ANIM_DURATION = "com.carlos.multiapp.ImageToCropBoundsAnimDuration";
-        public static final String EXTRA_DIMMED_LAYER_COLOR = "com.carlos.multiapp.DimmedLayerColor";
-        public static final String EXTRA_CIRCLE_DIMMED_LAYER = "com.carlos.multiapp.CircleDimmedLayer";
-        public static final String EXTRA_SHOW_CROP_FRAME = "com.carlos.multiapp.ShowCropFrame";
-        public static final String EXTRA_CROP_FRAME_COLOR = "com.carlos.multiapp.CropFrameColor";
-        public static final String EXTRA_CROP_FRAME_STROKE_WIDTH = "com.carlos.multiapp.CropFrameStrokeWidth";
-        public static final String EXTRA_SHOW_CROP_GRID = "com.carlos.multiapp.ShowCropGrid";
-        public static final String EXTRA_CROP_GRID_ROW_COUNT = "com.carlos.multiapp.CropGridRowCount";
-        public static final String EXTRA_CROP_GRID_COLUMN_COUNT = "com.carlos.multiapp.CropGridColumnCount";
-        public static final String EXTRA_CROP_GRID_COLOR = "com.carlos.multiapp.CropGridColor";
-        public static final String EXTRA_CROP_GRID_STROKE_WIDTH = "com.carlos.multiapp.CropGridStrokeWidth";
-        public static final String EXTRA_TOOL_BAR_COLOR = "com.carlos.multiapp.ToolbarColor";
-        public static final String EXTRA_STATUS_BAR_COLOR = "com.carlos.multiapp.StatusBarColor";
-        public static final String EXTRA_UCROP_COLOR_WIDGET_ACTIVE = "com.carlos.multiapp.UcropColorWidgetActive";
-        public static final String EXTRA_UCROP_WIDGET_COLOR_TOOLBAR = "com.carlos.multiapp.UcropToolbarWidgetColor";
-        public static final String EXTRA_UCROP_TITLE_TEXT_TOOLBAR = "com.carlos.multiapp.UcropToolbarTitleText";
-        public static final String EXTRA_UCROP_WIDGET_CANCEL_DRAWABLE = "com.carlos.multiapp.UcropToolbarCancelDrawable";
-        public static final String EXTRA_UCROP_WIDGET_CROP_DRAWABLE = "com.carlos.multiapp.UcropToolbarCropDrawable";
-        public static final String EXTRA_UCROP_LOGO_COLOR = "com.carlos.multiapp.UcropLogoColor";
-        public static final String EXTRA_HIDE_BOTTOM_CONTROLS = "com.carlos.multiapp.HideBottomControls";
-        public static final String EXTRA_FREE_STYLE_CROP = "com.carlos.multiapp.FreeStyleCrop";
-        public static final String EXTRA_ASPECT_RATIO_SELECTED_BY_DEFAULT = "com.carlos.multiapp.AspectRatioSelectedByDefault";
-        public static final String EXTRA_ASPECT_RATIO_OPTIONS = "com.carlos.multiapp.AspectRatioOptions";
-        public static final String EXTRA_UCROP_ROOT_VIEW_BACKGROUND_COLOR = "com.carlos.multiapp.UcropRootViewBackgroundColor";
+        public static final String EXTRA_COMPRESSION_FORMAT_NAME = "com.ywmail.virtualapp.CompressionFormatName";
+        public static final String EXTRA_COMPRESSION_QUALITY = "com.ywmail.virtualapp.CompressionQuality";
+        public static final String EXTRA_ALLOWED_GESTURES = "com.ywmail.virtualapp.AllowedGestures";
+        public static final String EXTRA_MAX_BITMAP_SIZE = "com.ywmail.virtualapp.MaxBitmapSize";
+        public static final String EXTRA_MAX_SCALE_MULTIPLIER = "com.ywmail.virtualapp.MaxScaleMultiplier";
+        public static final String EXTRA_IMAGE_TO_CROP_BOUNDS_ANIM_DURATION = "com.ywmail.virtualapp.ImageToCropBoundsAnimDuration";
+        public static final String EXTRA_DIMMED_LAYER_COLOR = "com.ywmail.virtualapp.DimmedLayerColor";
+        public static final String EXTRA_CIRCLE_DIMMED_LAYER = "com.ywmail.virtualapp.CircleDimmedLayer";
+        public static final String EXTRA_SHOW_CROP_FRAME = "com.ywmail.virtualapp.ShowCropFrame";
+        public static final String EXTRA_CROP_FRAME_COLOR = "com.ywmail.virtualapp.CropFrameColor";
+        public static final String EXTRA_CROP_FRAME_STROKE_WIDTH = "com.ywmail.virtualapp.CropFrameStrokeWidth";
+        public static final String EXTRA_SHOW_CROP_GRID = "com.ywmail.virtualapp.ShowCropGrid";
+        public static final String EXTRA_CROP_GRID_ROW_COUNT = "com.ywmail.virtualapp.CropGridRowCount";
+        public static final String EXTRA_CROP_GRID_COLUMN_COUNT = "com.ywmail.virtualapp.CropGridColumnCount";
+        public static final String EXTRA_CROP_GRID_COLOR = "com.ywmail.virtualapp.CropGridColor";
+        public static final String EXTRA_CROP_GRID_STROKE_WIDTH = "com.ywmail.virtualapp.CropGridStrokeWidth";
+        public static final String EXTRA_TOOL_BAR_COLOR = "com.ywmail.virtualapp.ToolbarColor";
+        public static final String EXTRA_STATUS_BAR_COLOR = "com.ywmail.virtualapp.StatusBarColor";
+        public static final String EXTRA_UCROP_COLOR_WIDGET_ACTIVE = "com.ywmail.virtualapp.UcropColorWidgetActive";
+        public static final String EXTRA_UCROP_WIDGET_COLOR_TOOLBAR = "com.ywmail.virtualapp.UcropToolbarWidgetColor";
+        public static final String EXTRA_UCROP_TITLE_TEXT_TOOLBAR = "com.ywmail.virtualapp.UcropToolbarTitleText";
+        public static final String EXTRA_UCROP_WIDGET_CANCEL_DRAWABLE = "com.ywmail.virtualapp.UcropToolbarCancelDrawable";
+        public static final String EXTRA_UCROP_WIDGET_CROP_DRAWABLE = "com.ywmail.virtualapp.UcropToolbarCropDrawable";
+        public static final String EXTRA_UCROP_LOGO_COLOR = "com.ywmail.virtualapp.UcropLogoColor";
+        public static final String EXTRA_HIDE_BOTTOM_CONTROLS = "com.ywmail.virtualapp.HideBottomControls";
+        public static final String EXTRA_FREE_STYLE_CROP = "com.ywmail.virtualapp.FreeStyleCrop";
+        public static final String EXTRA_ASPECT_RATIO_SELECTED_BY_DEFAULT = "com.ywmail.virtualapp.AspectRatioSelectedByDefault";
+        public static final String EXTRA_ASPECT_RATIO_OPTIONS = "com.ywmail.virtualapp.AspectRatioOptions";
+        public static final String EXTRA_UCROP_ROOT_VIEW_BACKGROUND_COLOR = "com.ywmail.virtualapp.UcropRootViewBackgroundColor";
         private final Bundle mOptionBundle = new Bundle();
 
         @NonNull
@@ -321,18 +321,18 @@ public class UCrop {
         }
 
         public void withAspectRatio(float x, float y) {
-            this.mOptionBundle.putFloat("com.carlos.multiapp.AspectRatioX", x);
-            this.mOptionBundle.putFloat("com.carlos.multiapp.AspectRatioY", y);
+            this.mOptionBundle.putFloat("com.ywmail.virtualapp.AspectRatioX", x);
+            this.mOptionBundle.putFloat("com.ywmail.virtualapp.AspectRatioY", y);
         }
 
         public void useSourceImageAspectRatio() {
-            this.mOptionBundle.putFloat("com.carlos.multiapp.AspectRatioX", 0.0f);
-            this.mOptionBundle.putFloat("com.carlos.multiapp.AspectRatioY", 0.0f);
+            this.mOptionBundle.putFloat("com.ywmail.virtualapp.AspectRatioX", 0.0f);
+            this.mOptionBundle.putFloat("com.ywmail.virtualapp.AspectRatioY", 0.0f);
         }
 
         public void withMaxResultSize(@IntRange(from=10L) int width, @IntRange(from=10L) int height) {
-            this.mOptionBundle.putInt("com.carlos.multiapp.MaxSizeX", width);
-            this.mOptionBundle.putInt("com.carlos.multiapp.MaxSizeY", height);
+            this.mOptionBundle.putInt("com.ywmail.virtualapp.MaxSizeX", width);
+            this.mOptionBundle.putInt("com.ywmail.virtualapp.MaxSizeY", height);
         }
     }
 }

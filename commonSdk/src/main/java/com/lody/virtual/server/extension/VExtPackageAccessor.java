@@ -106,7 +106,7 @@ public class VExtPackageAccessor {
         }
 
         try {
-            (new ProviderCall.Builder(VirtualCore.get().getContext(), "com.carlos.multiapp.virtual_stub_ext_0")).methodName("@").retry(0).call();
+            (new ProviderCall.Builder(VirtualCore.get().getContext(), StubManifest.getStubAuthority(0, true))).methodName("@").retry(0).call();
             return true;
         } catch (IllegalAccessException var1) {
             Log.e(TAG, "callHelper virtual_stub_ext_0 failed...:" + var1);

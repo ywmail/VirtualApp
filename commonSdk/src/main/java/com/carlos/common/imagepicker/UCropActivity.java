@@ -236,8 +236,8 @@ extends AppCompatActivity {
     }
 
     private void setImageData(@NonNull Intent intent) {
-        Uri inputUri = (Uri)intent.getParcelableExtra("com.carlos.multiapp.InputUri");
-        Uri outputUri = (Uri)intent.getParcelableExtra("com.carlos.multiapp.OutputUri");
+        Uri inputUri = (Uri)intent.getParcelableExtra("com.ywmail.virtualapp.InputUri");
+        Uri outputUri = (Uri)intent.getParcelableExtra("com.ywmail.virtualapp.OutputUri");
         this.processOptions(intent);
         if (inputUri != null && outputUri != null) {
             try {
@@ -254,39 +254,39 @@ extends AppCompatActivity {
     }
 
     private void processOptions(@NonNull Intent intent) {
-        String compressionFormatName = intent.getStringExtra("com.carlos.multiapp.CompressionFormatName");
+        String compressionFormatName = intent.getStringExtra("com.ywmail.virtualapp.CompressionFormatName");
         Bitmap.CompressFormat compressFormat = null;
         if (!TextUtils.isEmpty((CharSequence)compressionFormatName)) {
             compressFormat = Bitmap.CompressFormat.valueOf((String)compressionFormatName);
         }
         this.mCompressFormat = compressFormat == null ? DEFAULT_COMPRESS_FORMAT : compressFormat;
-        this.mCompressQuality = intent.getIntExtra("com.carlos.multiapp.CompressionQuality", 90);
-        int[] allowedGestures = intent.getIntArrayExtra("com.carlos.multiapp.AllowedGestures");
+        this.mCompressQuality = intent.getIntExtra("com.ywmail.virtualapp.CompressionQuality", 90);
+        int[] allowedGestures = intent.getIntArrayExtra("com.ywmail.virtualapp.AllowedGestures");
         if (allowedGestures != null && allowedGestures.length == 3) {
             this.mAllowedGestures = allowedGestures;
         }
-        this.mGestureCropImageView.setMaxBitmapSize(intent.getIntExtra("com.carlos.multiapp.MaxBitmapSize", 0));
-        this.mGestureCropImageView.setMaxScaleMultiplier(intent.getFloatExtra("com.carlos.multiapp.MaxScaleMultiplier", 10.0f));
-        this.mGestureCropImageView.setImageToWrapCropBoundsAnimDuration(intent.getIntExtra("com.carlos.multiapp.ImageToCropBoundsAnimDuration", 500));
-        this.mOverlayView.setFreestyleCropEnabled(intent.getBooleanExtra("com.carlos.multiapp.FreeStyleCrop", false));
-        this.mOverlayView.setDimmedColor(intent.getIntExtra("com.carlos.multiapp.DimmedLayerColor", this.getResources().getColor(R.color.ucrop_color_default_dimmed)));
-        this.mOverlayView.setCircleDimmedLayer(intent.getBooleanExtra("com.carlos.multiapp.CircleDimmedLayer", false));
-        this.mOverlayView.setShowCropFrame(intent.getBooleanExtra("com.carlos.multiapp.ShowCropFrame", true));
-        this.mOverlayView.setCropFrameColor(intent.getIntExtra("com.carlos.multiapp.CropFrameColor", this.getResources().getColor(R.color.ucrop_color_default_crop_frame)));
-        this.mOverlayView.setCropFrameStrokeWidth(intent.getIntExtra("com.carlos.multiapp.CropFrameStrokeWidth", this.getResources().getDimensionPixelSize(R.dimen.ucrop_default_crop_frame_stoke_width)));
-        this.mOverlayView.setShowCropGrid(intent.getBooleanExtra("com.carlos.multiapp.ShowCropGrid", true));
-        this.mOverlayView.setCropGridRowCount(intent.getIntExtra("com.carlos.multiapp.CropGridRowCount", 2));
-        this.mOverlayView.setCropGridColumnCount(intent.getIntExtra("com.carlos.multiapp.CropGridColumnCount", 2));
-        this.mOverlayView.setCropGridColor(intent.getIntExtra("com.carlos.multiapp.CropGridColor", this.getResources().getColor(R.color.ucrop_color_default_crop_grid)));
-        this.mOverlayView.setCropGridStrokeWidth(intent.getIntExtra("com.carlos.multiapp.CropGridStrokeWidth", this.getResources().getDimensionPixelSize(R.dimen.ucrop_default_crop_grid_stoke_width)));
-        float aspectRatioX = intent.getFloatExtra("com.carlos.multiapp.AspectRatioX", 0.0f);
-        float aspectRatioY = intent.getFloatExtra("com.carlos.multiapp.AspectRatioY", 0.0f);
-        int aspectRationSelectedByDefault = intent.getIntExtra("com.carlos.multiapp.AspectRatioSelectedByDefault", 0);
-        ArrayList aspectRatioList = intent.getParcelableArrayListExtra("com.carlos.multiapp.AspectRatioOptions");
+        this.mGestureCropImageView.setMaxBitmapSize(intent.getIntExtra("com.ywmail.virtualapp.MaxBitmapSize", 0));
+        this.mGestureCropImageView.setMaxScaleMultiplier(intent.getFloatExtra("com.ywmail.virtualapp.MaxScaleMultiplier", 10.0f));
+        this.mGestureCropImageView.setImageToWrapCropBoundsAnimDuration(intent.getIntExtra("com.ywmail.virtualapp.ImageToCropBoundsAnimDuration", 500));
+        this.mOverlayView.setFreestyleCropEnabled(intent.getBooleanExtra("com.ywmail.virtualapp.FreeStyleCrop", false));
+        this.mOverlayView.setDimmedColor(intent.getIntExtra("com.ywmail.virtualapp.DimmedLayerColor", this.getResources().getColor(R.color.ucrop_color_default_dimmed)));
+        this.mOverlayView.setCircleDimmedLayer(intent.getBooleanExtra("com.ywmail.virtualapp.CircleDimmedLayer", false));
+        this.mOverlayView.setShowCropFrame(intent.getBooleanExtra("com.ywmail.virtualapp.ShowCropFrame", true));
+        this.mOverlayView.setCropFrameColor(intent.getIntExtra("com.ywmail.virtualapp.CropFrameColor", this.getResources().getColor(R.color.ucrop_color_default_crop_frame)));
+        this.mOverlayView.setCropFrameStrokeWidth(intent.getIntExtra("com.ywmail.virtualapp.CropFrameStrokeWidth", this.getResources().getDimensionPixelSize(R.dimen.ucrop_default_crop_frame_stoke_width)));
+        this.mOverlayView.setShowCropGrid(intent.getBooleanExtra("com.ywmail.virtualapp.ShowCropGrid", true));
+        this.mOverlayView.setCropGridRowCount(intent.getIntExtra("com.ywmail.virtualapp.CropGridRowCount", 2));
+        this.mOverlayView.setCropGridColumnCount(intent.getIntExtra("com.ywmail.virtualapp.CropGridColumnCount", 2));
+        this.mOverlayView.setCropGridColor(intent.getIntExtra("com.ywmail.virtualapp.CropGridColor", this.getResources().getColor(R.color.ucrop_color_default_crop_grid)));
+        this.mOverlayView.setCropGridStrokeWidth(intent.getIntExtra("com.ywmail.virtualapp.CropGridStrokeWidth", this.getResources().getDimensionPixelSize(R.dimen.ucrop_default_crop_grid_stoke_width)));
+        float aspectRatioX = intent.getFloatExtra("com.ywmail.virtualapp.AspectRatioX", 0.0f);
+        float aspectRatioY = intent.getFloatExtra("com.ywmail.virtualapp.AspectRatioY", 0.0f);
+        int aspectRationSelectedByDefault = intent.getIntExtra("com.ywmail.virtualapp.AspectRatioSelectedByDefault", 0);
+        ArrayList aspectRatioList = intent.getParcelableArrayListExtra("com.ywmail.virtualapp.AspectRatioOptions");
         Log.i((String)"VirtualApp", (String)"setTargetAspectRatio  init kook");
         this.mGestureCropImageView.setTargetAspectRatio(1.0f);
-        int maxSizeX = intent.getIntExtra("com.carlos.multiapp.MaxSizeX", 0);
-        int maxSizeY = intent.getIntExtra("com.carlos.multiapp.MaxSizeY", 0);
+        int maxSizeX = intent.getIntExtra("com.ywmail.virtualapp.MaxSizeX", 0);
+        int maxSizeY = intent.getIntExtra("com.ywmail.virtualapp.MaxSizeY", 0);
         if (maxSizeX > 0 && maxSizeY > 0) {
             this.mGestureCropImageView.setMaxResultImageSizeX(maxSizeX);
             this.mGestureCropImageView.setMaxResultImageSizeY(maxSizeY);
@@ -294,17 +294,17 @@ extends AppCompatActivity {
     }
 
     private void setupViews(@NonNull Intent intent) {
-        this.mStatusBarColor = intent.getIntExtra("com.carlos.multiapp.StatusBarColor", ContextCompat.getColor((Context)this, (int)R.color.ucrop_color_statusbar));
-        this.mToolbarColor = intent.getIntExtra("com.carlos.multiapp.ToolbarColor", ContextCompat.getColor((Context)this, (int)R.color.ucrop_color_toolbar));
-        this.mActiveWidgetColor = intent.getIntExtra("com.carlos.multiapp.UcropColorWidgetActive", ContextCompat.getColor((Context)this, (int)R.color.ucrop_color_widget_active));
-        this.mToolbarWidgetColor = intent.getIntExtra("com.carlos.multiapp.UcropToolbarWidgetColor", ContextCompat.getColor((Context)this, (int)R.color.ucrop_color_toolbar_widget));
-        this.mToolbarCancelDrawable = intent.getIntExtra("com.carlos.multiapp.UcropToolbarCancelDrawable", R.drawable.ucrop_ic_cross);
-        this.mToolbarCropDrawable = intent.getIntExtra("com.carlos.multiapp.UcropToolbarCropDrawable", R.drawable.ucrop_ic_done);
-        this.mToolbarTitle = intent.getStringExtra("com.carlos.multiapp.UcropToolbarTitleText");
+        this.mStatusBarColor = intent.getIntExtra("com.ywmail.virtualapp.StatusBarColor", ContextCompat.getColor((Context)this, (int)R.color.ucrop_color_statusbar));
+        this.mToolbarColor = intent.getIntExtra("com.ywmail.virtualapp.ToolbarColor", ContextCompat.getColor((Context)this, (int)R.color.ucrop_color_toolbar));
+        this.mActiveWidgetColor = intent.getIntExtra("com.ywmail.virtualapp.UcropColorWidgetActive", ContextCompat.getColor((Context)this, (int)R.color.ucrop_color_widget_active));
+        this.mToolbarWidgetColor = intent.getIntExtra("com.ywmail.virtualapp.UcropToolbarWidgetColor", ContextCompat.getColor((Context)this, (int)R.color.ucrop_color_toolbar_widget));
+        this.mToolbarCancelDrawable = intent.getIntExtra("com.ywmail.virtualapp.UcropToolbarCancelDrawable", R.drawable.ucrop_ic_cross);
+        this.mToolbarCropDrawable = intent.getIntExtra("com.ywmail.virtualapp.UcropToolbarCropDrawable", R.drawable.ucrop_ic_done);
+        this.mToolbarTitle = intent.getStringExtra("com.ywmail.virtualapp.UcropToolbarTitleText");
         this.mToolbarTitle = this.mToolbarTitle != null ? this.mToolbarTitle : this.getResources().getString(R.string.ucrop_label_edit_photo);
-        this.mLogoColor = intent.getIntExtra("com.carlos.multiapp.UcropLogoColor", ContextCompat.getColor((Context)this, (int)R.color.ucrop_color_default_logo));
-        this.mShowBottomControls = !intent.getBooleanExtra("com.carlos.multiapp.HideBottomControls", false);
-        this.mRootViewBackgroundColor = intent.getIntExtra("com.carlos.multiapp.UcropRootViewBackgroundColor", ContextCompat.getColor((Context)this, (int)R.color.ucrop_color_crop_background));
+        this.mLogoColor = intent.getIntExtra("com.ywmail.virtualapp.UcropLogoColor", ContextCompat.getColor((Context)this, (int)R.color.ucrop_color_default_logo));
+        this.mShowBottomControls = !intent.getBooleanExtra("com.ywmail.virtualapp.HideBottomControls", false);
+        this.mRootViewBackgroundColor = intent.getIntExtra("com.ywmail.virtualapp.UcropRootViewBackgroundColor", ContextCompat.getColor((Context)this, (int)R.color.ucrop_color_crop_background));
         this.setupAppBar();
         this.initiateRootViews();
         if (this.mShowBottomControls) {
@@ -372,8 +372,8 @@ extends AppCompatActivity {
     }
 
     private void setupAspectRatioWidget(@NonNull Intent intent) {
-        int aspectRationSelectedByDefault = intent.getIntExtra("com.carlos.multiapp.AspectRatioSelectedByDefault", 0);
-        ArrayList<AspectRatio> aspectRatioList = intent.getParcelableArrayListExtra("com.carlos.multiapp.AspectRatioOptions");
+        int aspectRationSelectedByDefault = intent.getIntExtra("com.ywmail.virtualapp.AspectRatioSelectedByDefault", 0);
+        ArrayList<AspectRatio> aspectRatioList = intent.getParcelableArrayListExtra("com.ywmail.virtualapp.AspectRatioOptions");
         if (aspectRatioList == null || aspectRatioList.isEmpty()) {
             aspectRationSelectedByDefault = 0;
             aspectRatioList = new ArrayList<AspectRatio>();
@@ -567,11 +567,11 @@ extends AppCompatActivity {
     }
 
     protected void setResultUri(Uri uri, float resultAspectRatio, int offsetX, int offsetY, int imageWidth, int imageHeight) {
-        this.setResult(-1, this.getIntent().putExtra("com.carlos.multiapp.OutputUri", (Parcelable)uri).putExtra("com.carlos.multiapp.CropAspectRatio", resultAspectRatio).putExtra("com.carlos.multiapp.ImageWidth", imageWidth).putExtra("com.carlos.multiapp.ImageHeight", imageHeight).putExtra("com.carlos.multiapp.OffsetX", offsetX).putExtra("com.carlos.multiapp.OffsetY", offsetY));
+        this.setResult(-1, this.getIntent().putExtra("com.ywmail.virtualapp.OutputUri", (Parcelable)uri).putExtra("com.ywmail.virtualapp.CropAspectRatio", resultAspectRatio).putExtra("com.ywmail.virtualapp.ImageWidth", imageWidth).putExtra("com.ywmail.virtualapp.ImageHeight", imageHeight).putExtra("com.ywmail.virtualapp.OffsetX", offsetX).putExtra("com.ywmail.virtualapp.OffsetY", offsetY));
     }
 
     protected void setResultError(Throwable throwable) {
-        this.setResult(96, new Intent().putExtra("com.carlos.multiapp.Error", (Serializable)throwable));
+        this.setResult(96, new Intent().putExtra("com.ywmail.virtualapp.Error", (Serializable)throwable));
     }
 
     static {

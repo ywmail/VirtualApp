@@ -14,7 +14,7 @@ import de.robv.android.xposed.XposedHelpers;
 import java.io.File;
 
 public class Nexon {
-    public static File file = new File("/sdcard/Android/data/com.carlos.multiapp/files/Android_va/0/Android/data/com.nexon.hit2/");
+    public static File file = new File("/sdcard/Android/data/com.ywmail.virtualapp/files/Android_va/0/Android/data/com.nexon.hit2/");
 
     public static void hook(ClassLoader classLoader, Application application) {
         HVLog.d(" 开始 hook com.nexon.hit2  ");
