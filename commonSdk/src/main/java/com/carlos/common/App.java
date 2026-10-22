@@ -165,7 +165,7 @@ extends MultiApplication {
             VirtualCore.get().startup(this, base, this.mConfig);
         }
         catch (Throwable e) {
-            e.printStackTrace();
+            VLog.e("VA-Startup", "VirtualCore.startup failed", e);
         }
     }
 

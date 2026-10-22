@@ -75,7 +75,7 @@ subprojects {
                         signingConfig signingConfigs.va
                         minifyEnabled true
                         shrinkResources true
-                        proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), "${rootProject.rootDir}/proguard/proguard-rules.pro", "proguard-rules.pro"
+                        proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), "proguard-rules.pro", "virtualapp-proguard-rules.pro"
                     }
 
                     debug {
@@ -83,7 +83,7 @@ subprojects {
                         crunchPngs false
                         minifyEnabled false
 
-                        proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), "${rootProject.rootDir}/proguard/proguard-rules.pro", "proguard-rules.pro"
+                        proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), "proguard-rules.pro"
                     }
                 }
             }

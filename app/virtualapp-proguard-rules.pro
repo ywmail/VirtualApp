@@ -44,6 +44,6 @@
     public <methods>;
 }
 
--repackageclass z1
+-repackageclasses z1
 
 #-keepattributes SourceFile,LineNumberTable

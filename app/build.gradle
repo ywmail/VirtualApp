@@ -53,12 +53,10 @@ android {
         debug {
             jniDebuggable false
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), '../security/proguard-rules.pro'
         }
         release {
             jniDebuggable true
             minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), '../security/proguard-rules.pro'
         }
     }
     compileOptions {
