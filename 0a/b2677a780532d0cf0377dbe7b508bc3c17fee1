@@ -1,0 +1,30 @@
+commonSdk/src/main/java/com/carlos/common/ui/activity/base/VerifyActivity.java
+  s_b3a5f43281c19f::t_f52ec0ad5462c3 227
+commonSdk/src/main/java/com/kook/deviceinfo/impClasses/ExportThread.java
+  s_b3a5f43281c19f::t_d05d9c98dcaa8e 98
+commonSdk/src/main/java/com/carlos/common/ui/activity/SettingActivity.java
+  s_b3a5f43281c19f::t_d0fd2375e8bbd4 132
+commonSdk/src/main/java/mirror/android/app/ActivityThread.java
+  s_b3a5f43281c19f::t_e79a5f3df1450f 68
+  s_b3a5f43281c19f::t_19d8f01438deb4 72-74,76-83,85-88,90-106
+  s_b3a5f43281c19f::t_8b2432047c7951 67
+  s_b3a5f43281c19f::t_c8862f62fcc462 69-71
+commonSdk/src/main/java/com/carlos/common/ui/activity/MirrorActivity.java
+  s_b3a5f43281c19f::t_0adf962f60182d 265,270,278
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "0ab2677a780532d0cf0377dbe7b508bc3c17fee1",
+  "prompts": {},
+  "sessions": {
+    "s_b3a5f43281c19f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c1fc6566-1b05-4286-b7be-60f112ddf31d",
+        "model": "maas-glm-5-2-260617"
+      },
+      "human_author": "y00798287 <yangwei1@huawei.com>"
+    }
+  }
+}
