@@ -44,6 +44,8 @@
 -keep class c.t.m.g.** { *; }
 -keep class com.tencent.** { *; }
 -keep class jonathanfinerty.once.** { public *; }
+-keep class net.sourceforge.pinyin4j.** { *; }
+-keepclassmembers class net.sourceforge.pinyin4j.** { *; }
 
 # andhook
 -keep class andhook.lib.AndHook$Dalvik
@@ -79,9 +81,24 @@
 # 导致 processType 为 null，initialize() 的 switch 抛 ordinal() on null
 -dontoptimize
 
-# Keep VirtualCore 及内部类 — R8 混淆破坏 processType 字段赋值与 enum switch 语义
--keep class com.lody.virtual.client.core.** { *; }
--keepclassmembers class com.lody.virtual.client.core.** { *; }
+# Keep commonSdk 全部包 — commonSdk 含大量反射（mirror）、Parcelable 序列化、
+# 包级私有类/方法覆写绑定、hook 注解扫描等，R8 混淆会破坏运行时语义。
+# 覆盖 com.lody.virtual.** / com.carlos.** / com.kook.** / com.swift.sandhook.** /
+# com.android.dx.** / com.bytedance.shadowhook.** 等 commonSdk 源码包
+-keep class com.lody.virtual.** { *; }
+-keepclassmembers class com.lody.virtual.** { *; }
+-keep class com.carlos.common.** { *; }
+-keepclassmembers class com.carlos.common.** { *; }
+-keep class com.kook.** { *; }
+-keepclassmembers class com.kook.** { *; }
+-keep class com.swift.sandhook.** { *; }
+-keepclassmembers class com.swift.sandhook.** { *; }
+-keep class com.android.dx.** { *; }
+-keepclassmembers class com.android.dx.** { *; }
+-keep class com.bytedance.shadowhook.** { *; }
+-keepclassmembers class com.bytedance.shadowhook.** { *; }
+-keep class mirror.** { *; }
+-keepclassmembers class mirror.** { *; }
 
 # Keep hiddenapibypass — Helper 内的 MethodHandle/MethodHandleImpl 是布局 stub 类，
 # 字段顺序必须与系统 java.lang.invoke.MethodHandleImpl 一致，R8 重排字段会导致
