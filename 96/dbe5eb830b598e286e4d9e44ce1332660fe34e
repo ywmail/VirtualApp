@@ -1,0 +1,27 @@
+commonSdk/src/main/java/com/carlos/common/App.java
+  s_dd93d24c506b98::t_c80ecb14d3fee0 168
+app/proguard-rules.pro
+  s_dd93d24c506b98::t_28edbfb5695f45 1,3-7,9,18,21,26-27,29,31,36-38,43-46,48,50,52,54,56,58,65-69,71-76
+  s_dd93d24c506b98::t_531c66b12c12b9 77-91
+app/virtualapp-proguard-rules.pro
+  s_dd93d24c506b98::t_bb78d8ffa9e8fc 49
+  s_dd93d24c506b98::t_37d29fe1aa6209 47
+AppConfig.gradle
+  s_dd93d24c506b98::t_5d149c3cfb5520 78,86
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "96dbe5eb830b598e286e4d9e44ce1332660fe34e",
+  "prompts": {},
+  "sessions": {
+    "s_dd93d24c506b98": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1da7e0db-7b54-4674-a73f-9a669a8c392a",
+        "model": "maas-glm-5-2-260617"
+      },
+      "human_author": "y00798287 <yangwei1@huawei.com>"
+    }
+  }
+}
