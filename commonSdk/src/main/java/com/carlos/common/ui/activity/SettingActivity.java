@@ -129,16 +129,7 @@ implements View.OnClickListener {
         } else if (view.getId() == R.id.relaQuestions) {
             Toasty.success((Context)this, "开发中ing").show();
         } else if (view.getId() == R.id.relaUpdate) {
-            if (this.isUpgrade()) {
-                if (this.mSoftVersions != null) {
-                    String updateUrl = this.mSoftVersions.getUpdateUrl();
-                    Uri uri = Uri.parse((String)updateUrl);
-                    Intent intent = new Intent("android.intent.action.VIEW", uri);
-                    this.startActivity(intent);
-                }
-            } else {
-                Toasty.success((Context)this, this.getString(R.string.latest_version)).show();
-            }
+            Toasty.success((Context)this, this.getString(R.string.latest_version)).show();
         }
     }
 

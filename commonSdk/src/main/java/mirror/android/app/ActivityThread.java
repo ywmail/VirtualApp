@@ -64,85 +64,49 @@ public class ActivityThread {
     public static RefStaticMethod<IInterface> getPermissionManager;
 
     static {
-        try {
-            try {
-                USE_CACHE = new RefStaticObject<>(TYPE, TYPE.getDeclaredField("USE_CACHE"));
-            } catch (NoSuchFieldException ignore) {
-                // Android 14+ 移除了 USE_CACHE 字段
-            }
-            currentActivityThread = new RefStaticMethod<>(TYPE, TYPE.getDeclaredField("currentActivityThread"));
-            getProcessName = initRefMethod("getProcessName");
-            currentPackageName = new RefStaticMethod<>(TYPE, TYPE.getDeclaredField("currentPackageName"));
-            currentApplication = new RefStaticMethod<>(TYPE, TYPE.getDeclaredField("currentApplication"));
-            getHandler = initRefMethod("getHandler");
-
-            // installProvider签名可能存在差异，优先反射6参
-            try {
-                Method m = TYPE.getDeclaredMethod("installProvider", Context.class, Object.class, ProviderInfo.class,
-                        boolean.class, boolean.class, boolean.class);
-                installProvider = new RefMethod<>(TYPE, asField("installProvider"));
-            } catch (Throwable e) {
-                try {
-                    Method m = TYPE.getDeclaredMethod("installProvider", Context.class, Object.class, ProviderInfo.class,
-                            boolean.class, boolean.class);
-                    installProvider = new RefMethod<>(TYPE, asField("installProvider"));
-                } catch (Throwable ignore) {}
-            }
-
-            mBoundApplication = new RefObject<>(TYPE, TYPE.getDeclaredField("mBoundApplication"));
-            mH = new RefObject<>(TYPE, TYPE.getDeclaredField("mH"));
-            mInitialApplication = new RefObject<>(TYPE, TYPE.getDeclaredField("mInitialApplication"));
-            mInstrumentation = new RefObject<>(TYPE, TYPE.getDeclaredField("mInstrumentation"));
-            mPackages = new RefObject<>(TYPE, TYPE.getDeclaredField("mPackages"));
-            mActivities = new RefObject<>(TYPE, TYPE.getDeclaredField("mActivities"));
-            mProviderMap = new RefObject<>(TYPE, TYPE.getDeclaredField("mProviderMap"));
-
-            Field fPerformNewIntents = ActivityThread.class.getDeclaredField("performNewIntents");
-            performNewIntents = new RefMethod<>(TYPE, fPerformNewIntents);
-
-            sPackageManager = new RefStaticObject<>(TYPE, TYPE.getDeclaredField("sPackageManager"));
-            sPermissionManager = new RefStaticObject<>(TYPE, TYPE.getDeclaredField("sPermissionManager"));
-
-            Field fSendActivityResult = ActivityThread.class.getDeclaredField("sendActivityResult");
-            sendActivityResult = new RefMethod<>(TYPE, fSendActivityResult);
-
-            getApplicationThread = initRefMethod("getApplicationThread");
-            getPackageManager = new RefStaticMethod<>(TYPE, TYPE.getDeclaredField("getPackageManager"));
-            getLaunchingActivity = initRefMethod("getLaunchingActivity");
-
-            // getPackageInfoNoCheck参数在不同系统有变化，请根据实际字段和注解情况初始化
-            getPackageInfoNoCheck = initRefMethod("getPackageInfoNoCheck");
-
-            getPermissionManager = new RefStaticMethod<>(TYPE, TYPE.getDeclaredField("getPermissionManager"));
-
-        } catch (Throwable e) {
-            e.printStackTrace();
-        }
-    }
-
-    // 支持无注解的 RefMethod 自动初始化
-    private static <T> RefMethod<T> initRefMethod(String name) {
-        try {
-            Field field = ActivityThread.class.getDeclaredField(name);
-            return new RefMethod<>(TYPE, field);
-        } catch (Throwable e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
-    // 用于补充无直接Field时的临时Field构造
-    private static Field asField(String name) throws NoSuchFieldException {
-        Field f = ActivityThread.class.getDeclaredField(name);
-        return f;
+        // RefClass.load 已在 TYPE 赋值时自动初始化所有 RefStaticObject/RefStaticMethod/RefObject/RefMethod 字段。
+        // installProvider 使用方法已改为直接反射（处理多签名），不依赖 installProvider 字段。
     }
 
     public static Object installProvider(Object mainThread, Context context, ProviderInfo providerInfo, Object holder) throws Throwable {
-        if (Build.VERSION.SDK_INT <= 15 && installProvider != null) {
-            return installProvider.callWithException(mainThread, context, holder, providerInfo, false, true);
+        // 直接反射调用，不依赖 RefMethod 字段（避免多签名匹配问题）
+        Class<?>[] sig6 = {Context.class, Object.class, ProviderInfo.class, boolean.class, boolean.class, boolean.class};
+        Class<?>[] sig5 = {Context.class, Object.class, ProviderInfo.class, boolean.class, boolean.class};
+        try {
+            Method m;
+            Object[] args;
+            if (Build.VERSION.SDK_INT <= 15) {
+                m = TYPE.getDeclaredMethod("installProvider", sig5);
+                args = new Object[]{context, holder, providerInfo, false, true};
+            } else {
+                m = TYPE.getDeclaredMethod("installProvider", sig6);
+                args = new Object[]{context, holder, providerInfo, false, true, true};
+            }
+            m.setAccessible(true);
+            return m.invoke(mainThread, args);
+        } catch (NoSuchMethodException e) {
+            // fallback：尝试另一种签名
+            try {
+                Method m;
+                Object[] args;
+                if (Build.VERSION.SDK_INT <= 15) {
+                    m = TYPE.getDeclaredMethod("installProvider", sig6);
+                    args = new Object[]{context, holder, providerInfo, false, true, true};
+                } else {
+                    m = TYPE.getDeclaredMethod("installProvider", sig5);
+                    args = new Object[]{context, holder, providerInfo, false, true};
+                }
+                m.setAccessible(true);
+                return m.invoke(mainThread, args);
+            } catch (Throwable ignore) {
+                return null;
+            }
+        } catch (Throwable t) {
+            if (t instanceof java.lang.reflect.InvocationTargetException && t.getCause() != null) {
+                throw t.getCause();
+            }
+            return null;
         }
-        if (installProvider != null)
-            return installProvider.callWithException(mainThread, context, holder, providerInfo, false, true, true);
-        return null;
     }
 
     public static void handleNewIntent(Object obj, List list) {

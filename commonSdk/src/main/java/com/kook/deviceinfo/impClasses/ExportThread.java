@@ -15,7 +15,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.widget.Toast;
 import androidx.annotation.RequiresApi;
-import com.carlos.common.network.VNetworkManagerService;
 import com.kook.common.systemutil.SystemManager;
 import com.kook.common.utils.HVLog;
 import com.kook.deviceinfo.impClassMethods.InputDeviceMethod;
@@ -24,7 +23,6 @@ import com.kook.deviceinfo.impClasses.ExportDetails;
 import com.kook.deviceinfo.models.InputModel;
 import com.kook.deviceinfo.models.SensorListModel;
 import java.io.BufferedWriter;
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -97,10 +95,7 @@ extends Thread {
                 BufferedWriter bufferedWriter = null;
                 try {
                     if (!SystemManager.isSystemSign(context)) {
-                        File inifile = exportDetails.getIniFile().save();
-                        VNetworkManagerService networkManagerService = VNetworkManagerService.get();
-                        networkManagerService.systemReady(context);
-                        networkManagerService.checkDevicesUpload(inifile.getAbsolutePath());
+                        exportDetails.getIniFile().save();
                     } else {
                         HVLog.d("\u5f53\u524d\u662f\u5b9a\u5236\u7cfb\u7edf\uff0c\u6570\u636e\u4e0d\u4e0a\u4f20");
                     }

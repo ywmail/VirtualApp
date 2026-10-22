@@ -48,11 +48,6 @@ public class ListAppActivity extends VActivity {
     }
 
     @Override
-    protected boolean isCheckLog() {
-        return true;
-    }
-
-    @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_clone_app);

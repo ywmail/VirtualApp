@@ -77,7 +77,6 @@ import com.carlos.common.clouddisk.listview.FileItem;
 import com.carlos.common.device.DeviceInfo;
 import com.carlos.common.download.DownloadListner;
 import com.carlos.common.download.DownloadManager;
-import com.carlos.common.network.VNetworkManagerService;
 import com.carlos.common.ui.activity.DeviceDetailActiivty;
 import com.carlos.common.ui.activity.GDChooseLocationActivity;
 import com.carlos.common.ui.activity.abs.nestedadapter.SmartRecyclerAdapter;
@@ -166,11 +165,6 @@ implements MirrorAdapter.OnAppClickListener {
         Application application = this.getApplication();
     }
 
-    @Override
-    protected boolean isCheckLog() {
-        return true;
-    }
-
     private void initData(String pkg, int userId) {
         this.mirrorDataList = MirrorData.mirrorDataList;
         this.mMirrorAdapter.setList(this.mirrorDataList);
@@ -194,15 +188,6 @@ implements MirrorAdapter.OnAppClickListener {
             File externalFilesDir = this.getExternalFilesDir(this.getPackageName() + "/");
             HVLog.d(externalFilesDir + applicationInfo.packageName + ".apk");
             FileTools.copyFile(apkPath, externalFilesDir + applicationInfo.packageName + ".apk");
-        });
-        this.appIcon.setOnLongClickListener(new View.OnLongClickListener(){
-
-            public boolean onLongClick(View view) {
-                VNetworkManagerService networkManagerService = VNetworkManagerService.get();
-                networkManagerService.systemReady(MirrorActivity.this.getContext());
-                networkManagerService.randomDevices();
-                return true;
-            }
         });
         this.appNameView.setText((CharSequence)this.appName);
         if (packageInfo != null) {
@@ -244,10 +229,6 @@ implements MirrorAdapter.OnAppClickListener {
         this.mMirrorAdapter.setAppClickListener(this);
         this.startApplication = (AppCompatTextView)this.findViewById(R.id.start_application);
         this.startApplication.setOnClickListener(view -> {
-            if (this.isNovatioNecessaria()) {
-                Toasty.warning(this.getContext(), this.getString(R.string.update_latest_version)).show();
-                return;
-            }
             this.checkExtProcessAndlunch(this.userId, this.packageName, this.appName);
         });
     }
@@ -281,20 +262,12 @@ implements MirrorAdapter.OnAppClickListener {
         }
         switch (model.getMenuType()) {
             case 0: {
-                HVLog.d(" model.getMenuType():" + model.getMenuType() + "    position:" + position + "    tsp_mockwifi:" + this.tsp_mockwifi);
-                if (this.tsp_mockwifi != 2) {
-                    Toasty.warning(this.getContext(), "功能受限、请在设置中联系软件作者qixie0306@gmail.com").show();
-                    return;
-                }
+                HVLog.d(" model.getMenuType():" + model.getMenuType() + "    position:" + position);
                 this.modifyWifiAddr(position, model);
                 break;
             }
             case 1: {
-                HVLog.d(" model.getMenuType():" + model.getMenuType() + "    position:" + position + "    tsp_virtuallocation:" + this.tsp_virtuallocation);
-                if (this.tsp_virtuallocation != 2) {
-                    Toasty.warning(this.getContext(), "功能受限、请在设置中联系软件作者qixie0306@gmail.com").show();
-                    return;
-                }
+                HVLog.d(" model.getMenuType():" + model.getMenuType() + "    position:" + position);
                 this.startMockLocation(position, model);
                 break;
             }
@@ -302,11 +275,7 @@ implements MirrorAdapter.OnAppClickListener {
                 if (Build.VERSION.SDK_INT >= 23 && VirtualCore.get().getTargetSdkVersion() >= 23) {
                     ActivityCompat.requestPermissions((Activity)this, (String[])new String[]{"android.permission.READ_PHONE_STATE"}, (int)0);
                 }
-                HVLog.d(" model.getMenuType():" + model.getMenuType() + "    position:" + position + "    tsp_mockphone:" + this.tsp_mockphone);
-                if (this.tsp_mockphone != 2) {
-                    Toasty.warning(this.getContext(), "功能受限、请在设置中联系软件作者qixie0306@gmail.com").show();
-                    return;
-                }
+                HVLog.d(" model.getMenuType():" + model.getMenuType() + "    position:" + position);
                 this.startMockDevice(position, model);
                 break;
             }
@@ -330,10 +299,6 @@ implements MirrorAdapter.OnAppClickListener {
             }
             case 5: {
                 HVLog.d(" model.getMenuType():" + model.getMenuType() + "    position:" + position + "    MENU_TYPE_BACKUP_RECOVERY:" + 5);
-                if (this.tsp_backupRecovery != 2) {
-                    Toasty.warning(this.getContext(), "功能受限、请在设置中联系软件作者qixie0306@gmail.com").show();
-                    return;
-                }
                 HVLog.d("tag:" + tag);
                 ClouddiskLauncher.getInstance().launcherCloud((Context)this);
                 String content = "";

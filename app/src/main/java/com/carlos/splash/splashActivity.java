@@ -67,11 +67,6 @@ public class splashActivity extends VActivity {
         requestPermissions(permissionList.toArray(new String[permissionList.size()]), RequestCode);
     }
 
-    @Override
-    protected boolean isCheckLog() {
-        return true;
-    }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

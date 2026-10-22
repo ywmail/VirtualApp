@@ -78,7 +78,6 @@ import java.util.List;
 import com.carlos.home.models.EmptyAppData;
 import com.carlos.home.models.MultiplePackageAppData;
 import com.carlos.home.models.PackageAppData;
-import com.carlos.widgets.MarqueeTextView;
 import com.lody.virtual.remote.InstalledAppInfo;
 import com.lody.virtual.remote.VAppInstallerParams;
 import com.lody.virtual.remote.VAppInstallerResult;
@@ -102,7 +101,6 @@ public class HomeActivity extends VActivity implements HomeContract.HomeView, La
     private AppCompatImageView noApplicationList;
     private View mMenuView;
     private PopupMenu mPopupMenu;
-    private MarqueeTextView tipsNotifiction;
     private LaunchpadAdapter mLaunchpadAdapter;
     private Handler mUiHandler;
 
@@ -280,14 +278,6 @@ public class HomeActivity extends VActivity implements HomeContract.HomeView, La
             });
             funMenu.show();
         });
-        tipsNotifiction = findViewById(R.id.tipsNotifiction);
-        if (isUpgrade()) {
-            isNovatioNecessaria();
-            tipsNotifiction.setText(getString(R.string.txt_update)+mSoftVersions.getNotice());
-            tipsNotifiction.setOnClickListener((view)->{
-                //install();
-            });
-        }
     }
 
     //这里代码 activate_code 不能 修改,不然以后数据肯定异常

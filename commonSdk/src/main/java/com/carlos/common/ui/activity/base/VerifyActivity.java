@@ -48,16 +48,12 @@ import android.os.Environment;
 import android.provider.Settings;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.carlos.common.clouddisk.listview.FileItem;
 import com.carlos.common.ui.activity.base.PermissionRequestActivity;
 import com.carlos.common.ui.activity.base.VActivity;
-import com.carlos.common.utils.InstallTools;
-import com.carlos.common.utils.SPTools;
 import com.carlos.common.widget.BottomSheetLayout;
-import com.carlos.common.widget.toast.Toasty;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.kook.common.utils.HVLog;
 import com.kook.librelease.R;
@@ -70,13 +66,10 @@ import com.lody.virtual.client.ipc.VPackageManager;
 import com.lody.virtual.client.stub.RequestExternalStorageManagerActivity;
 import com.lody.virtual.helper.compat.BuildCompat;
 import com.lody.virtual.helper.compat.PermissionCompat;
-import com.lody.virtual.helper.utils.FileUtils;
 import com.lody.virtual.oem.OemPermissionHelper;
 import com.lody.virtual.remote.InstalledAppInfo;
 import com.lody.virtual.server.extension.VExtPackageAccessor;
 import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
@@ -94,9 +87,6 @@ implements AppLauncherCallback {
     private static final String APP_NAME;
     private static final String KEY_USER;
     protected final int ACTION_REQUEST_CODE_LAUNCH = 1;
-    protected ViewOnclick mViewOnclick = new ViewOnclick();
-    protected Dialog mDialog;
-    AlertDialog.Builder mBuilder;
     String[] whitelist = new String[]{".doc", ".docx", ".zip", ".rar", ".apk", ".ipa", ".txt", ".exe", ".7z", ".e", ".z", ".ct", ".ke", ".cetrainer", ".db", ".tar", ".pdf", ".w3x", ".epub", ".mobi", ".azw", ".azw3", ".osk", ".osz", ".xpa", ".cpk", ".lua", ".jar", ".dmg", ".ppt", ".pptx", ".xls", ".xlsx", ".mp3", ".ipa", ".iso", ".img", ".gho", ".ttf", ".ttc", ".txf", ".dwg", ".bat", ".dll"};
     private List<String> history = new ArrayList<String>();
     private List<FileItem> currentFile = new ArrayList<FileItem>();
@@ -158,34 +148,6 @@ implements AppLauncherCallback {
             public void afterActivityOnDestroy(Activity activity) {
             }
         });
-    }
-
-    public void tipsDialog(String content, View.OnClickListener ... onclick) {
-        if (this.mDialog == null) {
-            this.mBuilder = new AlertDialog.Builder((Context)this, R.style.VACustomTheme);
-            View view1 = this.getLayoutInflater().inflate(R.layout.dialog_tips, null);
-            this.mBuilder.setView(view1);
-            if (!this.isFinishing()) {
-                this.mDialog = this.mBuilder.show();
-            }
-            if (this.mDialog == null) {
-                return;
-            }
-            this.mDialog.setCanceledOnTouchOutside(false);
-            TextView textView = (TextView)view1.findViewById(R.id.tips_content);
-            textView.setText((CharSequence)content);
-            this.mDialog.setCancelable(false);
-            if (onclick != null && onclick.length == 2) {
-                view1.findViewById(R.id.double_btn_layout).setVisibility(View.VISIBLE);
-                view1.findViewById(R.id.btn_cancel).setOnClickListener(onclick[0]);
-                view1.findViewById(R.id.btn_ok).setOnClickListener(onclick[0]);
-            } else if (onclick != null && onclick.length == 1) {
-                view1.findViewById(R.id.single_btn_layout).setVisibility(View.VISIBLE);
-                view1.findViewById(R.id.single_btn).setOnClickListener(onclick[0]);
-            }
-        } else {
-            this.mDialog.show();
-        }
     }
 
     private String getMetaDataFromApp(Context context, String meta) {
@@ -262,33 +224,7 @@ implements AppLauncherCallback {
                 }
                 HVLog.d(" runAppNow :" + runAppNow);
                 if (runAppNow) {
-                    this.channelLimit = this.getPersistentValueToInt("channelLimit");
-                    this.channelStatus = this.getPersistentValueToInt("channelStatus");
-                    int channelLimitLocal = SPTools.getInt((Context)this, "channelLimit", 0);
-                    /*
-                    long currentTimeMillisLimit = 0L;
-                    if (channelLimitLocal == 0) {
-                        SPTools.putLong((Context)this, "currentTimeMillisLimit", System.currentTimeMillis());
-                    } else {
-                        currentTimeMillisLimit = SPTools.getLong((Context)this, "currentTimeMillisLimit");
-                    }
-                    HVLog.d("channelLimitLocal:" + channelLimitLocal + "    channelLimit:" + this.channelLimit);
-                    HVLog.d("channelStatus:" + this.channelStatus + "    ");
-                    if (this.channelLimit <= channelLimitLocal) {
-                        Toasty.warning(this.getContext(), "功能受限、请在设置中联系软件作者qixie0306@gmail.com").show();
-                        this.finish();
-                        return;
-                    }
-                    if (this.channelStatus == 0) {
-                        Toasty.warning(this.getContext(), "功能受限、请在设置中联系软件作者qixie0306@gmail.com").show();
-                        this.finish();
-                        return;
-                    }
-                     */
-                    if (!this.checkUpgrade()) {
-                        VActivityManager.get().launchApp(userId, packageName);
-                    }
-                    SPTools.putInt((Context)this, "channelLimit", channelLimitLocal + 1);
+                    VActivityManager.get().launchApp(userId, packageName);
                     this.finish();
                 }
             }
@@ -420,41 +356,6 @@ implements AppLauncherCallback {
         APP_NAME = "APP_NAME";
         KEY_USER = "KEY_USER";
         META_DATA_KEY = "ScorpionSDK";
-    }
-
-    class ViewOnclick
-    implements View.OnClickListener {
-        ViewOnclick() {
-        }
-
-        public void onClick(View v) {
-            if (v.getId() == R.id.single_btn) {
-                VerifyActivity.this.mDialog.dismiss();
-                VerifyActivity.this.finish();
-            } else if (v.getId() == R.id.btn_cancel) {
-                VerifyActivity.this.mDialog.dismiss();
-            } else if (v.getId() == R.id.btn_ok) {
-                VerifyActivity.this.mDialog.dismiss();
-                try {
-                    String assetFileName = "plugin_release.apk";
-                    HVLog.d("安装插件" + assetFileName);
-                    InputStream inputStream = null;
-                    File dir = VerifyActivity.this.getCacheDir();
-                    try {
-                        inputStream = VerifyActivity.this.getAssets().open(assetFileName);
-                        File apkFile = new File(dir, "plugin_release.apk");
-                        FileUtils.writeToFile(inputStream, apkFile);
-                        InstallTools.install((Context)VerifyActivity.this, apkFile);
-                    }
-                    catch (IOException e) {
-                        HVLog.printException(e);
-                    }
-                }
-                catch (Exception exception) {
-                    // empty catch block
-                }
-            }
-        }
     }
 }
 

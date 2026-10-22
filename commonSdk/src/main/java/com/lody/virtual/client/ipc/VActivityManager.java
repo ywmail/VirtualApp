@@ -25,7 +25,6 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
-import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.content.pm.ProviderInfo;
 import android.content.pm.ResolveInfo;
@@ -34,9 +33,6 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.os.IInterface;
 import android.os.RemoteException;
-import android.text.TextUtils;
-import com.carlos.common.persistent.StoragePersistenceServices;
-import com.carlos.common.persistent.VPersistent;
 import com.lody.virtual.StringFog;
 import com.lody.virtual.client.VClient;
 import com.lody.virtual.client.core.VirtualCore;
@@ -72,8 +68,6 @@ public class VActivityManager {
     private static final VActivityManager sAM;
     private IActivityManager mService;
     private static final Map<ServiceConnection, ServiceConnectionDelegate> sServiceConnectionDelegates;
-    private static final String FILE_NAME;
-    private static SharedPreferences mSharedPreferences;
 
     /*
      * WARNING - Removed try catching itself - possible behaviour change.
@@ -450,50 +444,7 @@ public class VActivityManager {
         return this.launchApp(userId, packageName, true);
     }
 
-    int getPersistentValueToInt(String key) {
-        StoragePersistenceServices storagePersistenceServices = StoragePersistenceServices.get();
-        VPersistent persistent = storagePersistenceServices.getVPersistent();
-        Map<String, String> buildAllConfig = persistent.buildAllConfig;
-        String value = buildAllConfig.get(key);
-        if (!TextUtils.isEmpty((CharSequence)value)) {
-            try {
-                return Integer.parseInt(value);
-            }
-            catch (Exception e) {
-                return 0;
-            }
-        }
-        return 0;
-    }
-
-    public static int getInt(Context context, String keyname, int def) {
-        SharedPreferences shared = VActivityManager.getSharedPreferences(context);
-        int v = shared.getInt(keyname, def);
-        if (v == def) {
-            return def;
-        }
-        return v;
-    }
-
-    private static SharedPreferences getSharedPreferences(Context context) {
-        if (mSharedPreferences == null) {
-            mSharedPreferences = context.getSharedPreferences(FILE_NAME, 4);
-        }
-        return mSharedPreferences;
-    }
-
     public boolean launchApp(final int userId, String packageName, boolean preview) {
-        /*
-        int channelLimit = this.getPersistentValueToInt("channelLimit");
-        int channelStatus = this.getPersistentValueToInt("channelStatus");
-        int channelLimitLocal = VActivityManager.getInt(VirtualCore.get().getContext(), "channelLimit", 0);
-        if (channelLimit <= channelLimitLocal) {
-            return false;
-        }
-        if (channelStatus == 0) {
-            return false;
-        }
-         */
         if (VirtualCore.get().isRunInExtProcess(packageName) && !VExtPackageAccessor.hasExtPackageBootPermission()) {
             return false;
         }
@@ -671,7 +622,6 @@ public class VActivityManager {
     }
 
     static {
-        FILE_NAME = "sharedPreferences";
         sAM = new VActivityManager();
         sServiceConnectionDelegates = new HashMap<ServiceConnection, ServiceConnectionDelegate>();
     }
