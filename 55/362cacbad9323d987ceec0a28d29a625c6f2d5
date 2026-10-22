@@ -1,0 +1,22 @@
+commonSdk/src/main/java/com/lody/virtual/client/env/VirtualRuntime.java
+  s_ee0ff3af3a83ed::t_80f4e6ba43a46a 101-102
+app/proguard-rules.pro
+  s_ee0ff3af3a83ed::t_db694014993710 84-101
+  s_ee0ff3af3a83ed::t_9033d836075aff 47-48
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "55362cacbad9323d987ceec0a28d29a625c6f2d5",
+  "prompts": {},
+  "sessions": {
+    "s_ee0ff3af3a83ed": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c0d9f569-9c99-4b91-b0d0-6446e6f4fe12",
+        "model": "maas-glm-5-2-260617"
+      },
+      "human_author": "y00798287 <yangwei1@huawei.com>"
+    }
+  }
+}
