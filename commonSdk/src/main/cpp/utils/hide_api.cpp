@@ -8,8 +8,18 @@
 #include "../includes/utils.h"
 #include "../includes/trampoline_manager.h"
 #include "../includes/art_runtime.h"
+#include <sys/system_properties.h>
+#include <stdlib.h>
 
 extern int SDK_INT;
+
+static int getRealSdkInt() {
+    char value[PROP_VALUE_MAX] = {0};
+    if (__system_property_get("ro.build.version.sdk", value) > 0) {
+        return atoi(value);
+    }
+    return SDK_INT;
+}
 
 extern "C" {
 
@@ -102,7 +112,7 @@ extern "C" {
                                                                                  "jit_compile_method"));
             }
             auto jit_load = getSymCompat(jit_lib_path, "jit_load");
-            if (jit_load) {
+            if (jit_load && getRealSdkInt() < 34) {
                 if (SDK_INT >= ANDROID_Q) {
                     // Android 10：void* jit_load()
                     // Android 11: JitCompilerInterface* jit_load()
@@ -113,6 +123,8 @@ extern "C" {
                     jitCompilerHandle = reinterpret_cast<void*(*)(void*)>(jit_load)(&generate_debug_info);
                 }
             } else {
+                // Android 14+ 上 jit_load 符号落在 libart-compiler.so 只读段，
+                // 直接调用会触发 SIGSEGV (SEGV_ACCERR)，改用全局 JIT compiler handle 兜底。
                 jitCompilerHandle = getGlobalJitCompiler();
             }
 

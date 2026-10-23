@@ -443,9 +443,11 @@ public final class VClient extends IVClient.Stub {
                     System.setProperty("java.io.tmpdir", new File(VEnvironment.getDataUserPackageDirectory(userId, info.packageName), "cache").getAbsolutePath());
                 }
                 VLog.i(TAG + "kooklog", "launchEngine    getContext():" + VirtualCore.get().getContext(), new Object[0]);
-                NativeEngine.launchEngine(VirtualCore.get().getContext(), packageName);
-                if (VirtualCore.getConfig().isEnableIORedirect()) {
-                    this.mountVirtualFS(info, isExt);
+                if (Build.VERSION.SDK_INT < 34) {
+                    NativeEngine.launchEngine(VirtualCore.get().getContext(), packageName);
+                    if (VirtualCore.getConfig().isEnableIORedirect()) {
+                        this.mountVirtualFS(info, isExt);
+                    }
                 }
             }
             VirtualCore.getConfig();
@@ -543,6 +545,14 @@ public final class VClient extends IVClient.Stub {
                 this.mInitialApplication = app;
                 ActivityThread.mInitialApplication.set(mainThread, app);
             }
+            if (isInitialApp && VirtualCore.getConfig().isAutoFixTinkerConflict(packageName) && this.isTinkerApp(app)) {
+                try {
+                    this.fixTinkerConflict(app, packageName, isExt, userId);
+                }
+                catch (Throwable t) {
+                    VLog.w(TAG, "fixTinkerConflict failed for " + packageName + ": " + t, new Object[0]);
+                }
+            }
             VLog.e("kook", "isInitialAppL" + isInitialApp + "    mInitialApplication:" + this.mInitialApplication);
             boolean bl = isTargetGame = packageName.equals("com.wemade.mirm") || packageName.equals("com.kakaogames.odin") || packageName.equals("com.kakaogames.archewar");
             if (isTargetGame && (providers = ActivityThread.AppBindData.providers.get(boundApp = ActivityThread.mBoundApplication.get(mainThread))) != null && !providers.isEmpty()) {
@@ -573,21 +583,24 @@ public final class VClient extends IVClient.Stub {
             }
             if (isInitialApp) {
                 VirtualCore.get().getAppCallback().beforeApplicationCreate(packageName, processName, app);
-                try {
-                    XposedHelpers.findAndHookMethod(Binder.class, "getCallingUid", new XC_MethodReplacement(){
+                if (Build.VERSION.SDK_INT < 31) {
+                    try {
+                        XposedHelpers.findAndHookMethod(Binder.class, "getCallingUid", new XC_MethodHook(){
 
-                        @Override
-                        protected Object replaceHookedMethod(XC_MethodHook.MethodHookParam param) throws Throwable {
-                            int ret = (Integer)XposedBridge.invokeOriginalMethod(param.method, param.thisObject, param.args);
-                            return NativeEngine.onGetCallingUid(ret);
-                        }
-                    });
-                }
-                catch (Throwable th) {
-                    VLog.i(TAG, "getCallingUid error:" + th.getMessage(), new Object[0]);
-                    th.printStackTrace();
+                            @Override
+                            protected void afterHookedMethod(XC_MethodHook.MethodHookParam param) throws Throwable {
+                                int ret = (Integer)param.getResult();
+                                param.setResult(NativeEngine.onGetCallingUid(ret));
+                            }
+                        });
+                    }
+                    catch (Throwable th) {
+                        VLog.i(TAG, "getCallingUid error:" + th.getMessage(), new Object[0]);
+                        th.printStackTrace();
+                    }
                 }
             }
+
             if (cond != null) {
                 cond.open();
             }
@@ -599,7 +612,7 @@ public final class VClient extends IVClient.Stub {
                     this.mInitialApplication = createdApp;
                 }
             }
-            catch (Exception e2) {
+            catch (Throwable e2) {
                 if (this.mInstrumentation.onException((Object)app, (Throwable)e2)) break block66;
                 throw new RuntimeException("Unable to create application " + data.appInfo.name + ": " + e2.toString(), e2);
             }
@@ -639,6 +652,51 @@ public final class VClient extends IVClient.Stub {
         }
         catch (Throwable e) {
             e.printStackTrace();
+        }
+    }
+
+    private boolean isTinkerApp(Application app) {
+        if (app == null) {
+            return false;
+        }
+        try {
+            Class<?> clazz = app.getClass();
+            while (clazz != null && clazz != Object.class) {
+                if ("com.tencent.tinker.loader.app.TinkerApplication".equals(clazz.getName())) {
+                    return true;
+                }
+                clazz = clazz.getSuperclass();
+            }
+        }
+        catch (Throwable t) {
+            VLog.w(TAG, "isTinkerApp check failed: " + t, new Object[0]);
+        }
+        return false;
+    }
+
+    private void fixTinkerConflict(Application app, String packageName, boolean isExt, int userId) {
+        try {
+            File dataDir = isExt ? VEnvironment.getDataUserPackageDirectoryExt(userId, packageName) : VEnvironment.getDataUserPackageDirectory(userId, packageName);
+            String[] subDirs = new String[]{"tinker", "tinker_temp", "tinker_server"};
+            for (String sub : subDirs) {
+                File dir = new File(dataDir, sub);
+                if (dir.exists()) {
+                    FileUtils.deleteDir(dir);
+                    VLog.i(TAG, "fixTinkerConflict deleted: " + dir.getAbsolutePath(), new Object[0]);
+                }
+            }
+            if (VirtualCore.getConfig().isEnableIORedirect()) {
+                int realUserId = VUserHandle.realUserId();
+                NativeEngine.forbid("/data/data/" + packageName + "/tinker/", false);
+                NativeEngine.forbid("/data/data/" + packageName + "/tinker_server/", false);
+                NativeEngine.forbid("/data/data/" + packageName + "/tinker_temp/", false);
+                NativeEngine.forbid("/data/user/" + realUserId + "/" + packageName + "/tinker/", false);
+                NativeEngine.forbid("/data/user/" + realUserId + "/" + packageName + "/tinker_server/", false);
+                NativeEngine.forbid("/data/user/" + realUserId + "/" + packageName + "/tinker_temp/", false);
+            }
+        }
+        catch (Throwable t) {
+            VLog.w(TAG, "fixTinkerConflict failed for " + packageName + ": " + t, new Object[0]);
         }
     }
 

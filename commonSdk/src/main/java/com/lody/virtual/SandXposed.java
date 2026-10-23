@@ -37,7 +37,7 @@ public class SandXposed {
 
             @Override
             public int hookMode(Member member) {
-                if (Build.VERSION.SDK_INT >= 30) {
+                if (Build.VERSION.SDK_INT >= 30 && Build.VERSION.SDK_INT < 31) {
                     return 2;
                 }
                 return 0;

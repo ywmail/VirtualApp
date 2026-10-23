@@ -57,6 +57,10 @@ public abstract class SettingConfig {
         return false;
     }
 
+    public boolean isAutoFixTinkerConflict(String packageName) {
+        return true;
+    }
+
     public abstract boolean isOutsidePackage(String var1);
 
     public boolean isOutsideAction(String action) {

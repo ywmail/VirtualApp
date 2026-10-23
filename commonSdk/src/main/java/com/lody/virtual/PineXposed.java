@@ -65,7 +65,7 @@ public class PineXposed {
 
             @Override
             public int hookMode(Member originMethod) {
-                if (Build.VERSION.SDK_INT >= 30) {
+                if (Build.VERSION.SDK_INT >= 30 && Build.VERSION.SDK_INT < 31) {
                     return 2;
                 }
                 return 0;
@@ -86,6 +86,9 @@ public class PineXposed {
 
     public static void initForXposed(Context context, String processName) {
         XposedCompat.cacheDir = new File(context.getCacheDir(), DexMakerUtils.MD5(processName));
+        if (Build.VERSION.SDK_INT >= 31) {
+            XposedCompat.useInternalStub = false;
+        }
         PineXposed.fixPendingIntentFlags(context);
         if (BuildCompat.isS()) {
             try {
